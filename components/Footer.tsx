@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex justify-between items-center space-y-6">
              {/* Copyright */}
              <div className="text-sm text-center">
-            &copy; {new Date().getFullYear()} Tailored Food. All rights reserved.
+            &copy; {new Date().getFullYear()} FiveWell Africa. All rights reserved.
           </div>
           {/* Social Icons */}
           <div className="flex space-x-6">

@@ -1,13 +1,19 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
-// Configure Nodemailer with environment variables
+// Configure Nodemailer with cPanel SMTP settings
 const transporter = nodemailer.createTransport({
-  service: 'gmail', // or your email service
+  host: process.env.CPANEL_SMTP_HOST || 'mail.fivewellafrica.org', // Your cPanel mail server
+  port: parseInt(process.env.CPANEL_SMTP_PORT || '465'), // 465 for SSL, 587 for TLS
+  secure: true, // true for 465, false for other ports
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASSWORD,
+    user: process.env.CPANEL_EMAIL || 'noreply@fivewellafrica.org',
+    pass: process.env.CPANEL_EMAIL_PASSWORD,
   },
+  tls: {
+    // Do not fail on invalid certs
+    rejectUnauthorized: false
+  }
 });
 
 // Email template for the confirmation email to the user
