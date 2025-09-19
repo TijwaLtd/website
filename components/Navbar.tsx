@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 
@@ -66,7 +67,8 @@ export default function Navbar() {
           <div className="hidden md:flex">
           <nav className="hidden md:flex space-x-4">
             {navigationItems.map((item) => {
-              const isActive = typeof window !== 'undefined' && window.location.pathname === item.href;
+              const pathname = usePathname();
+              const isActive = pathname === item.href;
               return (
                 <Link
                   key={item.name}

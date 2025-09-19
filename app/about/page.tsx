@@ -1,57 +1,61 @@
-'use client';
-
+import type { Metadata } from 'next';
 import { motion } from 'framer-motion';
-import { Users, Target, Heart, Globe, BookOpen, Eye, BarChart3, Leaf } from 'lucide-react';
+import { Users, Target, Heart, Globe, BookOpen, Eye, BarChart3, Leaf, TrendingUp, Handshake, BrainCircuit } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: 'Our Team & Expertise | FiveWell Africa',
+  description: 'Meet the expert team of agriculture consultants at FiveWell Africa. Learn about our experience in sustainable farming and agribusiness across the continent.',
+};
 
 const AboutPage = () => {
   const values = [
     {
-      icon: <Heart className="w-8 h-8" />,
-      title: "Community-Centered",
-      description: "We believe in empowering local communities to lead their own food security initiatives and build sustainable solutions."
+      icon: <TrendingUp className="w-8 h-8" />,
+      title: "Client Success-Driven",
+      description: "We are committed to delivering measurable results, increased profitability, and sustainable growth for our clients' agribusinesses."
     },
     {
-      icon: <Target className="w-8 h-8" />,
-      title: "Impact-Driven",
-      description: "Every program and partnership is designed to create measurable, lasting change in food access and nutrition."
+      icon: <BrainCircuit className="w-8 h-8" />,
+      title: "Data-Informed Strategy",
+      description: "Our recommendations are grounded in rigorous data analysis, market research, and cutting-edge agricultural science."
     },
     {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Locally Focused",
-      description: "We prioritize local solutions, ingredients, and knowledge to create food systems that work for each unique community."
+      icon: <Leaf className="w-8 h-8" />,
+      title: "Sustainable Practices",
+      description: "We champion and implement sustainable and regenerative farming techniques that ensure long-term environmental and economic viability."
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: "Collaborative",
-      description: "We work alongside grassroots entrepreneurs, global organizations, and communities to maximize collective impact."
+      icon: <Handshake className="w-8 h-8" />,
+      title: "Collaborative Partnership",
+      description: "We work as an extension of your team, building trusted partnerships to navigate challenges and unlock opportunities together."
     }
   ];
 
   const teamMembers = [
     {
       name: "Dr. Amara Okafor",
-      role: "Executive Director",
-      bio: "Leading agricultural development initiatives across West Africa for over 15 years.",
+      role: "Managing Director, Agribusiness Strategy",
+      bio: "Over 15 years of experience advising on agricultural investments and market entry strategies across West Africa.",
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=400&fit=crop&crop=face"
     },
     {
       name: "James Mwangi",
-      role: "Program Director",
-      bio: "Expert in community-based nutrition programs and sustainable farming practices.",
+      role: "Head of Agritech & Sustainable Farming",
+      bio: "Expert in implementing precision agriculture, irrigation technology, and sustainable farming practices for large-scale farms.",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=400&fit=crop&crop=face"
     },
     {
       name: "Sarah Nyong",
-      role: "Research Coordinator",
-      bio: "Specialist in food systems research and anthropological studies across rural Africa.",
+      role: "Senior Analyst, Market Research",
+      bio: "Specialist in supply chain analysis, commodity pricing, and agricultural market intelligence.",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=300&h=400&fit=crop&crop=face"
     },
     {
       name: "David Kimani",
-      role: "Partnership Manager",
-      bio: "Connecting local entrepreneurs with global resources and building sustainable partnerships.",
+      role: "Client & Partnership Manager",
+      bio: "Connects agribusinesses with strategic partners, financial resources, and new market opportunities.",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop&crop=face"
     }
   ];
@@ -67,10 +71,10 @@ const AboutPage = () => {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-                About FiveWellAfrica
+                Expert Agricultural Consulting for Africa
               </h1>
               <p className="text-xl text-white/90 mb-8 leading-relaxed">
-                We're building sustainable food systems across Africa that are nutritious, delicious, affordable, and local. Our mission is to eradicate hunger and malnutrition through community-driven solutions.
+                We are a premier agriculture consulting firm dedicated to unlocking the potential of African agribusiness through data-driven strategy, sustainable practices, and innovative technology.
               </p>
             </motion.div>
             
@@ -82,7 +86,7 @@ const AboutPage = () => {
             >
               <img
                 src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&h=400&fit=crop"
-                alt="FiveWellAfrica Team"
+                alt="Agricultural consultants reviewing data in a field"
                 className="rounded-2xl shadow-2xl"
               />
             </motion.div>
@@ -116,7 +120,7 @@ const AboutPage = () => {
                 </div>
                 <div className="prose prose-lg text-gray-600">
                   <p>
-                    FiveWellAfrica was founded with a simple belief: that every community has the knowledge, resources, and capability to create sustainable food systems. We started by working directly with rural farming communities across Kenya, learning from their traditional practices while introducing modern techniques that enhance both nutrition and income.
+                    FiveWell Africa was founded by agricultural experts who saw a critical need for data-driven, practical advisory services to help African agribusinesses thrive in a complex global market. We started by helping farms in Kenya leverage technology to increase yields, and have since grown to serve clients across the continent.
                   </p>
                 </div>
               </motion.div>
@@ -135,8 +139,7 @@ const AboutPage = () => {
                     <h3 className="text-xl font-semibold">Our Vision</h3>
                   </div>
                   <p className="text-gray-600">
-                    A future where every community in Africa has access to nutritious, affordable, and 
-                    sustainably produced food, while preserving the environment and local cultures.
+                    To be Africa's most trusted agricultural consulting partner, driving a future where the continent's agribusinesses are global leaders in productivity, sustainability, and innovation.
                   </p>
                 </motion.div>
 
@@ -152,8 +155,7 @@ const AboutPage = () => {
                     <h3 className="text-xl font-semibold">Our Mission</h3>
                   </div>
                   <p className="text-gray-600">
-                    To empower communities across Africa with the knowledge, resources, and support needed 
-                    to build resilient, sustainable food systems that nourish people and the planet.
+                    To provide actionable, data-driven insights and expert implementation support that empowers our clients to achieve sustainable growth, operational excellence, and market leadership.
                   </p>
                 </motion.div>
               </div>
@@ -193,7 +195,7 @@ const AboutPage = () => {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Meet Our Team</h2>
+                <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Meet Our Team of Experts</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                   {teamMembers.map((member, index) => (
                     <motion.div

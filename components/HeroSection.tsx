@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
@@ -7,21 +7,21 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const heroSlides = [
   {
     image: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=1920&h=1080&fit=crop&crop=center',
-    title: 'Building Sustainable Food Systems',
-    subtitle: 'Across Africa - Nutritious, Delicious, Affordable & Local',
-    cta: 'Learn About Our Work'
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1920&h=1080&fit=crop&crop=center',
-    title: 'Empowering Local Entrepreneurs',
-    subtitle: 'Supporting grassroots food entrepreneurs to develop, launch, and scale nutritious, locally sourced food products across African communities.',
-    cta: 'Our Partners'
+    title: 'Data-Driven Agricultural Strategy',
+    subtitle: 'Leveraging market data and predictive analytics to unlock profitability and sustainable growth for your agribusiness.',
+    cta: 'Explore Our Services'
   },
   {
     image: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?w=1920&h=1080&fit=crop&crop=center',
-    title: 'Eradicating Hunger and Malnutrition',
-    subtitle: 'Working with global organizations and local communities to ensure healthy food is affordable and available to families across Africa.',
-    cta: 'Our Projects'
+    title: 'Profitability Meets Sustainability',
+    subtitle: 'We implement innovative, sustainable farming practices that enhance your bottom line while protecting the environment.',
+    cta: 'View Case Studies'
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1920&h=1080&fit=crop&crop=center',
+    title: 'The Future of Farming is Here',
+    subtitle: 'From precision agriculture to supply chain automation, we help you integrate cutting-edge agritech for a competitive advantage.',
+    cta: 'Contact Our Experts'
   }
 ];
 
