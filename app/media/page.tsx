@@ -8,19 +8,8 @@ export const metadata: Metadata = {
   description: 'See FiveWell Africa in the news. Explore our publications, white papers, and media mentions showcasing our expertise in African agriculture.',
 };
 
-type MediaItem = {
-  id: string;
-  title: string;
-  type: 'publication' | 'video' | 'article';
-  thumbnail: string;
-  date: string;
-  url: string;
-  category?: string;
-  source: string;
-};
-
 const MediaPage = () => {
-  const mediaItems: MediaItem[] = [
+  const mediaItems: MediaGridItem[] = [
     {
       id: '1',
       title: 'White Paper: The Future of Sustainable Coffee Production in East Africa',
