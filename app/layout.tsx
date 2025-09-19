@@ -22,7 +22,10 @@ export const metadata: Metadata = {
     default: 'FiveWell Africa | Agriculture Consulting for a Thriving Continent',
   },
   description: 'Expert agriculture consulting and agribusiness advisory services to boost productivity and sustainability across Africa.',
-  themeColor: '#16a34a',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+  },
   openGraph: {
     title: 'FiveWell Africa | Agriculture Consulting for a Thriving Continent',
     description: 'Expert agriculture consulting and agribusiness advisory services to boost productivity and sustainability across Africa.',
@@ -43,11 +46,7 @@ export const metadata: Metadata = {
     title: 'FiveWell Africa | Agriculture Consulting for a Thriving Continent',
     description: 'Expert agriculture consulting and agribusiness advisory services to boost productivity and sustainability across Africa.',
     images: ['/og-image.png'], // Must be an absolute URL
-  },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-  },
+  }
 };
 
 export default function RootLayout({
