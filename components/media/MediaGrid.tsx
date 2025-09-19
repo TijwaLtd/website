@@ -135,17 +135,21 @@ export default function MediaGrid({ mediaItems }: { mediaItems: MediaItem[] }) {
                 </svg>
               </button>
             ) : (
-              <a
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-green-600 hover:text-green-700 font-medium mt-auto"
-              >
-                Read More
-                <svg className="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
+              (() => {
+                const isPdf = /\.pdf($|\?)/i.test(item.url);
+                return (
+                  <a
+                    href={item.url}
+                    {...(isPdf ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    className="inline-flex items-center text-green-600 hover:text-green-700 font-medium mt-auto"
+                  >
+                    Read More
+                    <svg className="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </a>
+                );
+              })()
             )}
           </div>
         </motion.div>
