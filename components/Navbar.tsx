@@ -34,10 +34,11 @@ export default function Navbar() {
 
   const navigationItems = [
     { name: 'Home', href: '/' },
+    { name: 'Themes', href: '/themes' },
     { name: 'About', href: '/about' },
     { name: 'Media', href: '/media' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Projects', href: '/projects' },
+    { name: 'Projects', href: '/case-studies' },
   ];
 
   return (
@@ -48,16 +49,15 @@ export default function Navbar() {
       className="fixed top-0 w-full z-50 backdrop-blur-md bg-white/90 border-b border-gray-200/20"
     >
       <div className="px-4">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
               <img
-                src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=40&h=40&fit=crop"
+                src="/logo.png"
                 alt="FiveWellAfrica"
-                className="h-10 w-10 rounded-full"
+                className="h-24 w-24 my-4"
               />
-              <span className="font-bold text-xl text-green-600">FiveWellAfrica</span>
             </Link>
           </div>
 
@@ -75,8 +75,8 @@ export default function Navbar() {
                   href={item.href}
                   className={`relative px-2 py-2 text-base font-semibold transition-colors duration-200 ${
                     isActive 
-                      ? 'text-green-600' 
-                      : 'text-gray-700 hover:text-green-600'
+                      ? 'text-primary' 
+                      : 'text-gray-700 hover:text-primary'
                   }`}
                 >
                   {item.name}
@@ -90,7 +90,7 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className="bg-green-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-green-700 transition-colors duration-200"
+              className="bg-primary text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-primary/80 transition-colors duration-200"
             >
               Contact Us
             </Link>

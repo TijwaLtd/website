@@ -4,7 +4,7 @@ import { Download, ExternalLink } from 'lucide-react';
 
 export default function CTASection() {
   return (
-    <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600">
+    <section className="py-20 bg-gradient-to-b from-primary to-secondary">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -20,11 +20,11 @@ export default function CTASection() {
               Read our annual report to learn more about our work in building food systems that are nutritious, delicious, affordable, and local. Join us in our mission to eradicate hunger and malnutrition worldwide.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-white text-orange-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center">
+              <button className="bg-white text-primary px-8 py-4 rounded-full font-semibold hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center">
                 <Download className="mr-2" size={20} />
                 Download Annual Report
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-orange-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
                 <ExternalLink className="mr-2" size={20} />
                 Become a Partner
               </button>

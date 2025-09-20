@@ -24,7 +24,7 @@ export default function AnnualReportSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-orange-700 transition-all duration-300 shadow-lg flex items-center"
+              className="bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary/80 transition-all duration-300 shadow-lg flex items-center"
             >
               <Download className="mr-3" size={24} />
               Download 2024 Report
@@ -33,7 +33,7 @@ export default function AnnualReportSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="border-2 border-orange-600 text-orange-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-orange-600 hover:text-white transition-all duration-300 flex items-center"
+              className="border-2 border-primary text-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary hover:text-white transition-all duration-300 flex items-center"
             >
               <ExternalLink className="mr-3" size={24} />
               View Online
@@ -53,7 +53,7 @@ export default function AnnualReportSection() {
                 alt="Tailored Food 2024 Annual Report"
                 className="rounded-2xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300"
               />
-              <div className="absolute -top-4 -right-4 bg-orange-500 text-white px-4 py-2 rounded-full font-bold text-sm">
+              <div className="absolute -top-4 -right-4 bg-secondary text-white px-4 py-2 rounded-full font-bold text-sm">
                 2024 Edition
               </div>
             </div>

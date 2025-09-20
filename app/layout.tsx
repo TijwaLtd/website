@@ -76,7 +76,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
         />
         <Navbar />
-        <main>{children}</main>
+        <main >{children}</main>
         <Footer />
         <GoogleAnalytics gaId="G-XXXXXXXXXX" />
       </body>

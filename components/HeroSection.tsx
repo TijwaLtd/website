@@ -6,22 +6,34 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const heroSlides = [
   {
-    image: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=1920&h=1080&fit=crop&crop=center',
-    title: 'Data-Driven Agricultural Strategy',
-    subtitle: 'Leveraging market data and predictive analytics to unlock profitability and sustainable growth for your agribusiness.',
-    cta: 'Explore Our Services'
+    image: 'https://images.unsplash.com/photo-1492496913980-501348b61469?w=1920&h=1080&fit=crop&crop=center',
+    title: 'Sustainable Solutions for a Sustainable Future',
+    subtitle: 'Driving transformation in Africa and beyond through innovative and sustainable solutions.',
+    cta: 'Discover Our Mission'
   },
   {
-    image: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?w=1920&h=1080&fit=crop&crop=center',
-    title: 'Profitability Meets Sustainability',
-    subtitle: 'We implement innovative, sustainable farming practices that enhance your bottom line while protecting the environment.',
-    cta: 'View Case Studies'
+    image: 'https://images.unsplash.com/photo-1521405924349-63a5b5a16b3b?w=1920&h=1080&fit=crop&crop=center',
+    title: 'Building Sustainable and Adaptive Pathways',
+    subtitle: 'Developing resilient strategies for long-term success.',
+    cta: 'Learn More'
   },
   {
     image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1920&h=1080&fit=crop&crop=center',
-    title: 'The Future of Farming is Here',
-    subtitle: 'From precision agriculture to supply chain automation, we help you integrate cutting-edge agritech for a competitive advantage.',
-    cta: 'Contact Our Experts'
+    title: 'Innovation & Technology',
+    subtitle: 'Leveraging cutting-edge solutions to drive progress.',
+    cta: 'Explore Tech'
+  },
+    {
+    image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1920&h=1080&fit=crop&crop=center',
+    title: 'Knowledge, Research & Capacity Building',
+    subtitle: 'Empowering communities through education and insights.',
+    cta: 'See Our Research'
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1920&h=1080&fit=crop&crop=center',
+    title: 'Partnerships and Market Access',
+    subtitle: 'Connecting opportunities and fostering collaboration.',
+    cta: 'Partner With Us'
   }
 ];
 
@@ -87,16 +99,16 @@ export default function HeroSection() {
             {heroSlides[currentSlide].subtitle}
           </motion.p>
           
-          <motion.div
+          {/* <motion.div
             key={`cta-${currentSlide}`}
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <button className="bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <button className="bg-red-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
               {heroSlides[currentSlide].cta}
             </button>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
 
