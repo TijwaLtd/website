@@ -1,13 +1,12 @@
-import type { Metadata } from 'next';
-import Image from 'next/image';
+"use client"
 import { motion } from 'framer-motion';
 import { CheckCircle } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'The Ultimate Guide to Sustainable Agribusiness in Africa | FiveWell Africa',
-  description: 'A comprehensive guide to building a profitable and sustainable agribusiness in Africa. Covers financing, technology, supply chains, and market access.',
-  keywords: ['sustainable agribusiness africa', 'agribusiness guide', 'farming in africa', 'agritech africa', 'sustainable farming'],
-};
+// export const metadata: Metadata = {
+//   title: 'The Ultimate Guide to Sustainable Agribusiness in Africa | FiveWell Africa',
+//   description: 'A comprehensive guide to building a profitable and sustainable agribusiness in Africa. Covers financing, technology, supply chains, and market access.',
+//   keywords: ['sustainable agribusiness africa', 'agribusiness guide', 'farming in africa', 'agritech africa', 'sustainable farming'],
+// };
 
 export default function SustainableAgribusinessGuide() {
   const articleSchema = {
