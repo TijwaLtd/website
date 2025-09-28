@@ -41,7 +41,7 @@ export default function Home() {
         <MissionSection />
         <OurWorkSection />
         <CTASection />
-        <AnnualReportSection />
+        {/* <AnnualReportSection /> */}
         <PartnerSection />
     </>
   );
