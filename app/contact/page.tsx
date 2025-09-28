@@ -20,7 +20,7 @@ const ContactForm = dynamic(
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-24">
       {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-br from-green-600 to-blue-700">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -90,7 +90,7 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className="bg-primary text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-primary/80 transition-colors duration-200"
+              className="bg-primary text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-primary/80 transition-colors duration-200 ml-6"
             >
               Contact Us
             </Link>
