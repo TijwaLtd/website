@@ -62,7 +62,7 @@ export default function ThemesPage() {
                 Each theme represents a commitment to excellence and a pathway to creating sustainable impact.
               </p>
               <p className="text-lg text-gray-600 mb-8">
-                Explore our themes to learn more about our approach, key focus areas, and the difference we're making in communities worldwide.
+                Explore our themes to learn more about our approach, key focus areas, and the difference we&apos;re making in communities worldwide.
               </p>
               <Link 
                 href="/about" 

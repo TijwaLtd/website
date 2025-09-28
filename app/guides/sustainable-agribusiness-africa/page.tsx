@@ -48,7 +48,7 @@ export default function SustainableAgribusinessGuide() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <p className="text-green-300 font-semibold">Cornerstone Guide</p>
             <h1 className="text-4xl sm:text-5xl font-bold mt-2 mb-4">The Ultimate Guide to Sustainable Agribusiness in Africa</h1>
-            <p className="text-xl text-white/90">Your comprehensive roadmap to building a profitable, resilient, and environmentally conscious agricultural enterprise in Africa's dynamic market.</p>
+            <p className="text-xl text-white/90">Your comprehensive roadmap to building a profitable, resilient, and environmentally conscious agricultural enterprise in Africa&apos;s dynamic market.</p>
           </motion.div>
         </div>
       </section>
@@ -57,7 +57,7 @@ export default function SustainableAgribusinessGuide() {
       <article className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg lg:prose-xl">
           
-          <p className="lead">Africa's agricultural sector is poised for explosive growth. Yet, success is not guaranteed. It requires a delicate balance of profitability and sustainability, innovation and tradition. This guide provides a strategic framework for entrepreneurs, investors, and farm managers looking to build a thriving agribusiness that stands the test of time.</p>
+          <p className="lead">Africa&apos;s agricultural sector is poised for explosive growth. Yet, success is not guaranteed. It requires a delicate balance of profitability and sustainability, innovation and tradition. This guide provides a strategic framework for entrepreneurs, investors, and farm managers looking to build a thriving agribusiness that stands the test of time.</p>
 
           {/* Section 1 */}
           <h2>Chapter 1: The Foundation - Strategy & Business Planning</h2>
@@ -91,7 +91,7 @@ export default function SustainableAgribusinessGuide() {
 
           {/* Section 4 */}
           <h2>Chapter 4: From Farm to Market - Supply Chain & Logistics</h2>
-          <p>[Content to be added: The challenges and opportunities in Africa's agricultural supply chains.]</p>
+          <p>[Content to be added: The challenges and opportunities in Africa&apos;s agricultural supply chains.]</p>
           <h3>4.1. Post-Harvest Handling and Reducing Spoilage</h3>
           <p>[Content to be added: Best practices for storage, cooling, and transportation.]</p>
           <h3>4.2. Accessing Local and International Markets</h3>

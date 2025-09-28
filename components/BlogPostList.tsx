@@ -5,10 +5,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import type { Entry } from 'contentful';
-import type { IBlogPost } from '@/lib/contentful';
+import type { BlogPostSkeleton } from '@/lib/contentful';
+
+type BlogPostEntry = Entry<BlogPostSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>;
 
 interface BlogPostListProps {
-  posts: Entry<IBlogPost>[];
+  posts: BlogPostEntry[];
 }
 
 export default function BlogPostList({ posts }: BlogPostListProps) {
@@ -16,52 +18,73 @@ export default function BlogPostList({ posts }: BlogPostListProps) {
     return (
       <div className="text-center py-16">
         <h2 className="text-2xl font-bold text-gray-800">No Posts Yet</h2>
-        <p className="text-gray-500 mt-2">It looks like you haven't published any posts in Contentful, or there was an issue fetching them. Please check your API keys and ensure you have at least one published post.</p>
+        <p className="text-gray-500 mt-2">It looks like you haven&apos;t published any posts in Contentful, or there was an issue fetching them. Please check your API keys and ensure you have at least one published post.</p>
       </div>
     );
   }
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {posts.map((post, index) => (
-        <motion.article
-          key={post.sys.id}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
-          viewport={{ once: true }}
-          className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow flex flex-col"
-        >
-          <div className="relative h-48">
-            <Link href={`/blog/${post.fields.slug}`}>
-              {post.fields.featuredImage?.fields?.file?.url && (
-                <Image
-                  src={`https:${post.fields.featuredImage.fields.file.url}`}
-                  alt={post.fields.title}
-                  fill
-                  className="object-cover"
-                />
+      {posts.map((post, index) => {
+        const { fields } = post;
+        const publishDate = fields.publishDate ? new Date(fields.publishDate) : null;
+        const imageUrl = fields.featuredImage && 'fields' in fields.featuredImage 
+          ? `https:${fields.featuredImage.fields.file?.url}`
+          : null;
+
+        return (
+          <motion.article
+            key={post.sys.id}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow flex flex-col"
+          >
+            <div className="relative h-48">
+              <Link href={`/blog/${fields.slug}`}>
+                {imageUrl && (
+                  <Image
+                    src={imageUrl}
+                    alt={fields.title || 'Blog post image'}
+                    fill
+                    className="object-cover"
+                  />
+                )}
+              </Link>
+            </div>
+            <div className="p-6 flex flex-col flex-grow">
+              {publishDate && (
+                <div className="flex items-center text-sm text-gray-500 mb-2">
+                  <span>{publishDate.toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                  })}</span>
+                </div>
               )}
-            </Link>
-          </div>
-          <div className="p-6 flex flex-col flex-grow">
-            <div className="flex items-center text-sm text-gray-500 mb-2">
-              <span>{new Date(post.fields.publishDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+              <h2 className="text-xl font-bold text-gray-900 mb-2">
+                <Link href={`/blog/${fields.slug}`} className="hover:text-green-600 transition-colors">
+                  {fields.title}
+                </Link>
+              </h2>
+              {fields.excerpt && (
+                <p className="text-gray-600 mb-6 line-clamp-3 flex-grow">
+                  {fields.excerpt}
+                </p>
+              )}
+              <div className="mt-auto">
+                <Link 
+                  href={`/blog/${fields.slug}`} 
+                  className="inline-block px-4 py-2 border border-green-600 text-green-600 rounded-md font-semibold text-sm hover:bg-green-600 hover:text-white transition-colors"
+                >
+                  Read More
+                </Link>
+              </div>
             </div>
-            <h2 className="text-xl font-bold text-gray-900 mb-2">
-              <Link href={`/blog/${post.fields.slug}`} className="hover:text-green-600 transition-colors">
-                {post.fields.title}
-              </Link>
-            </h2>
-            <p className="text-gray-600 mb-6 line-clamp-3 flex-grow">{post.fields.excerpt}</p>
-            <div className="mt-auto">
-              <Link href={`/blog/${post.fields.slug}`} className="inline-block px-4 py-2 border border-green-600 text-green-600 rounded-md font-semibold text-sm hover:bg-green-600 hover:text-white transition-colors">
-                Read More
-              </Link>
-            </div>
-          </div>
-        </motion.article>
-      ))}
+          </motion.article>
+        );
+      })}
     </div>
   );
 }

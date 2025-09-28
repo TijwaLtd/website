@@ -11,6 +11,7 @@ export default function Navbar() {
   const [showNavbar, setShowNavbar] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,7 +68,6 @@ export default function Navbar() {
           <div className="hidden md:flex">
           <nav className="hidden md:flex space-x-4">
             {navigationItems.map((item) => {
-              const pathname = usePathname();
               const isActive = pathname === item.href;
               return (
                 <Link
