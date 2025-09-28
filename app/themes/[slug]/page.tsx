@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
 import { Theme, themes } from '@/data/themes';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
@@ -27,7 +28,9 @@ const StatCard = ({ value, label, index }: StatCardProps) => {
   );
 };
 
+// This is a Server Component by default in Next.js 13+
 export default function ThemePage({ params }: { params: { slug: string } }) {
+  // Since we're using generateStaticParams, we can safely access params.slug directly
   const theme = themes.find((t) => t.slug === params.slug);
 
   if (!theme) {
@@ -116,8 +119,10 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const theme = themes.find(t => t.slug === params.slug);
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  // Read route params
+  const slug = params.slug;
+  const theme = themes.find(t => t.slug === slug);
   
   if (!theme) {
     return {
@@ -129,5 +134,14 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   return {
     title: `${theme.title} | Fivewell`,
     description: theme.description,
+    // Add other metadata as needed
   };
 }
+
+// Add viewport export to handle viewport settings
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  // Add any other viewport settings you need
+};

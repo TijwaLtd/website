@@ -1,13 +1,13 @@
 'use client';
 
-import type { Metadata } from 'next';
+// import type { Metadata } from 'next';
 import { motion } from 'framer-motion';
 import { Zap, University, Landmark, Handshake } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Our Partners | FiveWell Africa',
-  description: 'FiveWell Africa collaborates with leading technology providers, financial institutions, and research organizations to deliver exceptional results for our clients.',
-};
+// export const metadata: Metadata = {
+//   title: 'Our Partners | FiveWell Africa',
+//   description: 'FiveWell Africa collaborates with leading technology providers, financial institutions, and research organizations to deliver exceptional results for our clients.',
+// };
 
 export default function Partners() {
   const partners = {
