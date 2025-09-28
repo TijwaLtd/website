@@ -38,13 +38,30 @@ const getDateString = (dateValue: unknown): string | null => {
   return null;
 };
 
+// Type for Contentful asset fields
+interface ContentfulAssetFields {
+  file?: {
+    url?: string;
+    details?: {
+      image?: {
+        width: number;
+        height: number;
+      };
+    };
+    fileName?: string;
+    contentType?: string;
+  };
+  title?: string;
+  description?: string;
+}
+
 // Helper function to safely extract image URL from Contentful asset
 const getImageUrl = (asset: unknown): string | null => {
   if (!asset || typeof asset !== 'object') return null;
   
   // Handle resolved asset
   if ('fields' in asset) {
-    const fields = (asset as any).fields;
+    const fields = (asset as { fields?: ContentfulAssetFields }).fields;
     if (fields?.file?.url) {
       return `https:${fields.file.url}`;
     }
