@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     default: 'FiveWell Africa | Agriculture Consulting for a Thriving Continent',
   },
   description: 'Expert agriculture consulting and agribusiness advisory services to boost productivity and sustainability across Africa.',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-  },
+  // viewport: {
+  //   width: 'device-width',
+  //   initialScale: 1,
+  // },
   openGraph: {
     title: 'FiveWell Africa | Agriculture Consulting for a Thriving Continent',
     description: 'Expert agriculture consulting and agribusiness advisory services to boost productivity and sustainability across Africa.',
