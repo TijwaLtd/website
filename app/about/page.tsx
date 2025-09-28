@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { Users, Target, Heart, Globe, BookOpen, Eye, BarChart3, Leaf, TrendingUp, Handshake, BrainCircuit } from 'lucide-react';
+import { Users, Target, Heart, Globe, BookOpen, Eye, BarChart3, Leaf, TrendingUp, Handshake, BrainCircuit } from 'lucide-react'; // Icons are used in the component
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Image from 'next/image';
 
@@ -133,7 +133,7 @@ const AboutPage = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">The Birth of FiveWell</h3>
                   <p className="text-gray-600">
-                    Inspired by this possibility, we came together to bring that spirit of innovation back home. We believed that if the desert could bloom, then Africa's challenges too could be met with solutions rooted in knowledge, technology, and collaboration.
+                    Inspired by this possibility, we came together to bring that spirit of innovation back home. We believed that if the desert could bloom, then Africa&apos;s challenges too could be met with solutions rooted in knowledge, technology, and collaboration.
                   </p>
                 </div>
               </motion.div>

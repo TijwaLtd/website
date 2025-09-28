@@ -16,8 +16,16 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+interface ContactFormData {
+  name: string;
+  email: string;
+  organization?: string;
+  subject: string;
+  message: string;
+}
+
 // Email template for the confirmation email to the user
-const createUserEmailTemplate = (data: any) => `
+const createUserEmailTemplate = (data: ContactFormData) => `
   <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #333; border: 1px solid #e2e8f0; border-radius: 8px;">
     <div style="background-color: #10b981; padding: 20px; border-radius: 8px 8px 0 0; color: white;">
       <h1 style="margin: 0; font-size: 24px;">Thank You for Contacting FiveWell Africa</h1>
@@ -44,7 +52,7 @@ const createUserEmailTemplate = (data: any) => `
 `;
 
 // Email template for the notification email to the admin
-const createAdminEmailTemplate = (data: any) => `
+const createAdminEmailTemplate = (data: ContactFormData) => `
   <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #333;">
     <h2 style="color: #10b981;">New Contact Form Submission</h2>
     

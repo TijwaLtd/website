@@ -29,7 +29,7 @@ export default function ContactPage() {
               Contact Our Experts
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Ready to transform your agribusiness? Reach out for a consultation or to discuss a potential partnership. We're here to help you grow.
+              Ready to transform your agribusiness? Reach out for a consultation or to discuss a potential partnership. We&apos;re here to help you grow.
             </p>
           </div>
         </div>
