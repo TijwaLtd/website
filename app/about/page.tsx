@@ -12,25 +12,25 @@ const AboutPage = () => {
       name: "Calvin Otieno",
       role: "Agronomy & Plant Breeding",
       bio: "Pursuing a Master's in Plant Breeding, with experience in GIS, data management, and molecular biology techniques.",
-      image: "/placeholder.svg"
+      image: "/placeholder.png"
     },
     {
       name: "Fredrick Kariuki",
       role: "Agricultural & Biosystems Engineer",
       bio: "Specializing in sustainable farming systems, precision agriculture, and technology integration.",
-      image: "/placeholder.svg"
+      image: "/placeholder.png"
     },
     {
       name: "Charles Toywa",
       role: "Agribusiness & Economics",
       bio: "Focuses on the economic aspects of agriculture, ensuring that our solutions are not only sustainable but also profitable.",
-      image: "/placeholder.svg"
+      image: "/placeholder.png"
     },
     {
       name: "Mercy Philips",
       role: "Communications & PR",
       bio: "A storyteller and sustainable development practitioner, crafting stories that connect people and inspire change.",
-      image: "/placeholder.svg"
+      image: "/placeholder.png"
     }
   ];
 

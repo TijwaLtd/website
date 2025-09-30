@@ -1,6 +1,6 @@
-"use client"
-import { motion } from 'framer-motion';
-import { Download, ExternalLink } from 'lucide-react';
+"use client";
+import { motion } from "framer-motion";
+import { Download, ExternalLink } from "lucide-react";
 
 export default function CTASection() {
   return (
@@ -14,16 +14,15 @@ export default function CTASection() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-              Partner with Tailored Food
+              Partner with FiveWellAfrica
             </h2>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Read our annual report to learn more about our work in building food systems that are nutritious, delicious, affordable, and local. Join us in our mission to eradicate hunger and malnutrition worldwide.
+              Read our annual report to learn more about our work in building
+              food systems that are nutritious, delicious, affordable, and
+              local. Join us in our mission to eradicate hunger and malnutrition
+              worldwide.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-white text-primary px-8 py-4 rounded-full font-semibold hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center">
-                <Download className="mr-2" size={20} />
-                Download Annual Report
-              </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
                 <ExternalLink className="mr-2" size={20} />
                 Become a Partner
@@ -44,9 +43,9 @@ export default function CTASection() {
                 alt="Annual Report Cover"
                 className="rounded-2xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300"
               />
-              <div className="absolute -top-4 -right-4 bg-orange-400 text-white px-4 py-2 rounded-full font-bold text-sm">
+              {/* <div className="absolute -top-4 -right-4 bg-orange-400 text-white px-4 py-2 rounded-full font-bold text-sm">
                 2024 Report
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>

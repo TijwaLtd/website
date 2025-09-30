@@ -4,7 +4,7 @@ export interface TeamMember {
   role: string;
   bio: string;
   image: string;
-  department: 'leadership' | 'technical' | 'operations' | 'advisory';
+  department: "leadership" | "technical" | "operations" | "advisory";
   social?: {
     twitter?: string;
     linkedin?: string;
@@ -14,30 +14,30 @@ export interface TeamMember {
 
 export const teamMembers: TeamMember[] = [
   {
-    id: 'ceo',
-    name: 'John Doe',
-    role: 'CEO & Founder',
-    bio: 'John has over 15 years of experience in the industry and founded the company in 2020.',
-    image: '/team/john-doe.jpg',
-    department: 'leadership',
+    id: "ceo",
+    name: "John Doe",
+    role: "CEO & Founder",
+    bio: "John has over 15 years of experience in the industry and founded the company in 2020.",
+    image: "/man.png",
+    department: "leadership",
     social: {
-      twitter: 'johndoe',
-      linkedin: 'johndoe',
-      email: 'john@example.com'
-    }
+      twitter: "johndoe",
+      linkedin: "johndoe",
+      email: "john@example.com",
+    },
   },
   {
-    id: 'cto',
-    name: 'Jane Smith',
-    role: 'CTO',
-    bio: 'Jane leads our technical team with expertise in software development and system architecture.',
-    image: '/team/jane-smith.jpg',
-    department: 'leadership',
+    id: "cto",
+    name: "Jane Smith",
+    role: "CTO",
+    bio: "Jane leads our technical team with expertise in software development and system architecture.",
+    image: "/man.png",
+    department: "leadership",
     social: {
-      twitter: 'janesmith',
-      linkedin: 'janesmith',
-      email: 'jane@example.com'
-    }
+      twitter: "janesmith",
+      linkedin: "janesmith",
+      email: "jane@example.com",
+    },
   },
   // Add more team members as needed
 ];
