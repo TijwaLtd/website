@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -82,6 +83,8 @@ export default function ProcessSection() {
                   <Image
                     src={step.image}
                     alt={step.title}
+                    width={400}
+                    height={200}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>

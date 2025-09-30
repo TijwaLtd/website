@@ -1,11 +1,10 @@
+"use client";
 
-"use client"
-
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
-import Link from 'next/link';
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -16,37 +15,37 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
+
       // Show navbar when scrolling up or at top
       if (currentScrollY < lastScrollY || currentScrollY < 100) {
         setShowNavbar(true);
-      } 
+      }
       // Hide navbar when scrolling down
       else if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setShowNavbar(false);
       }
-      
+
       setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
   const navigationItems = [
-    { name: 'Home', href: '/' },
-    { name: 'Themes', href: '/themes' },
-    { name: 'About', href: '/about' },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Themes", href: "/themes" },
+    { name: "Projects", href: "/case-studies" },
     // { name: 'Media', href: '/media' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Projects', href: '/case-studies' },
+    { name: "Blog", href: "/blog" },
   ];
 
   return (
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: showNavbar ? 0 : -100 }}
-      transition={{ duration: 0.3, ease: 'easeInOut' }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
       className="fixed top-0 w-full z-50 backdrop-blur-md bg-white/90 border-b border-gray-200/20"
     >
       <div className="px-4">
@@ -63,30 +62,30 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-        
+
           {/* CTA Button */}
           <div className="hidden md:flex">
-          <nav className="hidden md:flex space-x-4">
-            {navigationItems.map((item) => {
-              const isActive = pathname === item.href;
-              return (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={`relative px-2 py-2 text-base font-semibold transition-colors duration-200 ${
-                    isActive 
-                      ? 'text-primary' 
-                      : 'text-gray-700 hover:text-primary'
-                  }`}
-                >
-                  {item.name}
-                  {isActive && (
-                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-600"></span>
-                  )}
-                </Link>
-              );
-            })}
-          </nav>
+            <nav className="hidden md:flex space-x-4">
+              {navigationItems.map((item) => {
+                const isActive = pathname === item.href;
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={`relative px-2 py-2 text-base font-semibold transition-colors duration-200 ${
+                      isActive
+                        ? "text-primary"
+                        : "text-gray-700 hover:text-primary"
+                    }`}
+                  >
+                    {item.name}
+                    {isActive && (
+                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-600"></span>
+                    )}
+                  </Link>
+                );
+              })}
+            </nav>
 
             <Link
               href="/contact"
@@ -111,7 +110,7 @@ export default function Navbar() {
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden border-t border-gray-200/20"
           >

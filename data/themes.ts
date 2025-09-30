@@ -4,6 +4,17 @@ export interface Theme {
   description: string;
   image: string;
   heroImage?: string;
+  introduction: {
+    title: string;
+    content: string;
+  };
+  keyAreas: {
+    title: string;
+    points: {
+      title: string;
+      description: string;
+    }[];
+  };
   keyFocusAreas: string[];
   approach: string;
   impact: string;
@@ -26,6 +37,32 @@ export const themes: Theme[] = [
       "Developing resilient strategies for long-term success in sustainable development.",
     image: "/image.png",
     heroImage: "/image.png",
+    introduction: {
+      title: "Building Sustainable and Adaptive Pathways",
+      content:
+        "Developing resilient strategies for long-term success in sustainable development.",
+    },
+    keyAreas: {
+      title: "Key Focus Areas",
+      points: [
+        {
+          title: "Climate-resilient infrastructure development",
+          description: "Building infrastructure that can withstand the impacts of climate change.",
+        },
+        {
+          title: "Sustainable resource management",
+          description: "Managing resources in a way that meets the needs of the present without compromising the ability of future generations to meet their own needs.",
+        },
+        {
+          title: "Community-based adaptation strategies",
+          description: "Working with communities to develop and implement adaptation strategies that are tailored to their specific needs and contexts.",
+        },
+        {
+          title: "Policy development for sustainability",
+          description: "Developing and advocating for policies that promote sustainability at the local, national, and international levels.",
+        },
+      ],
+    },
     keyFocusAreas: [
       "Climate-resilient infrastructure development",
       "Sustainable resource management",
@@ -49,6 +86,32 @@ export const themes: Theme[] = [
       "Leveraging cutting-edge solutions to drive progress and transformation.",
     image: "/image.png",
     heroImage: "/image.png",
+    introduction: {
+      title: "Innovation & Technology",
+      content:
+        "Leveraging cutting-edge solutions to drive progress and transformation.",
+    },
+    keyAreas: {
+      title: "Key Focus Areas",
+      points: [
+        {
+          title: "Emerging technology adoption",
+          description: "Adopting new and emerging technologies to drive innovation and progress.",
+        },
+        {
+          title: "Digital transformation",
+          description: "Transforming business processes and models to take advantage of digital technologies.",
+        },
+        {
+          title: "Smart infrastructure",
+          description: "Building and managing infrastructure that is more efficient, sustainable, and resilient.",
+        },
+        {
+          title: "Technology for social good",
+          description: "Using technology to address social and environmental challenges.",
+        },
+      ],
+    },
     keyFocusAreas: [
       "Emerging technology adoption",
       "Digital transformation",
@@ -72,6 +135,32 @@ export const themes: Theme[] = [
       "Empowering individuals and organizations through education, research, and skill development.",
     image: "/image.png",
     heroImage: "/image.png",
+    introduction: {
+      title: "Knowledge, Research & Capacity Building",
+      content:
+        "Empowering individuals and organizations through education, research, and skill development.",
+    },
+    keyAreas: {
+      title: "Key Focus Areas",
+      points: [
+        {
+          title: "Professional training programs",
+          description: "Providing training and development opportunities to professionals in the field of sustainable development.",
+        },
+        {
+          title: "Research and development",
+          description: "Conducting research and development to advance the field of sustainable development.",
+        },
+        {
+          title: "Knowledge sharing platforms",
+          description: "Creating and managing platforms for sharing knowledge and best practices in sustainable development.",
+        },
+        {
+          title: "Institutional capacity building",
+          description: "Strengthening the capacity of institutions to support sustainable development.",
+        },
+      ],
+    },
     keyFocusAreas: [
       "Professional training programs",
       "Research and development",
@@ -95,6 +184,32 @@ export const themes: Theme[] = [
       "Creating connections that drive sustainable growth and opportunity.",
     image: "/image.png",
     heroImage: "/image.png",
+    introduction: {
+      title: "Partnerships and Market Access",
+      content:
+        "Creating connections that drive sustainable growth and opportunity.",
+    },
+    keyAreas: {
+      title: "Key Focus Areas",
+      points: [
+        {
+          title: "Strategic alliances",
+          description: "Building and managing strategic alliances with partners in the public, private, and non-profit sectors.",
+        },
+        {
+          title: "Market development",
+          description: "Developing and implementing strategies to create and expand markets for sustainable products and services.",
+        },
+        {
+          title: "Investment facilitation",
+          description: "Facilitating investment in sustainable businesses and projects.",
+        },
+        {
+          title: "Cross-sector collaboration",
+          description: "Promoting collaboration across sectors to address complex challenges in sustainable development.",
+        },
+      ],
+    },
     keyFocusAreas: [
       "Strategic alliances",
       "Market development",
