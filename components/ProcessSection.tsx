@@ -1,27 +1,34 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const processSteps = [
   {
-    step: '01',
-    title: 'Community Assessment',
-    description: 'We begin by conducting thorough assessments with local communities to understand their unique needs, challenges, and existing resources.',
-    image: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&h=300&fit=crop&crop=center',
-    color: 'from-green-500 to-green-600'
+    step: "01",
+    title: "Community Assessment",
+    description:
+      "We begin by conducting thorough assessments with local communities to understand their unique needs, challenges, and existing resources.",
+    image:
+      "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&h=300&fit=crop&crop=center",
+    color: "from-green-500 to-green-600",
   },
   {
-    step: '02', 
-    title: 'Program Development',
-    description: 'Based on community input, we develop customized programs that address specific needs while building on existing strengths and capabilities.',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop&crop=center',
-    color: 'from-blue-500 to-blue-600'
+    step: "02",
+    title: "Program Development",
+    description:
+      "Based on community input, we develop customized programs that address specific needs while building on existing strengths and capabilities.",
+    image:
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop&crop=center",
+    color: "from-blue-500 to-blue-600",
   },
   {
-    step: '03',
-    title: 'Implementation & Support',
-    description: 'We work alongside communities to implement programs, provide ongoing training, and ensure sustainable long-term impact and self-sufficiency.',
-    image: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?w=400&h=300&fit=crop&crop=center',
-    color: 'from-purple-500 to-purple-600'
-  }
+    step: "03",
+    title: "Implementation & Support",
+    description:
+      "We work alongside communities to implement programs, provide ongoing training, and ensure sustainable long-term impact and self-sufficiency.",
+    image:
+      "https://images.unsplash.com/photo-1593113598332-cd288d649433?w=400&h=300&fit=crop&crop=center",
+    color: "from-purple-500 to-purple-600",
+  },
 ];
 
 export default function ProcessSection() {
@@ -39,7 +46,8 @@ export default function ProcessSection() {
             Read Our Annual Report
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Learn more about our work building food systems that are nutritious, delicious, affordable, and local.
+            Learn more about our work building food systems that are nutritious,
+            delicious, affordable, and local.
           </p>
         </motion.div>
 
@@ -60,14 +68,18 @@ export default function ProcessSection() {
                     {step.step}
                   </div>
                   <div className="relative z-10">
-                    <div className="text-2xl font-bold text-white mb-2">Step {step.step}</div>
-                    <h3 className="text-xl font-semibold text-white">{step.title}</h3>
+                    <div className="text-2xl font-bold text-white mb-2">
+                      Step {step.step}
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">
+                      {step.title}
+                    </h3>
                   </div>
                 </div>
 
                 {/* Image */}
                 <div className="relative overflow-hidden">
-                  <img
+                  <Image
                     src={step.image}
                     alt={step.title}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"

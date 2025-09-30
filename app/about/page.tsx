@@ -1,37 +1,35 @@
 "use client";
 
-import { motion } from 'framer-motion';
-import { Users, Target, Heart, Globe, BookOpen, Eye, BarChart3, Leaf, TrendingUp, Handshake, BrainCircuit } from 'lucide-react'; // Icons are used in the component
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import Image from 'next/image';
+import { motion } from "framer-motion";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Image from "next/image";
 
 const AboutPage = () => {
-
   const teamMembers = [
     {
       name: "Calvin Otieno",
       role: "Agronomy & Plant Breeding",
       bio: "Pursuing a Master's in Plant Breeding, with experience in GIS, data management, and molecular biology techniques.",
-      image: "/placeholder.png"
+      image: "/placeholder.png",
     },
     {
       name: "Fredrick Kariuki",
       role: "Agricultural & Biosystems Engineer",
       bio: "Specializing in sustainable farming systems, precision agriculture, and technology integration.",
-      image: "/placeholder.png"
+      image: "/placeholder.png",
     },
     {
       name: "Charles Toywa",
       role: "Agribusiness & Economics",
       bio: "Focuses on the economic aspects of agriculture, ensuring that our solutions are not only sustainable but also profitable.",
-      image: "/placeholder.png"
+      image: "/placeholder.png",
     },
     {
       name: "Mercy Philips",
       role: "Communications & PR",
       bio: "A storyteller and sustainable development practitioner, crafting stories that connect people and inspire change.",
-      image: "/placeholder.png"
-    }
+      image: "/placeholder.png",
+    },
   ];
 
   return (
@@ -48,7 +46,8 @@ const AboutPage = () => {
               About FiveWell Africa
             </h1>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed max-w-3xl mx-auto">
-              FiveWell Africa stands as the convergence of five journeys, five pillars of expertise, and one well of solutions.
+              FiveWell Africa stands as the convergence of five journeys, five
+              pillars of expertise, and one well of solutions.
             </p>
           </motion.div>
         </div>
@@ -66,9 +65,9 @@ const AboutPage = () => {
             >
               Our Story
             </motion.h2>
-            <motion.div 
+            <motion.div
               initial={{ width: 0 }}
-              animate={{ width: '80px' }}
+              animate={{ width: "80px" }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="h-1 bg-primary mx-auto mb-8"
             />
@@ -78,11 +77,11 @@ const AboutPage = () => {
           <div className="relative max-w-4xl mx-auto">
             {/* Vertical Line */}
             <div className="absolute left-1/2 w-0.5 h-full bg-primary"></div>
-            
+
             {/* Timeline Items */}
             <div className="space-y-12">
               {/* Item 1 */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
@@ -93,15 +92,20 @@ const AboutPage = () => {
                   <div className="absolute -left-4 top-6 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
                     1
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Our Beginning</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    Our Beginning
+                  </h3>
                   <p className="text-gray-600">
-                    When we left Kenya in the summer of 2023, we were just five experts in Agronomy, Environmental Science, Agribusiness, Agricultural Engineering, and Agricultural Extension, each seeking to sharpen our skills and expand our frontiers.
+                    When we left Kenya in the summer of 2023, we were just five
+                    experts in Agronomy, Environmental Science, Agribusiness,
+                    Agricultural Engineering, and Agricultural Extension, each
+                    seeking to sharpen our skills and expand our frontiers.
                   </p>
                 </div>
               </motion.div>
 
               {/* Item 2 */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
@@ -112,15 +116,20 @@ const AboutPage = () => {
                   <div className="absolute -right-4 top-6 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
                     2
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Inspiration in Israel</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    Inspiration in Israel
+                  </h3>
                   <p className="text-gray-600">
-                    In Israel, we worked alongside leading experts in the Arava Valley, witnessing firsthand how science, innovation, and determination could turn desert sands into fields that feed the world.
+                    In Israel, we worked alongside leading experts in the Arava
+                    Valley, witnessing firsthand how science, innovation, and
+                    determination could turn desert sands into fields that feed
+                    the world.
                   </p>
                 </div>
               </motion.div>
 
               {/* Item 3 */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
@@ -131,15 +140,21 @@ const AboutPage = () => {
                   <div className="absolute -left-4 top-6 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
                     3
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">The Birth of FiveWell</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    The Birth of FiveWell
+                  </h3>
                   <p className="text-gray-600">
-                    Inspired by this possibility, we came together to bring that spirit of innovation back home. We believed that if the desert could bloom, then Africa&apos;s challenges too could be met with solutions rooted in knowledge, technology, and collaboration.
+                    Inspired by this possibility, we came together to bring that
+                    spirit of innovation back home. We believed that if the
+                    desert could bloom, then Africa&apos;s challenges too could
+                    be met with solutions rooted in knowledge, technology, and
+                    collaboration.
                   </p>
                 </div>
               </motion.div>
 
               {/* Item 4 */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
@@ -150,9 +165,15 @@ const AboutPage = () => {
                   <div className="absolute -right-4 top-6 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
                     4
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Our Vision Today</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    Our Vision Today
+                  </h3>
                   <p className="text-gray-600">
-                    Today, FiveWell Africa stands as the convergence of five journeys, five pillars of expertise, and one well of solutions. With over 25 years of cumulative experience, we are committed to being a bridge between needs and solutions, and a partner in building a sustainable, prosperous Africa.
+                    Today, FiveWell Africa stands as the convergence of five
+                    journeys, five pillars of expertise, and one well of
+                    solutions. With over 25 years of cumulative experience, we
+                    are committed to being a bridge between needs and solutions,
+                    and a partner in building a sustainable, prosperous Africa.
                   </p>
                 </div>
               </motion.div>
@@ -178,7 +199,9 @@ const AboutPage = () => {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Meet Our Team</h2>
+                <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+                  Meet Our Team
+                </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                   {teamMembers.map((member, index) => (
                     <motion.div
@@ -198,8 +221,12 @@ const AboutPage = () => {
                         />
                       </div>
                       <div className="p-6">
-                        <h3 className="text-xl font-semibold text-gray-900">{member.name}</h3>
-                        <p className="text-primary font-medium mb-2">{member.role}</p>
+                        <h3 className="text-xl font-semibold text-gray-900">
+                          {member.name}
+                        </h3>
+                        <p className="text-primary font-medium mb-2">
+                          {member.role}
+                        </p>
                         <p className="text-gray-600 text-sm">{member.bio}</p>
                       </div>
                     </motion.div>
@@ -212,6 +239,6 @@ const AboutPage = () => {
       </section>
     </div>
   );
-}
+};
 
 export default AboutPage;

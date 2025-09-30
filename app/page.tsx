@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
 import MissionSection from "@/components/MissionSection";
 import OurWorkSection from "@/components/OurWorkSection";
-import CTASection from "@/components/CTASection";
-import AnnualReportSection from "@/components/AnnualReportSection";
 import PartnerSection from "@/components/Partners";
 import BecomePartner from "@/components/BecomePartner";
 
@@ -47,7 +45,7 @@ export default function Home() {
       {/* <AnnualReportSection /> */}
       <PartnerSection />
       <BecomePartner />
-      <CTASection />
+      {/* <CTASection /> */}
     </>
   );
 }

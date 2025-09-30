@@ -37,7 +37,7 @@ export default function Navbar() {
     { name: 'Home', href: '/' },
     { name: 'Themes', href: '/themes' },
     { name: 'About', href: '/about' },
-    { name: 'Media', href: '/media' },
+    // { name: 'Media', href: '/media' },
     { name: 'Blog', href: '/blog' },
     { name: 'Projects', href: '/case-studies' },
   ];

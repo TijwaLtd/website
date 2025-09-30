@@ -3,50 +3,44 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import { GoogleAnalytics } from '@next/third-parties/google';
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://fivewellafrica.com'),
+  metadataBase: new URL("https://fivewellafrica.com"),
   title: {
-    template: '%s | FiveWell Africa',
-    default: 'FiveWell Africa | Agriculture Consulting for a Thriving Continent',
+    template: "%s | FiveWell Africa",
+    default:
+      "FiveWell Africa | Agriculture Consulting for a Thriving Continent",
   },
-  description: 'Expert agriculture consulting and agribusiness advisory services to boost productivity and sustainability across Africa.',
+  description:
+    "Expert agriculture consulting and agribusiness advisory services to boost productivity and sustainability across Africa.",
   // viewport: {
   //   width: 'device-width',
   //   initialScale: 1,
   // },
   openGraph: {
-    title: 'FiveWell Africa | Agriculture Consulting for a Thriving Continent',
-    description: 'Expert agriculture consulting and agribusiness advisory services to boost productivity and sustainability across Africa.',
-    url: 'https://fivewellafrica.com',
-    siteName: 'FiveWell Africa',
+    title: "FiveWell Africa | Agriculture Consulting for a Thriving Continent",
+    description:
+      "Expert agriculture consulting and agribusiness advisory services to boost productivity and sustainability across Africa.",
+    url: "https://fivewellafrica.com",
+    siteName: "FiveWell Africa",
     images: [
       {
-        url: '/og-image.png', // Must be an absolute URL
+        url: "/og-image.png", // Must be an absolute URL
         width: 1200,
         height: 630,
       },
     ],
-    locale: 'en_US',
-    type: 'website',
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'FiveWell Africa | Agriculture Consulting for a Thriving Continent',
-    description: 'Expert agriculture consulting and agribusiness advisory services to boost productivity and sustainability across Africa.',
-    images: ['/og-image.png'], // Must be an absolute URL
-  }
+    card: "summary_large_image",
+    title: "FiveWell Africa | Agriculture Consulting for a Thriving Continent",
+    description:
+      "Expert agriculture consulting and agribusiness advisory services to boost productivity and sustainability across Africa.",
+    images: ["/og-image.png"], // Must be an absolute URL
+  },
 };
 
 export default function RootLayout({
@@ -57,15 +51,15 @@ export default function RootLayout({
   const webSiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "url": "https://fivewellafrica.com/",
-    "potentialAction": {
+    url: "https://fivewellafrica.com/",
+    potentialAction: {
       "@type": "SearchAction",
-      "target": {
+      target: {
         "@type": "EntryPoint",
-        "urlTemplate": "https://fivewellafrica.com/search?q={search_term_string}"
+        urlTemplate: "https://fivewellafrica.com/search?q={search_term_string}",
       },
-      "query-input": "required name=search_term_string"
-    }
+      "query-input": "required name=search_term_string",
+    },
   };
 
   return (
@@ -76,7 +70,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
         />
         <Navbar />
-        <main >{children}</main>
+        <main>{children}</main>
         <Footer />
         <GoogleAnalytics gaId="G-XXXXXXXXXX" />
       </body>
