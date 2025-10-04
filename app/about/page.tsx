@@ -3,34 +3,11 @@
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
+import Link from "next/link";
+import { teamMembers } from "@/data/team";
 
 const AboutPage = () => {
-  const teamMembers = [
-    {
-      name: "Calvin Otieno",
-      role: "Agronomy & Plant Breeding",
-      bio: "Pursuing a Master's in Plant Breeding, with experience in GIS, data management, and molecular biology techniques.",
-      image: "/placeholder.png",
-    },
-    {
-      name: "Fredrick Kariuki",
-      role: "Agricultural & Biosystems Engineer",
-      bio: "Specializing in sustainable farming systems, precision agriculture, and technology integration.",
-      image: "/placeholder.png",
-    },
-    {
-      name: "Charles Toywa",
-      role: "Agribusiness & Economics",
-      bio: "Focuses on the economic aspects of agriculture, ensuring that our solutions are not only sustainable but also profitable.",
-      image: "/placeholder.png",
-    },
-    {
-      name: "Mercy Philips",
-      role: "Communications & PR",
-      bio: "A storyteller and sustainable development practitioner, crafting stories that connect people and inspire change.",
-      image: "/placeholder.png",
-    },
-  ];
+
 
   return (
     <div className="min-h-screen">
@@ -210,7 +187,7 @@ const AboutPage = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: 0.1 * index }}
                       viewport={{ once: true }}
-                      className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow text-center"
+                      className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col h-full"
                     >
                       <div className="h-64 relative bg-gray-200">
                         <Image
@@ -220,14 +197,20 @@ const AboutPage = () => {
                           className="object-cover"
                         />
                       </div>
-                      <div className="p-6">
+                      <div className="p-6 flex-grow flex flex-col">
                         <h3 className="text-xl font-semibold text-gray-900">
                           {member.name}
                         </h3>
                         <p className="text-primary font-medium mb-2">
                           {member.role}
                         </p>
-                        <p className="text-gray-600 text-sm">{member.bio}</p>
+                        <p className="text-gray-600 text-sm mb-4 flex-grow">{member.bio}</p>
+                        <Link 
+                          href={`/team/${member.slug}`}
+                          className="mt-auto inline-block px-4 py-2 text-sm font-medium text-white bg-primary rounded-md hover:bg-primary/90 transition-colors"
+                        >
+                          Read More
+                        </Link>
                       </div>
                     </motion.div>
                   ))}

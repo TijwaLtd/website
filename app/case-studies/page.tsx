@@ -96,7 +96,7 @@ export default function CaseStudiesPage() {
                 className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
               >
                 <div className={`lg:order-${index % 2 === 0 ? "1" : "2"}`}>
-                  <p className="font-semibold text-green-600">{study.client}</p>
+                  <p className="font-semibold text-primary">{study.client}</p>
                   <h2 className="text-3xl font-bold text-gray-900 mt-2 mb-4">
                     {study.title}
                   </h2>
@@ -122,7 +122,7 @@ export default function CaseStudiesPage() {
                         key={result.label}
                         className="bg-white p-4 rounded-lg shadow-sm"
                       >
-                        <p className="text-2xl font-bold text-green-600">
+                        <p className="text-2xl font-bold text-primary">
                           {result.metric}
                         </p>
                         <p className="text-sm text-gray-500">{result.label}</p>

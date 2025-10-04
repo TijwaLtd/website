@@ -6,34 +6,34 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const heroSlides = [
   {
-    image: 'https://images.unsplash.com/photo-1492496913980-501348b61469?w=1920&h=1080&fit=crop&crop=center',
+    image: '/assets/Sustainability.jpg',
     title: 'Sustainable Solutions for a Sustainable Future',
     subtitle: 'Driving transformation in Africa and beyond through innovative and sustainable solutions.',
     cta: 'Discover Our Mission'
   },
   {
-    image: 'https://images.unsplash.com/photo-1521405924349-63a5b5a16b3b?w=1920&h=1080&fit=crop&crop=center',
-    title: 'Building Sustainable and Adaptive Pathways',
-    subtitle: 'Developing resilient strategies for long-term success.',
-    cta: 'Learn More'
+    image: '/assets/Innovation.jpg',
+    title: 'Sustainable Solutions for a Sustainable Future',
+    subtitle: 'Driving transformation in Africa and beyond through innovative and sustainable solutions.',
+    cta: 'Discover Our Mission'
   },
   {
-    image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1920&h=1080&fit=crop&crop=center',
-    title: 'Innovation & Technology',
-    subtitle: 'Leveraging cutting-edge solutions to drive progress.',
+    image: '/assets/Solar.jpg',
+    title: 'Sustainable Solutions for a Sustainable Future',
+    subtitle: 'Driving transformation in Africa and beyond through innovative and sustainable solutions.',
     cta: 'Explore Tech'
   },
-    {
-    image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1920&h=1080&fit=crop&crop=center',
-    title: 'Knowledge, Research & Capacity Building',
-    subtitle: 'Empowering communities through education and insights.',
+  {
+    image: '/assets/Mercy @ Farm.jpg',
+    title: 'Sustainable Solutions for a Sustainable Future',
+    subtitle: 'Driving transformation in Africa and beyond through innovative and sustainable solutions.',
     cta: 'See Our Research'
   },
   {
-    image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1920&h=1080&fit=crop&crop=center',
-    title: 'Partnerships and Market Access',
-    subtitle: 'Connecting opportunities and fostering collaboration.',
-    cta: 'Partner With Us'
+    image: '/assets/Partnerships.jpg',
+    title: 'Sustainable Solutions for a Sustainable Future',
+    subtitle: 'Driving transformation in Africa and beyond through innovative and sustainable solutions.',
+    cta: 'Discover Our Mission'
   }
 ];
 

@@ -46,7 +46,7 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: showNavbar ? 0 : -100 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="fixed top-0 w-full z-50 backdrop-blur-md bg-white/90 border-b border-gray-200/20"
+      className="fixed top-0 w-full z-50 bg-primary text-white border-b border-primary/20"
     >
       <div className="px-4">
         <div className="flex justify-between items-center h-24">
@@ -56,7 +56,7 @@ export default function Navbar() {
               <img
                 src="/logo.png"
                 alt="FiveWellAfrica"
-                className="h-24 w-24 my-4"
+                className="h-24 w-56 my-4"
               />
             </Link>
           </div>
@@ -74,8 +74,8 @@ export default function Navbar() {
                     href={item.href}
                     className={`relative px-2 py-2 text-base font-semibold transition-colors duration-200 ${
                       isActive
-                        ? "text-primary"
-                        : "text-gray-700 hover:text-primary"
+                        ? "text-white font-bold"
+                        : "text-white/90 hover:text-white"
                     }`}
                   >
                     {item.name}
@@ -89,7 +89,7 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className="bg-primary text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-primary/80 transition-colors duration-200 ml-6"
+              className="bg-secondary text-primary px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors duration-200 ml-6"
             >
               Contact Us
             </Link>
@@ -99,7 +99,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-700 hover:text-green-600 p-2"
+              className="text-white hover:text-white/80 p-2"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
