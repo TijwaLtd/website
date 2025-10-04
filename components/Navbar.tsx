@@ -58,9 +58,9 @@ export default function Navbar() {
               <Image
                 src="/logo.png"
                 alt="FiveWellAfrica"
-                width={500}
-                height={500}
-                className="h-20 w-56 my-4"
+                width={300}
+                height={100}
+                className="h-16 w-auto object-contain"
               />
             </Link>
           </div>
@@ -83,7 +83,7 @@ export default function Navbar() {
                   >
                     {item.name}
                     {isActive && (
-                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-600"></span>
+                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-secondary"></span>
                     )}
                   </Link>
                 );
