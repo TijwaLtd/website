@@ -57,7 +57,7 @@ export default function CaseStudiesPage() {
   return (
     <div className="min-h-screen pt-36">
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-green-600 to-blue-700">
+      <section className="pt-20 pb-16 bg-gradient-to-br from-green-600 to-blue-700 dark:from-green-700 dark:to-blue-800">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.h1
@@ -83,7 +83,7 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Case Studies Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-20">
             {caseStudies.map((study, index) => (
@@ -97,35 +97,34 @@ export default function CaseStudiesPage() {
               >
                 <div className={`lg:order-${index % 2 === 0 ? "1" : "2"}`}>
                   <p className="font-semibold text-primary">{study.client}</p>
-                  <h2 className="text-3xl font-bold text-gray-900 mt-2 mb-4">
+                  <h2 className="text-3xl font-bold text-gray-900 dark:text-white mt-2 mb-4">
                     {study.title}
                   </h2>
 
-                  <div className="space-y-6 text-gray-600">
+                  <div className="space-y-6 text-gray-600 dark:text-gray-300">
                     <div>
-                      <h3 className="font-semibold text-gray-800 mb-2">
+                      <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
                         The Challenge
                       </h3>
                       <p>{study.challenge}</p>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-800 mb-2">
+                      <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
                         Our Solution
                       </h3>
                       <p>{study.solution}</p>
                     </div>
                   </div>
-
                   <div className="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
                     {study.results.map((result) => (
                       <div
                         key={result.label}
-                        className="bg-white p-4 rounded-lg shadow-sm"
+                        className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm dark:shadow-gray-800/30"
                       >
-                        <p className="text-2xl font-bold text-primary">
+                        <p className="text-2xl font-bold text-primary dark:text-white">
                           {result.metric}
                         </p>
-                        <p className="text-sm text-gray-500">{result.label}</p>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">{result.label}</p>
                       </div>
                     ))}
                   </div>
@@ -136,7 +135,7 @@ export default function CaseStudiesPage() {
                     alt={study.title}
                     width={800}
                     height={600}
-                    className="rounded-2xl shadow-2xl object-cover"
+                    className="rounded-2xl shadow-2xl object-cover dark:ring-2 dark:ring-gray-700"
                   />
                 </div>
               </motion.div>

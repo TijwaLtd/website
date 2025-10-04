@@ -29,7 +29,7 @@ export default function ThemesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white pt-24">
+    <div className="min-h-screen bg-white dark:bg-gray-900 pt-24">
       {/* Hero Section */}
       <section className="relative py-20 md:py-28 text-white overflow-hidden">
         {/* Background Image with Overlay */}
@@ -65,7 +65,7 @@ export default function ThemesPage() {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -74,10 +74,10 @@ export default function ThemesPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
                 Driving Change Through Focused Initiatives
               </h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
                 Our work is organized around strategic themes that address the
                 most pressing challenges and opportunities in our field. Each
                 theme represents a commitment to excellence and a pathway to
@@ -97,7 +97,7 @@ export default function ThemesPage() {
               </Link> */}
             </motion.div>
             <motion.div
-              className="bg-white rounded-2xl shadow-xl overflow-hidden"
+              className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -116,7 +116,7 @@ export default function ThemesPage() {
       </section>
 
       {/* Themes Grid Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -125,10 +125,10 @@ export default function ThemesPage() {
             viewport={{ once: true }}
             className="mb-16 text-center"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Explore Our Themes
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Each theme represents a pillar of our strategy for creating
               meaningful, sustainable change.
             </p>
@@ -187,7 +187,7 @@ export default function ThemesPage() {
                           {theme.title}
                         </h3>
                       </Link>
-                      <p className="text-gray-600 mb-4 md:mb-6 leading-relaxed">
+                      <p className="text-gray-600 dark:text-gray-300 mb-4 md:mb-6 leading-relaxed">
                         {theme.description}
                       </p>
                       <div className="flex flex-wrap gap-4">
@@ -204,7 +204,7 @@ export default function ThemesPage() {
                         </Link>
                         <Link
                           href={`/projects?theme=${theme.slug}`}
-                          className="inline-flex items-center px-4 py-2 text-sm md:text-base text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                          className="inline-flex items-center px-4 py-2 text-sm md:text-base text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition-colors duration-200"
                         >
                           View related projects
                         </Link>
@@ -213,7 +213,7 @@ export default function ThemesPage() {
 
                     {/* Image */}
                     <div
-                      className={`w-full md:w-72 h-72 rounded-2xl overflow-hidden flex-shrink-0 shadow-xl mt-6 md:mt-0 ${
+                      className={`w-full md:w-72 h-72 rounded-2xl overflow-hidden flex-shrink-0 shadow-xl dark:shadow-gray-900/30 mt-6 md:mt-0 ${
                         isEven ? "md:ml-8" : "md:mr-8"
                       }`}
                     >
@@ -246,31 +246,30 @@ export default function ThemesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-blue-600 dark:bg-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Make an Impact?
             </h2>
-            <p className="text-xl text-secondary max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-blue-100 dark:text-blue-200 max-w-3xl mx-auto mb-8 dark:text-gray-300">
               Join us in our mission to create sustainable change. Explore
               partnership opportunities or learn how you can get involved.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 bg-white text-primary rounded-full font-medium hover:bg-blue-50 transition-colors duration-200"
+                className="inline-flex items-center justify-center px-6 py-3 bg-white dark:bg-gray-100 text-primary rounded-full font-medium hover:bg-blue-50 dark:hover:bg-gray-200 transition-colors duration-200"
               >
                 Contact Us
               </Link>
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white rounded-full font-medium hover:bg-white hover:bg-opacity-10 transition-colors duration-200"
+                className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white rounded-full font-medium hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-20 transition-colors duration-200"
               >
                 Learn More About Us
               </Link>

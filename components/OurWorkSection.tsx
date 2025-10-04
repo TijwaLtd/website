@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 export default function OurWorkSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -17,10 +17,10 @@ export default function OurWorkSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Our Guiding Themes
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Our projects fall under four themes that capture the breadth of our expertise and vision. Each theme reflects the areas where we drive impact and partner with communities, businesses, and institutions.
           </p>
         </motion.div>
@@ -74,7 +74,7 @@ export default function OurWorkSection() {
                         {theme.title}
                       </h3>
                     </Link>
-                    <p className="text-gray-600 mb-4 md:mb-6 leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-300 mb-4 md:mb-6 leading-relaxed">
                       {theme.description}
                     </p>
                     <Link 
@@ -87,14 +87,14 @@ export default function OurWorkSection() {
                   </div>
                   
                   {/* Image */}
-                  <div className={`w-full md:w-72 h-72 rounded-2xl overflow-hidden flex-shrink-0 shadow-xl mt-6 md:mt-0 ${isEven ? 'md:ml-8' : 'md:mr-8'}`}>
+                  <div className={`w-full md:w-72 h-72 rounded-2xl overflow-hidden flex-shrink-0 shadow-xl dark:shadow-gray-800/30 mt-6 md:mt-0 ${isEven ? 'md:ml-8' : 'md:mr-8'}`}>
                     <Link href={`/themes/${theme.slug}`} className="block h-full">
                       <Image
                         src={theme.image || "/placeholder.svg"}
                         alt={theme.title}
                         width={500}
                         height={500}
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105 dark:brightness-90"
                       />
                     </Link>
                   </div>
