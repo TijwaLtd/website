@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { ModeToggle } from "./ui/modeToggle";
 
 export default function Navbar() {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -75,11 +76,10 @@ export default function Navbar() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`relative px-2 py-2 text-base font-semibold transition-colors duration-200 ${
-                      isActive
+                    className={`relative px-2 py-2 text-base font-semibold transition-colors duration-200 ${isActive
                         ? "text-white font-bold"
                         : "text-white/90 hover:text-white"
-                    }`}
+                      }`}
                   >
                     {item.name}
                     {isActive && (
@@ -96,6 +96,8 @@ export default function Navbar() {
             >
               Contact Us
             </Link>
+            <div className="ml-6">
+              <ModeToggle /></div>
           </div>
 
           {/* Mobile menu button */}

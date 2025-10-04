@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
-import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fivewellafrica.com"),
@@ -68,11 +69,19 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
         />
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
         <Navbar />
         <main>{children}</main>
         <Footer />
-        <GoogleAnalytics gaId="G-XXXXXXXXXX" />
+      
+        <GoogleAnalytics gaId="G-XXXXXXXXXX" />  </ThemeProvider>
       </body>
+    
     </html>
   );
 }
