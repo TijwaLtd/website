@@ -56,7 +56,7 @@ export default function Navbar() {
               <img
                 src="/logo.png"
                 alt="FiveWellAfrica"
-                className="h-24 w-56 my-4"
+                className="h-20 w-56 my-4"
               />
             </Link>
           </div>
@@ -89,7 +89,7 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className="bg-secondary text-primary px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors duration-200 ml-6"
+              className="bg-[#F5D7A2] text-primary px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors duration-200 ml-6"
             >
               Contact Us
             </Link>

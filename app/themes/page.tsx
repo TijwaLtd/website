@@ -8,30 +8,44 @@ import { themes } from "@/data/themes";
 export default function ThemesPage() {
   const colors = [
     "border-primary",
-    "border-secondary",
-    "border-tertiary",
-    "border-quaternary",
+    "border-primary",
+    "border-primary",
+    "border-primary",
   ];
 
   const textColors = [
     "text-primary",
-    "text-secondary",
-    "text-tertiary",
-    "text-quaternary",
+    "text-primary",
+    "text-primary",
+    "text-primary",
   ];
 
   const borderColors = [
     "border-primary hover:border-primary",
-    "border-secondary hover:border-secondary",
-    "border-tertiary hover:border-tertiary",
-    "border-quaternary hover:border-quaternary",
+    "border-primary hover:border-primary",
+    "border-primary hover:border-primary",
+    "border-primary hover:border-primary",
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pt-24">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary to-secondary text-white py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 md:py-28 text-white overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: "url('/assets/Pollution.jpg')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
+          />
+          <div className="absolute inset-0 bg-black/60"></div>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -73,13 +87,13 @@ export default function ThemesPage() {
                 areas, and the difference we&apos;re making in communities
                 worldwide.
               </p>
-              <Link
+              {/* <Link
                 href="/about"
                 className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-full font-medium hover:bg-primary/80 transition-colors duration-200"
               >
                 Learn about our approach
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+              </Link> */}
             </motion.div>
             <motion.div
               className="bg-white rounded-2xl shadow-xl overflow-hidden"

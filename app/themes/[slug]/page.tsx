@@ -1,13 +1,19 @@
-import { themes } from '@/data/themes';
+import { themes, type Theme } from '@/data/themes';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import CTASection from '@/components/CTASection';
 import WhatWeDoSection from '@/components/WhatWeDoSection';
 import ProcessSection from '@/components/ProcessSection';
 import MissionSection from '@/components/MissionSection';
-import ThirdStep from '@/components/ThirdStep';
+import Subthemes from '@/components/Subthemes';
+import CTASection from '@/components/CTASection';
+import { KeyAreasGrid } from '../_components';
+
+
+interface ThemePageProps {
+  params: { slug: string };
+}
 
 // This function generates the static paths for each theme slug
 export async function generateStaticParams() {
@@ -16,10 +22,8 @@ export async function generateStaticParams() {
   }));
 }
 
-// This is the main page component for a single theme
-export default async function ThemePage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ThemePage({ params }: ThemePageProps) {
   const { slug } = await params;
-  // Since we're using generateStaticParams, we can safely access params.slug directly
   const theme = themes.find((t) => t.slug === slug);
 
   if (!theme) {
@@ -27,52 +31,44 @@ export default async function ThemePage({ params }: { params: Promise<{ slug: st
   }
 
   return (
-    <div className="bg-white text-gray-800">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative h-[60vh] text-white">
-        <Image
-          src={theme.heroImage}
-          alt={theme.title}
-          layout="fill"
-          objectFit="cover"
-          className="absolute inset-0"
-        />
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
-          <h1 className="text-4xl md:text-6xl font-bold">{theme.title}</h1>
-          <p className="mt-4 text-lg md:text-xl max-w-2xl">{theme.description}</p>
-        </div>
-      </div>
-
-      {/* Introduction Section */}
-      <section className="py-16 px-4 md:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">{theme.introduction.title}</h2>
-          <p className="text-lg">{theme.introduction.content}</p>
-        </div>
-      </section>
-
-      {/* Key Areas Section */}
-      <section className="bg-gray-50 py-16 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">{theme.keyAreas.title}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {theme.keyAreas.points.map((point, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-2">{point.title}</h3>
-                <p>{point.description}</p>
-              </div>
-            ))}
+      <section className="relative py-20 md:py-32 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">{theme.title}</h1>
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto">{theme.description}</p>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <CTASection />
+      {/* Key Areas Section */}
+      <section className="py-16 px-4 md:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <KeyAreasGrid areas={theme.keyAreas} />
+        </div>
+      </section>
+
+      {/* Impact Section */}
+      {theme.impact && (
+        <section className="py-16 px-4 md:px-8 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-lg text-center">{theme.impact}</p>
+          </div>
+        </section>
+      )}
+
+      {/* Subthemes Section */}
+      {theme.subthemes && theme.subthemes.length > 0 && (
+        <Subthemes subthemes={theme.subthemes} />
+      )}
+
+      {/* Additional Sections */}
       <WhatWeDoSection />
-      <ProcessSection />
+      {theme.process && (
+        <ProcessSection process={theme.process} />
+      )}
       <MissionSection />
-      <ThirdStep />
     </div>
   );
 }
@@ -98,7 +94,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: theme.description,
       images: [
         {
-          url: theme.heroImage,
+          url: theme.heroImage || theme.image,  // Fallback to theme.image if heroImage is undefined,
           width: 1200,
           height: 630,
           alt: theme.title,

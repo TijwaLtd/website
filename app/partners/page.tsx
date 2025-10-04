@@ -1,6 +1,8 @@
 import BecomePartnerForm from "@/components/BecomePartnerForm";
 import PartnerSection from "@/components/Partners";
+import Image from "next/image";
 import React from "react";
+import AnimatedHero from "@/components/AnimatedHero";
 
 // Placeholder for an icon. In a real app, this would be an SVG or an icon component.
 const PlaceholderIcon = ({ className }: { className?: string }) => (
@@ -24,25 +26,25 @@ const PlaceholderIcon = ({ className }: { className?: string }) => (
 function BecomePartnerPage() {
   const benefits = [
     {
-      icon: <PlaceholderIcon className="w-12 h-12 text-green-600" />,
+      icon: <PlaceholderIcon className="w-12 h-12 text-primary" />,
       title: "Unlock Market Access",
       description:
         "Gain entry into new local and regional markets with our extensive network and logistical support.",
     },
     {
-      icon: <PlaceholderIcon className="w-12 h-12 text-green-600" />,
+      icon: <PlaceholderIcon className="w-12 h-12 text-primary" />,
       title: "Expert Agribusiness Guidance",
       description:
         "Leverage our team's deep expertise in sustainable farming, supply chain management, and market trends.",
     },
     {
-      icon: <PlaceholderIcon className="w-12 h-12 text-green-600" />,
+      icon: <PlaceholderIcon className="w-12 h-12 text-primary" />,
       title: "Access to Finance & Technology",
       description:
         "We help you connect with investors and adopt cutting-edge ag-tech to scale your operations efficiently.",
     },
     {
-      icon: <PlaceholderIcon className="w-12 h-12 text-green-600" />,
+      icon: <PlaceholderIcon className="w-12 h-12 text-primary" />,
       title: "Drive Sustainable Impact",
       description:
         "Join a movement committed to building a resilient and profitable agricultural future for Africa.",
@@ -96,25 +98,13 @@ function BecomePartnerPage() {
       title: "Launch & Grow",
       description:
         "Once we agree on the terms, we'll kick off the partnership and start working towards shared success.",
-    },
+    }
   ];
 
   return (
     <div className="bg-gray-50 text-gray-800 mt-24">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-700 to-blue-800 text-white py-24 sm:py-32">
-        <div className="absolute inset-0 bg-black opacity-30"></div>
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">
-            Partner with FiveWell Africa
-          </h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-            Join us in cultivating a prosperous and sustainable agricultural
-            landscape across Africa. Together, we can build resilient food
-            systems and empower communities.
-          </p>
-        </div>
-      </section>
+      <AnimatedHero />
 
       {/* Why Partner With Us? Section */}
       <section className="py-20">
@@ -131,7 +121,7 @@ function BecomePartnerPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start">
-                <div className="flex-shrink-0">{benefit.icon}</div>
+                <div className="flex-shrink-0 text-primary">{benefit.icon}</div>
                 <div className="ml-6">
                   <h3 className="text-xl font-semibold text-gray-900">
                     {benefit.title}
@@ -194,7 +184,7 @@ function BecomePartnerPage() {
                     )}
                     <div className="relative flex space-x-3">
                       <div>
-                        <span className="h-8 w-8 rounded-full bg-green-600 flex items-center justify-center ring-8 ring-gray-50">
+                        <span className="h-8 w-8 rounded-full bg-primary flex items-center justify-center ring-8 ring-gray-50">
                           <span className="text-white font-bold">
                             {step.step}
                           </span>
