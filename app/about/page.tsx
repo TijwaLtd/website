@@ -1,10 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { teamMembers } from "@/data/team";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { teamMembers } from "@/data/team";
 
 const AboutPage = () => {
 
@@ -204,12 +204,12 @@ const AboutPage = () => {
                         <p className="text-primary font-medium mb-2">
                           {member.role}
                         </p>
-                        <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">{member.bio}</p>
+                        {/* <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">{member.bio}</p> */}
                         <Link 
                           href={`/team/${member.slug}`}
                           className="mt-auto inline-block px-4 py-2 text-sm font-medium text-white bg-primary rounded-md hover:bg-primary/90 transition-colors"
                         >
-                          Read More
+                          View Profile
                         </Link>
                       </div>
                     </motion.div>

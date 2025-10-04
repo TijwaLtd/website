@@ -203,7 +203,7 @@ export default function TeamMemberPage({ params }: PageProps) {
                     <Briefcase className="w-5 h-5" />
                     <p className="text-xl font-semibold">{member.role}</p>
                   </motion.div>
-                  <motion.p 
+                  {/* <motion.p 
                     custom={2}
                     initial="hidden"
                     animate="visible"
@@ -211,7 +211,7 @@ export default function TeamMemberPage({ params }: PageProps) {
                     className="text-gray-600 text-base sm:text-lg italic"
                   >
                     {member.bio}
-                  </motion.p>
+                  </motion.p> */}
                 </div>
 
                 {/* Detailed Bio */}
