@@ -31,6 +31,21 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
+    id: "mercy-philips",
+    name: "Mercy Philips",
+    role: "Communications & PR",
+    bio: "A storyteller and sustainable development practitioner, crafting stories that connect people and inspire change.",
+    detailedBio: "Mercy Philips is our Communications and PR expert, with a passion for storytelling that drives social change. As a sustainable development practitioner, she crafts compelling narratives that connect communities with our mission. Mercy's expertise in strategic communication helps us share the impact of our work with diverse audiences. She develops engaging content, manages media relations, and creates campaigns that raise awareness about sustainable agriculture and its role in community development.",
+    image: "/assets/MercyPhilips.jpeg",
+    department: "operations",
+    slug: "mercy-philips",
+    social: {
+      twitter: "",
+      linkedin: "",
+      email: "",
+    },
+  },
+  {
     id: "fredrick-kariuki",
     name: "Fredrick Kariuki",
     role: "Agricultural & Biosystems Engineer",
@@ -60,19 +75,5 @@ export const teamMembers: TeamMember[] = [
       email: "",
     },
   },
-  {
-    id: "mercy-philips",
-    name: "Mercy Philips",
-    role: "Communications & PR",
-    bio: "A storyteller and sustainable development practitioner, crafting stories that connect people and inspire change.",
-    detailedBio: "Mercy Philips is our Communications and PR expert, with a passion for storytelling that drives social change. As a sustainable development practitioner, she crafts compelling narratives that connect communities with our mission. Mercy's expertise in strategic communication helps us share the impact of our work with diverse audiences. She develops engaging content, manages media relations, and creates campaigns that raise awareness about sustainable agriculture and its role in community development.",
-    image: "/assets/MercyPhilips.jpeg",
-    department: "operations",
-    slug: "mercy-philips",
-    social: {
-      twitter: "",
-      linkedin: "",
-      email: "",
-    },
-  },
+
 ];

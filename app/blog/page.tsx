@@ -1,9 +1,8 @@
-import React from "react";
-import Image from "next/image";
-import { getBlogPosts } from "@/lib/contentful";
-import type { Metadata } from "next";
 import BlogPostList from "@/components/BlogPostList";
 import MediaContnent from "@/components/Media";
+import { getBlogPosts } from "@/lib/contentful";
+import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Agricultural Insights Blog | FiveWell Africa",
@@ -30,10 +29,10 @@ const BlogPage = async () => {
   return (
     <div className="min-h-screen pt-24">
       {/* Hero Section */}
-      <div className="relative bg-green-700 py-20">
+      <div className="relative  py-20">
         <div className="absolute inset-0 overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&h=600&fit=crop"
+            src="/assets/Seedling.jpg"
             alt="Agricultural Insights Blog"
             fill
             className="object-cover opacity-20"
