@@ -1,13 +1,12 @@
 'use client';
 
-import React from 'react';
-import { notFound } from 'next/navigation';
-import Image from 'next/image';
-import { teamMembers, TeamMember } from '@/data/team';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import { TeamMember, teamMembers } from '@/data/team';
 import { motion, Variants } from 'framer-motion';
-import { Twitter, Linkedin, Mail, Briefcase, Sparkles, Award, Users } from 'lucide-react';
+import { Award, Briefcase, Linkedin, Mail, Sparkles, Twitter, Users } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import React from 'react';
 
 type PageProps = {
   params: { slug: string };

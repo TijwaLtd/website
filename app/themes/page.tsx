@@ -1,9 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ArrowRight, ChevronRight } from "lucide-react";
-import Link from "next/link";
 import { themes } from "@/data/themes";
+import { motion } from "framer-motion";
+import { ChevronRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function ThemesPage() {
   const colors = [
@@ -102,9 +103,11 @@ export default function ThemesPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <img
+              <Image
                 src="/image.png"
                 alt="Strategic Themes"
+                width={500}
+                height={500}
                 className="w-full h-full object-cover"
               />
             </motion.div>
@@ -218,9 +221,11 @@ export default function ThemesPage() {
                         href={`/themes/${theme.slug}`}
                         className="block h-full"
                       >
-                        <img
+                        <Image
                           src={theme.image || "/placeholder.svg"}
                           alt={theme.title}
+                          width={500}
+                          height={500}
                           className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                         />
                       </Link>

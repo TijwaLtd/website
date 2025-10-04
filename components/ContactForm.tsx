@@ -1,9 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useForm } from 'react-hook-form';
+import { CheckCircle, Mail, Phone, XCircle } from 'lucide-react';
 import { useState } from 'react';
-import { Mail, Phone, CheckCircle, XCircle } from 'lucide-react';
+import { useForm } from 'react-hook-form';
 
 interface ContactFormData {
   name: string;
@@ -40,7 +40,7 @@ export default function ContactForm() {
     } catch (error) {
       setSubmitStatus({
         success: false,
-        message: 'There was an error sending your message. Please try again later.'
+        message: `There was an error sending your message. Please try again later.${error}`
       });
     }
   };

@@ -1,9 +1,8 @@
 'use client';
 
+import { partners } from '@/data/partners';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { partners } from '@/data/partners';
-import { ExternalLink } from 'lucide-react';
 
 const container = {
   hidden: { opacity: 0 },

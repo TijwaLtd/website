@@ -1,13 +1,10 @@
-import { themes, type Theme } from '@/data/themes';
-import { notFound } from 'next/navigation';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Metadata } from 'next';
-import WhatWeDoSection from '@/components/WhatWeDoSection';
-import ProcessSection from '@/components/ProcessSection';
 import MissionSection from '@/components/MissionSection';
+import ProcessSection from '@/components/ProcessSection';
 import Subthemes from '@/components/Subthemes';
-import CTASection from '@/components/CTASection';
+import WhatWeDoSection from '@/components/WhatWeDoSection';
+import { themes } from '@/data/themes';
+import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import { KeyAreasGrid } from '../_components';
 
 

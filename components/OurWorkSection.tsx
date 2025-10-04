@@ -1,9 +1,10 @@
 "use client"
 
+import { themes } from '@/data/themes';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
-import { themes } from '@/data/themes';
 
 export default function OurWorkSection() {
   return (
@@ -27,7 +28,6 @@ export default function OurWorkSection() {
         <div className="space-y-16 max-w-6xl mx-auto px-4">
           {themes.map((theme, index) => {
             const isEven = index % 2 === 0;
-            const isSecondOrFourth = index % 4 === 1 || index % 4 === 3;
             const colors = [
               'border-primary',
               'border-primary/70',
@@ -89,9 +89,11 @@ export default function OurWorkSection() {
                   {/* Image */}
                   <div className={`w-full md:w-72 h-72 rounded-2xl overflow-hidden flex-shrink-0 shadow-xl mt-6 md:mt-0 ${isEven ? 'md:ml-8' : 'md:mr-8'}`}>
                     <Link href={`/themes/${theme.slug}`} className="block h-full">
-                      <img
+                      <Image
                         src={theme.image || "/placeholder.svg"}
                         alt={theme.title}
+                        width={500}
+                        height={500}
                         className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                       />
                     </Link>

@@ -1,6 +1,7 @@
 "use client"
 import { motion } from 'framer-motion';
 import { Download, ExternalLink } from 'lucide-react';
+import Image from 'next/image';
 
 export default function AnnualReportSection() {
   return (
@@ -48,9 +49,11 @@ export default function AnnualReportSection() {
             className="mt-12 flex justify-center"
           >
             <div className="relative">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1543109740-4bdb38fda756?w=300&h=400&fit=crop&crop=center"
                 alt="Tailored Food 2024 Annual Report"
+                width={500}
+                height={500}
                 className="rounded-2xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300"
               />
               <div className="absolute -top-4 -right-4 bg-secondary text-white px-4 py-2 rounded-full font-bold text-sm">

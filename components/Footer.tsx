@@ -1,6 +1,4 @@
-import React from 'react';
-import Link from 'next/link';
-import { Facebook, Twitter, Linkedin, Mail, Phone, Youtube } from 'lucide-react';
+import { Facebook, Linkedin, Mail, Phone, Twitter, Youtube } from 'lucide-react';
 
 const Footer = () => {
   return (

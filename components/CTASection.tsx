@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import { Download, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 export default function CTASection() {
   return (
@@ -38,7 +39,9 @@ export default function CTASection() {
             className="flex justify-center"
           >
             <div className="relative">
-              <img
+              <Image
+                width={500}
+                height={500}
                 src="https://images.unsplash.com/photo-1543109740-4bdb38fda756?w=400&h=500&fit=crop&crop=center"
                 alt="Annual Report Cover"
                 className="rounded-2xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300"

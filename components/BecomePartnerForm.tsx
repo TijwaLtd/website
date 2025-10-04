@@ -1,9 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useForm } from 'react-hook-form';
-import { useState } from 'react';
 import { CheckCircle, XCircle } from 'lucide-react';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 interface PartnerFormData {
   name: string;
@@ -38,7 +38,7 @@ export default function BecomePartnerForm() {
     } catch (error) {
       setSubmitStatus({
         success: false,
-        message: 'There was an error submitting your request. Please try again later.'
+        message: `${error}`
       });
     }
   };

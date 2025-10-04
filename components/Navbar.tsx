@@ -1,10 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -53,9 +54,11 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
-              <img
+              <Image
                 src="/logo.png"
                 alt="FiveWellAfrica"
+                width={500}
+                height={500}
                 className="h-20 w-56 my-4"
               />
             </Link>
