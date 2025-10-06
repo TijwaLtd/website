@@ -73,7 +73,7 @@ export default function ContactForm() {
               </div>
               <div className="ml-4">
                 <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100">Call us</h3>
-                <p className="text-gray-600 dark:text-gray-400">+254 700 000000</p>
+                <p className="text-gray-600 dark:text-gray-400">+254 741 865 915</p>
               </div>
             </div>
           </div>
@@ -194,6 +194,7 @@ export default function ContactForm() {
                   <option value="">Select a subject</option>
                   <option value="General Inquiry">General Inquiry</option>
                   <option value="Partnership">Partnership</option>
+                  <option value="Book a Consultion call">Book a Consultion call</option>
                   <option value="Career Opportunities">Career Opportunities</option>
                   <option value="Other">Other</option>
                 </select>

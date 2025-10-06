@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 const heroSlides = [
   {
@@ -24,7 +24,7 @@ const heroSlides = [
     cta: 'Explore Tech'
   },
   {
-    image: '/assets/Mercy @ Farm.jpg',
+    image: '/assets/Meditteranean.jpg',
     title: 'Sustainable Solutions for a Sustainable Future',
     subtitle: 'Driving transformation in Africa and beyond through innovative and sustainable solutions.',
     cta: 'See Our Research'
@@ -57,7 +57,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section className="relative h-screen overflow-hidden pt-20 pb-16">
       {/* Background Images */}
       {heroSlides.map((slide, index) => (
         <motion.div
@@ -77,7 +77,7 @@ export default function HeroSection() {
       ))}
 
       {/* Content */}
-      <div className="relative z-10 flex items-center justify-center h-full">
+      <div className="relative z-10 py-20 md:py-28 flex items-center justify-center h-full">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h1
             key={`title-${currentSlide}`}

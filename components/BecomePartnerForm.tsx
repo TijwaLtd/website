@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { CheckCircle, XCircle } from 'lucide-react';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -44,12 +43,14 @@ export default function BecomePartnerForm() {
   };
 
   return (
-    <div className="bg-white shadow-lg rounded-lg p-8">
-      <h2 className="text-2xl font-bold text-gray-900 mb-6">Become a Partner</h2>
+    <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 transition-colors duration-300">
+      <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Become a Partner</h2>
       
       {submitStatus && (
-        <div className={`mb-6 p-4 rounded-md ${
-          submitStatus.success ? 'bg-green-50' : 'bg-red-50'
+        <div className={`mb-6 p-4 rounded-md transition-colors duration-300 ${
+          submitStatus.success 
+            ? 'bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-800' 
+            : 'bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-800'
         }`}>
           <div className="flex">
             <div className="flex-shrink-0">
@@ -61,7 +62,9 @@ export default function BecomePartnerForm() {
             </div>
             <div className="ml-3">
               <p className={`text-sm font-medium ${
-                submitStatus.success ? 'text-green-800' : 'text-red-800'
+                submitStatus.success 
+                  ? 'text-green-800 dark:text-green-200' 
+                  : 'text-red-800 dark:text-red-200'
               }`}>
                 {submitStatus.message}
               </p>
@@ -72,7 +75,7 @@ export default function BecomePartnerForm() {
       
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-200">
             Full Name <span className="text-red-500">*</span>
           </label>
           <div className="mt-1">
@@ -80,18 +83,18 @@ export default function BecomePartnerForm() {
               type="text"
               id="name"
               {...register('name', { required: 'Name is required' })}
-              className={`block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm ${
-                errors.name ? 'border-red-300' : ''
+              className={`block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
+                errors.name ? 'border-red-300 dark:border-red-500' : ''
               }`}
             />
             {errors.name && (
-              <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
+              <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.name.message}</p>
             )}
           </div>
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-200">
             Email <span className="text-red-500">*</span>
           </label>
           <div className="mt-1">
@@ -105,18 +108,18 @@ export default function BecomePartnerForm() {
                   message: 'Invalid email address',
                 },
               })}
-              className={`block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm ${
-                errors.email ? 'border-red-300' : ''
+              className={`block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
+                errors.email ? 'border-red-300 dark:border-red-500' : ''
               }`}
             />
             {errors.email && (
-              <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
+              <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.email.message}</p>
             )}
           </div>
         </div>
 
         <div>
-          <label htmlFor="organization" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="organization" className="block text-sm font-medium text-gray-700 dark:text-gray-200">
             Organization <span className="text-red-500">*</span>
           </label>
           <div className="mt-1">
@@ -124,51 +127,44 @@ export default function BecomePartnerForm() {
               type="text"
               id="organization"
               {...register('organization', { required: 'Organization is required' })}
-              className={`block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm ${
-                errors.organization ? 'border-red-300' : ''
+              className={`block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
+                errors.organization ? 'border-red-300 dark:border-red-500' : ''
               }`}
             />
             {errors.organization && (
-              <p className="mt-1 text-sm text-red-600">{errors.organization.message}</p>
+              <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.organization.message}</p>
             )}
           </div>
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-            Tell us about your organization and why you want to partner with us <span className="text-red-500">*</span>
+          <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-200">
+            How can we collaborate? <span className="text-red-500">*</span>
           </label>
           <div className="mt-1">
             <textarea
               id="message"
               rows={4}
-              {...register('message', { 
-                required: 'Message is required',
-                minLength: {
-                  value: 20,
-                  message: 'Message must be at least 20 characters',
-                },
-              })}
-              className={`block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm ${
-                errors.message ? 'border-red-300' : ''
+              {...register('message', { required: 'Please tell us how we can collaborate' })}
+              className={`block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
+                errors.message ? 'border-red-300 dark:border-red-500' : ''
               }`}
+              defaultValue={''}
             />
             {errors.message && (
-              <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>
+              <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.message.message}</p>
             )}
           </div>
         </div>
 
         <div>
-          <motion.button
+          <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 dark:bg-blue-700 dark:hover:bg-blue-800 dark:focus:ring-blue-600"
           >
-            {isSubmitting ? 'Submitting...' : 'Submit Partnership Request'}
-          </motion.button>
+            {isSubmitting ? 'Sending...' : 'Submit'}
+          </button>
         </div>
       </form>
     </div>

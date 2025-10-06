@@ -6,8 +6,22 @@ import Link from "next/link";
 
 const BecomePartner = () => {
   return (
-    <section className="py-24 bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="relative py-24 overflow-hidden">
+      {/* Background Image with dark mode overlay */}
+      <div className="absolute inset-0 w-full h-full">
+        <div 
+          className="absolute inset-0 bg-[url('/assets/Partnerships.jpg')] bg-cover bg-center bg-no-repeat dark:brightness-50 dark:contrast-125"
+          style={{
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            filter: 'brightness(0.7) contrast(1.1)'
+          }}
+        />
+        {/* Dark overlay for better text contrast */}
+        <div className="absolute inset-0 bg-black/40 dark:bg-black/60" />
+      </div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -100,7 +100,7 @@ function BecomePartnerPage() {
   ];
 
   return (
-    <div className="bg-gray-50 text-gray-800 mt-24">
+    <div className="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 mt-24">
       {/* Hero Section */}
       <AnimatedHero />
 
@@ -108,10 +108,10 @@ function BecomePartnerPage() {
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
               Why Partner With Us?
             </h2>
-            <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               We provide the resources, expertise, and network to help you
               overcome challenges and seize opportunities.
             </p>
@@ -121,10 +121,10 @@ function BecomePartnerPage() {
               <div key={index} className="flex items-start">
                 <div className="flex-shrink-0 text-primary">{benefit.icon}</div>
                 <div className="ml-6">
-                  <h3 className="text-xl font-semibold text-gray-900">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                     {benefit.title}
                   </h3>
-                  <p className="mt-2 text-gray-600">{benefit.description}</p>
+                  <p className="mt-2 text-gray-600 dark:text-gray-300">{benefit.description}</p>
                 </div>
               </div>
             ))}
@@ -133,11 +133,11 @@ function BecomePartnerPage() {
       </section>
 
       {/* Our Ideal Partners Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-800">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">Who We&apos;re Looking For</h2>
-            <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">Who We&apos;re Looking For</h2>
+            <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               We collaborate with a diverse range of organizations that share
               our vision for a thriving African agricultural sector.
             </p>
@@ -146,12 +146,12 @@ function BecomePartnerPage() {
             {partnerProfiles.map((profile, index) => (
               <div
                 key={index}
-                className="bg-gray-50 p-8 rounded-xl shadow-sm text-center hover:shadow-lg transition-shadow duration-300"
+                className="bg-gray-50 dark:bg-gray-700 p-8 rounded-xl shadow-sm dark:shadow-gray-900/30 text-center hover:shadow-lg dark:hover:shadow-gray-900/50 transition-all duration-300"
               >
-                <h3 className="text-xl font-semibold text-gray-900">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                   {profile.title}
                 </h3>
-                <p className="mt-2 text-gray-600">{profile.description}</p>
+                <p className="mt-2 text-gray-600 dark:text-gray-300">{profile.description}</p>
               </div>
             ))}
           </div>
@@ -159,13 +159,13 @@ function BecomePartnerPage() {
       </section>
 
       {/* The Partnership Journey Section */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
               Your Journey With Us
             </h2>
-            <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               A simple, transparent process to get our partnership started.
             </p>
           </div>
@@ -176,27 +176,25 @@ function BecomePartnerPage() {
                   <div className="relative pb-8">
                     {index !== partnershipSteps.length - 1 && (
                       <span
-                        className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                        className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200 dark:bg-gray-600"
                         aria-hidden="true"
                       ></span>
                     )}
                     <div className="relative flex space-x-3">
                       <div>
-                        <span className="h-8 w-8 rounded-full bg-primary flex items-center justify-center ring-8 ring-gray-50">
+                        <span className="h-8 w-8 rounded-full bg-primary flex items-center justify-center ring-8 ring-gray-50 dark:ring-gray-800">
                           <span className="text-white font-bold">
                             {step.step}
                           </span>
                         </span>
                       </div>
-                      <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
-                        <div>
-                          <h3 className="text-xl font-semibold text-gray-900">
-                            {step.title}
-                          </h3>
-                          <p className="mt-1 text-gray-600">
-                            {step.description}
-                          </p>
-                        </div>
+                      <div className="min-w-0 flex-1 pt-1.5">
+                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                          {step.title}
+                        </h3>
+                        <p className="mt-1 text-gray-600 dark:text-gray-300">
+                          {step.description}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -208,18 +206,18 @@ function BecomePartnerPage() {
       </section>
 
       {/* Contact Form Section */}
-      <section id="form" className="py-20 bg-white">
+      <section id="form" className="py-20 bg-white dark:bg-gray-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
               Become a Partner
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
+            <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
               Ready to take the next step? Fill out the form below and a member
               of our team will be in touch shortly.
             </p>
           </div>
-          <div className="bg-white rounded-xl shadow-2xl overflow-hidden border border-gray-100">
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-700">
             <BecomePartnerForm />
           </div>
         </div>

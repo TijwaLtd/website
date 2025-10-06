@@ -1,4 +1,4 @@
-import { Facebook, Linkedin, Mail, Phone, Twitter, Youtube } from 'lucide-react';
+import { Instagram, Linkedin, Mail, Phone, Twitter } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
           </div>
           {/* Social Icons */}
           <div className="flex space-x-6">
-            <a 
+            {/* <a 
               href="https://facebook.com" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -19,9 +19,18 @@ const Footer = () => {
               aria-label="Facebook"
             >
               <Facebook className="w-6 h-6" />
+            </a> */}
+            <a 
+              href="https://www.instagram.com/fivewell.africa?igsh=MWRqdnc2YW8ycW03eQ==" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-white transition-colors"
+              aria-label="Instagram"
+            >
+              <Instagram className="w-6 h-6" />
             </a>
             <a 
-              href="https://twitter.com" 
+              href="https://x.com/FivewellAfrica" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-white transition-colors"
@@ -30,7 +39,7 @@ const Footer = () => {
               <Twitter className="w-6 h-6" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/company/fivewell-africa/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-white transition-colors"
@@ -38,7 +47,7 @@ const Footer = () => {
             >
               <Linkedin className="w-6 h-6" />
             </a>
-            <a 
+            {/* <a 
               href="https://youtube.com" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -46,16 +55,16 @@ const Footer = () => {
               aria-label="YouTube"
             >
               <Youtube className="w-6 h-6" />
-            </a>
+            </a> */}
             <a 
-              href="mailto:info@tailoredfood.org" 
+              href="mailto:info@fivewellafrica.com" 
               className="text-gray-300 hover:text-white transition-colors"
               aria-label="Email us"
             >
               <Mail className="w-6 h-6" />
             </a>
             <a 
-              href="tel:+15551234567" 
+              href="tel:+254741865915" 
               className="text-gray-300 hover:text-white transition-colors"
               aria-label="Call us"
             >
