@@ -207,7 +207,7 @@ const AboutPage = () => {
                         {/* <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">{member.bio}</p> */}
                         <Link 
                           href={`/team/${member.slug}`}
-                          className="mt-auto inline-block px-4 py-2 text-sm font-medium text-white bg-primary rounded-md hover:bg-primary/90 transition-colors"
+                          className="mt-auto inline-block px-4 py-2 text-sm font-medium text-white text-center bg-primary rounded-md hover:bg-primary/90 transition-colors"
                         >
                           View Profile
                         </Link>

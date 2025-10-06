@@ -21,7 +21,7 @@ export const teamMembers: TeamMember[] = [
     role: "Agronomy & Plant Breeding",
     bio: "Pursuing a Master's in Plant Breeding, with experience in GIS, data management, and molecular biology techniques.",
     detailedBio: "Calvin Otieno is currently pursuing a Master's degree in Plant Breeding, bringing a wealth of knowledge in agricultural sciences. With hands-on experience in Geographic Information Systems (GIS), he excels in spatial data analysis for precision agriculture. His expertise extends to molecular biology techniques, where he applies cutting-edge research methods to improve crop varieties. Calvin's work focuses on developing sustainable agricultural solutions through innovative plant breeding techniques and data-driven approaches.",
-    image: "/placeholder.png",
+    image: "/assets/Calvin.jpg",
     department: "technical",
     slug: "calvin-otieno",
     social: {
@@ -51,7 +51,7 @@ export const teamMembers: TeamMember[] = [
     role: "Agricultural & Biosystems Engineer",
     bio: "Specializing in sustainable farming systems, precision agriculture, and technology integration.",
     detailedBio: "Fredrick Kariuki is an expert in Agricultural and Biosystems Engineering, with a strong focus on sustainable farming practices. His work integrates technology with traditional farming methods to create efficient and eco-friendly agricultural systems. Fredrick specializes in precision agriculture, utilizing sensors, drones, and data analytics to optimize crop yields while minimizing environmental impact. His innovative approaches to technology integration in agriculture have helped numerous farmers increase productivity and sustainability.",
-    image: "/placeholder.png",
+    image: "/assets/karis.png",
     department: "technical",
     slug: "fredrick-kariuki",
     social: {
@@ -63,6 +63,21 @@ export const teamMembers: TeamMember[] = [
   {
     id: "charles-toywa",
     name: "Charles Toywa",
+    role: "Agribusiness & Economics",
+    bio: "Focuses on the economic aspects of agriculture, ensuring that our solutions are not only sustainable but also profitable.",
+    detailedBio: "Charles Toywa brings a unique perspective to our team with his expertise in Agribusiness and Economics. He focuses on developing economically viable agricultural solutions that balance profitability with sustainability. Charles analyzes market trends, develops business models, and creates strategies that help agricultural enterprises thrive. His work ensures that our sustainable solutions are not just environmentally sound but also economically beneficial for farmers and stakeholders across the agricultural value chain.",
+    image: "/assets/CharlesToywa.jpg",
+    department: "operations",
+    slug: "charles-toywa",
+    social: {
+      twitter: "",
+      linkedin: "",
+      email: "",
+    },
+  },
+  {
+    id: "dravian",
+    name: "Dr. Avian",
     role: "Agribusiness & Economics",
     bio: "Focuses on the economic aspects of agriculture, ensuring that our solutions are not only sustainable but also profitable.",
     detailedBio: "Charles Toywa brings a unique perspective to our team with his expertise in Agribusiness and Economics. He focuses on developing economically viable agricultural solutions that balance profitability with sustainability. Charles analyzes market trends, develops business models, and creates strategies that help agricultural enterprises thrive. His work ensures that our sustainable solutions are not just environmentally sound but also economically beneficial for farmers and stakeholders across the agricultural value chain.",
