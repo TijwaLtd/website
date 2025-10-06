@@ -7,25 +7,35 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function ThemesPage() {
-  const colors = [
-    "border-primary",
-    "border-primary",
-    "border-primary",
-    "border-primary",
-  ];
-
-  const textColors = [
-    "text-primary",
-    "text-primary",
-    "text-primary",
-    "text-primary",
-  ];
-
-  const borderColors = [
-    "border-primary hover:border-primary",
-    "border-primary hover:border-primary",
-    "border-primary hover:border-primary",
-    "border-primary hover:border-primary",
+  const themeColors = [
+    {
+      bg: 'bg-blue-50 dark:bg-blue-900/30',
+      border: 'border-blue-200 dark:border-blue-800',
+      text: 'text-blue-700 dark:text-blue-300',
+      hover: 'hover:bg-blue-100 dark:hover:bg-blue-900/50',
+      button: 'bg-blue-100 dark:bg-blue-800/50 text-blue-700 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-700/70'
+    },
+    {
+      bg: 'bg-green-50 dark:bg-green-900/30',
+      border: 'border-green-200 dark:border-green-800',
+      text: 'text-green-700 dark:text-green-300',
+      hover: 'hover:bg-green-100 dark:hover:bg-green-900/50',
+      button: 'bg-green-100 dark:bg-green-800/50 text-green-700 dark:text-green-200 hover:bg-green-200 dark:hover:bg-green-700/70'
+    },
+    {
+      bg: 'bg-amber-50 dark:bg-amber-900/30',
+      border: 'border-amber-200 dark:border-amber-800',
+      text: 'text-amber-700 dark:text-amber-300',
+      hover: 'hover:bg-amber-100 dark:hover:bg-amber-900/50',
+      button: 'bg-amber-100 dark:bg-amber-800/50 text-amber-700 dark:text-amber-200 hover:bg-amber-200 dark:hover:bg-amber-700/70'
+    },
+    {
+      bg: 'bg-purple-50 dark:bg-purple-900/30',
+      border: 'border-purple-200 dark:border-purple-800',
+      text: 'text-purple-700 dark:text-purple-300',
+      hover: 'hover:bg-purple-100 dark:hover:bg-purple-900/50',
+      button: 'bg-purple-100 dark:bg-purple-800/50 text-purple-700 dark:text-purple-200 hover:bg-purple-200 dark:hover:bg-purple-700/70'
+    }
   ];
 
   return (
@@ -77,12 +87,12 @@ export default function ThemesPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
                 Driving Change Through Focused Initiatives
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+              {/* <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
                 Our work is organized around strategic themes that address the
                 most pressing challenges and opportunities in our field. Each
                 theme represents a commitment to excellence and a pathway to
                 creating sustainable impact.
-              </p>
+              </p> */}
               <p className="text-lg text-gray-600 mb-8">
                 Explore our themes to learn more about our approach, key focus
                 areas, and the difference we&apos;re making in communities
@@ -134,113 +144,70 @@ export default function ThemesPage() {
             </p>
           </motion.div>
 
-          <div className="space-y-16 max-w-6xl mx-auto px-4">
-            {themes.map((theme, index) => {
-              const isEven = index % 2 === 0;
-
-              return (
-                <motion.div
-                  key={theme.slug}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="relative"
-                >
-                  <div
-                    className={`flex flex-col ${
-                      isEven ? "md:flex-row" : "md:flex-row-reverse"
-                    } items-start`}
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="flex flex-col lg:flex-row lg:flex-wrap -mx-4">
+              {themes.map((theme, index) => {
+                const color = themeColors[index % themeColors.length];
+                const isLarge = index % 4 === 0; // Make every 4th item larger
+                
+                return (
+                  <motion.div
+                    key={theme.slug}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className={`w-full px-4 mb-8 group ${isLarge ? 'lg:w-2/3' : 'lg:w-1/3'}`}
                   >
-                    {/* Number with circular border */}
-                    <div
-                      className={`relative flex-shrink-0 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center ${
-                        isEven ? "md:mr-6" : "md:ml-0"
-                      }`}
-                    >
-                      <div
-                        className={`absolute inset-0 rounded-full border-4 ${
-                          colors[index % colors.length]
-                        } opacity-20`}
-                      ></div>
-                      <span
-                        className={`text-3xl md:text-4xl font-bold ${
-                          textColors[index % textColors.length]
-                        }`}
-                      >
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                    </div>
-
-                    {/* Content */}
-                    <div
-                      className={`flex-1 min-w-0 -mt-1 ${
-                        isEven ? "md:pr-8" : "md:pl-8"
-                      }`}
-                    >
-                      <Link href={`/themes/${theme.slug}`} className="group">
-                        <h3
-                          className={`text-2xl md:text-3xl font-bold ${
-                            textColors[index % textColors.length]
-                          } mb-3 group-hover:underline`}
-                        >
-                          {theme.title}
-                        </h3>
-                      </Link>
-                      <p className="text-gray-600 dark:text-gray-300 mb-4 md:mb-6 leading-relaxed">
-                        {theme.description}
-                      </p>
-                      <div className="flex flex-wrap gap-4">
-                        <Link
-                          href={`/themes/${theme.slug}`}
-                          className={`inline-flex items-center px-5 py-2 border-2 ${
-                            borderColors[index % borderColors.length]
-                          } rounded-full text-sm md:text-base font-medium ${
-                            textColors[index % textColors.length]
-                          } hover:bg-opacity-10 transition-all duration-200`}
-                        >
-                          Explore theme
-                          <ChevronRight className="ml-1 h-4 w-4" />
-                        </Link>
-                        <Link
-                          href={`/projects?theme=${theme.slug}`}
-                          className="inline-flex items-center px-4 py-2 text-sm md:text-base text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition-colors duration-200"
-                        >
-                          View related projects
-                        </Link>
+                    <div className={`h-full flex flex-col rounded-2xl overflow-hidden border ${color.border} ${color.bg} ${color.hover} transition-all duration-300`}>
+                      {/* Image with gradient overlay */}
+                      <div className={`relative h-48 ${isLarge ? 'lg:h-64' : 'lg:h-48'} overflow-hidden`}>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+                        <Image
+                          src={theme.image || "/placeholder-theme.jpg"}
+                          alt={theme.title}
+                          fill
+                          className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                        <div className="absolute bottom-4 left-4 z-20">
+                          <span className={`inline-flex items-center justify-center w-10 h-10 rounded-full ${color.button} text-sm font-bold mb-2`}>
+                            {index + 1}
+                          </span>
+                          <h3 className="text-2xl font-bold text-white">
+                            <Link href={`/themes/${theme.slug}`} className="hover:underline">
+                              {theme.title}
+                            </Link>
+                          </h3>
+                        </div>
+                      </div>
+                      
+                      {/* Content */}
+                      <div className="p-6 flex-1 flex flex-col">
+                        <p className={`${color.text} mb-6 flex-grow`}>
+                          {theme.description}
+                        </p>
+                        
+                        <div className="flex flex-wrap gap-3 mt-auto">
+                          <Link
+                            href={`/themes/${theme.slug}`}
+                            className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium ${color.button} transition-all duration-200`}
+                          >
+                            Explore theme
+                            <ChevronRight className="ml-1 h-4 w-4" />
+                          </Link>
+                          <Link
+                            href={`/projects?theme=${theme.slug}`}
+                            className="inline-flex items-center px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-300 transition-colors duration-200"
+                          >
+                            View projects
+                          </Link>
+                        </div>
                       </div>
                     </div>
-
-                    {/* Image */}
-                    <div
-                      className={`w-full md:w-72 h-72 rounded-2xl overflow-hidden flex-shrink-0 shadow-xl dark:shadow-gray-900/30 mt-6 md:mt-0 ${
-                        isEven ? "md:ml-8" : "md:mr-8"
-                      }`}
-                    >
-                      <Link
-                        href={`/themes/${theme.slug}`}
-                        className="block h-full"
-                      >
-                        <Image
-                          src={theme.image || "/placeholder.svg"}
-                          alt={theme.title}
-                          width={500}
-                          height={500}
-                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                        />
-                      </Link>
-                    </div>
-                  </div>
-
-                  {/* Left border line */}
-                  <div
-                    className={`absolute left-8 md:left-10 top-0 bottom-0 w-0.5 bg-gradient-to-b ${
-                      colors[index % colors.length]
-                    } opacity-30 -z-10`}
-                  ></div>
-                </motion.div>
-              );
-            })}
+                  </motion.div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
