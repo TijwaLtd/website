@@ -145,10 +145,64 @@ export default function ThemesPage() {
           </motion.div>
 
           <div className="max-w-7xl mx-auto px-4">
-            <div className="flex flex-col lg:flex-row lg:flex-wrap -mx-4">
-              {themes.map((theme, index) => {
-                const color = themeColors[index % themeColors.length];
-                const isLarge = index % 4 === 0; // Make every 4th item larger
+            {/* First Theme - Full Width */}
+            {themes.length > 0 && (
+              <motion.div
+                key={themes[0].slug}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="w-full mb-8"
+              >
+                <div className={`h-full flex flex-col lg:flex-row rounded-2xl overflow-hidden border ${themeColors[0].border} ${themeColors[0].bg} ${themeColors[0].hover} transition-all duration-300`}>
+                  {/* Image */}
+                  <div className="lg:w-1/2 h-80 lg:h-[32rem]">
+                    <div className="relative h-full w-full">
+                      <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent z-10"></div>
+                      <Image
+                        src={themes[0].image || "/placeholder-theme.jpg"}
+                        alt={themes[0].title}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        priority
+                      />
+                      <div className="absolute bottom-4 left-4 z-20">
+                        <span className={`inline-flex items-center justify-center w-12 h-12 rounded-full ${themeColors[0].button} text-base font-bold mb-3`}>
+                          01
+                        </span>
+                        <h3 className="text-3xl font-bold text-white">
+                          <Link href={`/themes/${themes[0].slug}`} className="hover:underline">
+                            {themes[0].title}
+                          </Link>
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="lg:w-1/2 p-8 flex flex-col justify-center">
+                    <p className={`${themeColors[0].text} text-lg mb-8`}>
+                      {themes[0].description}
+                    </p>
+                    <div className="mt-6">
+                      <Link
+                        href={`/themes/${themes[0].slug}`}
+                        className={`inline-flex items-center px-6 py-3 rounded-full text-base font-medium ${themeColors[0].button} transition-all duration-200 hover:opacity-90`}
+                      >
+                        Explore theme
+                        <ChevronRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+
+            {/* Other Themes - Grid Layout */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+              {themes.slice(1).map((theme, index) => {
+                const color = themeColors[(index + 1) % themeColors.length];
                 
                 return (
                   <motion.div
@@ -157,23 +211,24 @@ export default function ThemesPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className={`w-full px-4 mb-8 group ${isLarge ? 'lg:w-2/3' : 'lg:w-1/3'}`}
+                    className="w-full px-4 mb-8 group"
                   >
                     <div className={`h-full flex flex-col rounded-2xl overflow-hidden border ${color.border} ${color.bg} ${color.hover} transition-all duration-300`}>
                       {/* Image with gradient overlay */}
-                      <div className={`relative h-48 ${isLarge ? 'lg:h-64' : 'lg:h-48'} overflow-hidden`}>
+                      <div className="relative h-64 overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
                         <Image
                           src={theme.image || "/placeholder-theme.jpg"}
                           alt={theme.title}
                           fill
-                          className="object-cover transition-transform duration-700 group-hover:scale-110"
+                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
                         <div className="absolute bottom-4 left-4 z-20">
                           <span className={`inline-flex items-center justify-center w-10 h-10 rounded-full ${color.button} text-sm font-bold mb-2`}>
-                            {index + 1}
+                            {index + 2}
                           </span>
-                          <h3 className="text-2xl font-bold text-white">
+                          <h3 className="text-xl font-bold text-white">
                             <Link href={`/themes/${theme.slug}`} className="hover:underline">
                               {theme.title}
                             </Link>
@@ -183,23 +238,17 @@ export default function ThemesPage() {
                       
                       {/* Content */}
                       <div className="p-6 flex-1 flex flex-col">
-                        <p className={`${color.text} mb-6 flex-grow`}>
+                        <p className={`${color.text} text-sm mb-6 line-clamp-3`}>
                           {theme.description}
                         </p>
                         
-                        <div className="flex flex-wrap gap-3 mt-auto">
+                        <div className="mt-4">
                           <Link
                             href={`/themes/${theme.slug}`}
-                            className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium ${color.button} transition-all duration-200`}
+                            className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium ${color.button} transition-all duration-200 hover:opacity-90`}
                           >
-                            Explore theme
-                            <ChevronRight className="ml-1 h-4 w-4" />
-                          </Link>
-                          <Link
-                            href={`/projects?theme=${theme.slug}`}
-                            className="inline-flex items-center px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary-300 transition-colors duration-200"
-                          >
-                            View projects
+                            Learn more
+                            <ChevronRight className="ml-2 h-4 w-4" />
                           </Link>
                         </div>
                       </div>
@@ -232,14 +281,9 @@ export default function ThemesPage() {
                 href="/contact"
                 className="inline-flex items-center justify-center px-6 py-3 bg-white dark:bg-gray-100 text-primary rounded-full font-medium hover:bg-blue-50 dark:hover:bg-gray-200 transition-colors duration-200"
               >
-                Contact Us
+                Book a Call
               </Link>
-              <Link
-                href="/about"
-                className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white rounded-full font-medium hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-20 transition-colors duration-200"
-              >
-                Learn More About Us
-              </Link>
+             
             </div>
           </motion.div>
         </div>
