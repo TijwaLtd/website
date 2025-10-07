@@ -52,342 +52,348 @@ export interface Theme {
 
 export const themes: Theme[] = [
   {
-    title: "Building Sustainable and Adaptive Pathways",
+    title: "Building Sustainable and Adaptive Pathways for Development",
     slug: "building-sustainable-and-adaptive-pathways",
-    description: "Developing resilient strategies for long-term success in sustainable development.",
+    description: "In a world of constant change, we help our partners pivot, adjust, and remain resilient while navigating shifting markets, policies, or social challenges.",
     image: "/assets/Sustainability.jpg",
     heroImage: "/assets/Sustainability.jpg",
     introduction: {
-      title: "Building Sustainable and Adaptive Pathways",
-      content: "Developing resilient strategies for long-term success in sustainable development.",
+      title: "Building Sustainable and Adaptive Pathways for Development",
+      content: "In a world of constant change, we help our partners pivot, adjust, and remain resilient while navigating shifting markets, policies, or social challenges.",
     },
     keyAreas: {
       title: "Key Focus Areas",
       points: [
         {
-          title: "Climate-resilient infrastructure development",
-          description: "Building infrastructure that can withstand the impacts of climate change.",
+          title: "Climate-resilient development",
+          description: "Creating strategies that help communities and businesses adapt to changing environmental conditions.",
         },
         {
           title: "Sustainable resource management",
-          description: "Managing resources in a way that meets the needs of the present without compromising the ability of future generations to meet their own needs.",
+          description: "Implementing practices that ensure long-term availability of natural resources.",
         },
         {
-          title: "Community-based adaptation strategies",
-          description: "Working with communities to develop and implement adaptation strategies that are tailored to their specific needs and contexts.",
+          title: "Policy and market adaptation",
+          description: "Helping organizations navigate and adapt to changing policies and market conditions.",
         },
       ],
     },
     subthemes: [
       {
-        id: "sustainable-agriculture",
-        title: "Sustainable Agriculture",
-        description: "Promoting agricultural practices that are environmentally sustainable and productive.",
+        id: "climate-smart-agriculture",
+        title: "Climate Smart Agriculture",
+        description: "Focus on sustainable food systems, improving yield, and reducing post-harvest losses.",
         image: "/assets/Herbs Greenhouse 2.jpg",
         keyPoints: [
-          "Regenerative farming techniques",
-          "Water conservation methods",
-          "Organic crop management",
-          "Soil health improvement"
+          "Sustainable farming practices",
+          "Crop diversification",
+          "Soil and water conservation",
+          "Climate-resilient crops"
         ],
+        details: "Transforming agriculture into a pathway for nourishment and prosperity."
       },
       {
-        id: "renewable-energy",
-        title: "Renewable Energy Solutions",
-        description: "Implementing clean and sustainable energy sources for communities.",
-        image: "/assets/Solar.jpg",
+        id: "circular-economy",
+        title: "Circular Economy & Resource Efficiency",
+        description: "Focus on turning waste into value through composting, renewable energy, and upcycling in agribusiness.",
+        image: "/assets/Infrastructure.jpg",
         keyPoints: [
-          "Solar power installations",
-          "Wind energy projects",
-          "Biomass solutions",
-          "Energy efficiency programs"
+          "Waste-to-resource initiatives",
+          "Renewable energy solutions",
+          "Sustainable production cycles",
+          "Resource optimization"
         ],
+        details: "Closing loops, creating value, minimizing waste.",
         stats: [
-          { value: "80%", label: "Reduction in carbon footprint" },
-          { value: "1000+", label: "Households powered" }
-        ]
-      },
-      {
-        id: "sustainable-infrastructure",
-        title: "Sustainable Infrastructure",
-        description: "Building resilient infrastructure that meets current needs without compromising future generations.",
-        image: "/assets/Infrustructure.jpg",
-        keyPoints: [
-          "Green building design",
-          "Water management systems",
-          "Waste reduction strategies",
-          "Sustainable materials"
-        ],
-        stats: [
-          { value: "50%", label: "Reduction in energy use" },
-          { value: "30%", label: "Lower maintenance costs" }
+          { value: "60%", label: "Waste reduction" },
+          { value: "200+", label: "Circular projects" }
         ]
       }
     ],
     keyFocusAreas: [
-      "Climate-resilient infrastructure development",
-      "Sustainable resource management",
-      "Community-based adaptation strategies",
-      "Policy development for sustainability",
+      "Climate-smart agriculture",
+      "Circular economy",
+      "Resource efficiency",
+      "Sustainable food systems"
     ],
     process: {
       title: "Our Implementation Process",
       steps: [
         {
-          title: "Needs Assessment",
-          description: "Conduct comprehensive community and environmental assessments to identify specific challenges and opportunities."
+          title: "Assessment",
+          description: "Analyze current practices and identify areas for sustainable transformation."
         },
         {
           title: "Solution Design",
-          description: "Co-create tailored solutions with local stakeholders, ensuring cultural appropriateness and sustainability."
+          description: "Develop tailored solutions that balance environmental and economic needs."
         },
         {
-          title: "Pilot Implementation",
-          description: "Test solutions on a small scale to evaluate effectiveness and gather community feedback."
+          title: "Pilot Testing",
+          description: "Implement solutions on a small scale to test effectiveness."
         },
         {
-          title: "Capacity Building",
-          description: "Train local teams and community members to ensure long-term sustainability of the initiatives."
+          title: "Scaling",
+          description: "Expand successful pilots to broader applications."
         },
         {
-          title: "Scale & Replicate",
-          description: "Expand successful pilots to broader regions while maintaining quality and local relevance."
+          title: "Monitoring",
+          description: "Continuously evaluate impact and make necessary adjustments."
         }
       ]
     },
-    approach:
-      "Our approach combines cutting-edge research with community engagement to develop pathways that are both environmentally sustainable and socially inclusive. We work closely with local communities to understand their unique challenges and co-create solutions that enhance resilience while promoting economic growth.",
-    impact:
-      "Through our initiatives, we've helped implement sustainable practices in over 50 communities, resulting in a 40% reduction in resource waste and improved livelihoods for thousands of families. Our adaptive strategies have been recognized by international organizations for their effectiveness in addressing climate change challenges.",
+    approach: "We combine traditional knowledge with innovative approaches to create sustainable and adaptive development pathways that work in the real world.",
+    impact: "Our sustainable pathways have helped communities and businesses adapt to change while reducing environmental impact and improving livelihoods.",
     stats: [
-      { value: "50+", label: "Communities Impacted" },
-      { value: "40%", label: "Reduction in Waste" },
-      { value: "10K+", label: "Lives Improved" },
+      { value: "100+", label: "Communities Impacted" },
+      { value: "50%+", label: "Resource Efficiency" },
+      { value: "1M+", label: "Lives Improved" },
     ],
   },
   {
-    title: "Innovation & Technology",
+    title: "Innovation and Technology",
     slug: "innovation-and-technology",
-    description:
-      "Leveraging cutting-edge solutions to drive progress and transformation.",
+    description: "Where tradition meets innovation — bringing modern solutions to age-old farming challenges.",
     image: "/assets/Innovation.jpg",
     heroImage: "/assets/Innovation.jpg",
     introduction: {
-      title: "Innovation & Technology",
-      content:
-        "Leveraging cutting-edge solutions to drive progress and transformation.",
+      title: "Innovation and Technology",
+      content: "We bring fresh thinking and creative solutions to complex challenges. Whether it's in business, development, or community transformation, we don't recycle old ideas—we design new pathways that work.",
     },
     keyAreas: {
-      title: "Key Focus Areas",
+      title: "Focus Areas",
       points: [
         {
-          title: "Emerging technology adoption",
-          description: "Adopting new and emerging technologies to drive innovation and progress.",
+          title: "Digital Agriculture",
+          description: "Leveraging technology to enhance agricultural productivity and sustainability.",
         },
         {
-          title: "Digital transformation",
-          description: "Transforming business processes and models to take advantage of digital technologies.",
+          title: "Precision Farming",
+          description: "Using data and technology to optimize farming practices and resource use.",
         },
         {
-          title: "Smart infrastructure",
-          description: "Building and managing infrastructure that is more efficient, sustainable, and resilient.",
-        },
-        {
-          title: "Technology for social good",
-          description: "Using technology to address social and environmental challenges.",
+          title: "Financial Technology",
+          description: "Developing innovative financing models to support agricultural innovation.",
         },
       ],
     },
-    subthemes: [],
+    subthemes: [
+      {
+        id: "digital-tools",
+        title: "Digital Tools & Precision Farming",
+        description: "Introducing digital tools, precision farming, bio-tech, AI, and new financing models.",
+        image: "/assets/Tech.jpg",
+        keyPoints: [
+          "AI and machine learning applications",
+          "Precision agriculture technologies",
+          "IoT and sensor networks",
+          "Data-driven decision making"
+        ],
+        details: "Where tradition meets innovation — bringing modern solutions to age-old farming challenges."
+      }
+    ],
     keyFocusAreas: [
-      "Emerging technology adoption",
       "Digital transformation",
-      "Smart infrastructure",
-      "Technology for social good",
+      "Precision agriculture",
+      "Financial innovation",
+      "Sustainable tech solutions"
     ],
     process: {
-      title: "Technology Implementation Journey",
+      title: "Technology Implementation",
       steps: [
         {
-          title: "Technology Assessment",
-          description: "Evaluate existing systems and identify technology gaps and opportunities for innovation."
+          title: "Needs Assessment",
+          description: "Identify technological gaps and opportunities."
         },
         {
-          title: "Solution Architecture",
-          description: "Design scalable and sustainable technology solutions tailored to specific needs."
+          title: "Solution Design",
+          description: "Develop customized technology solutions."
         },
         {
-          title: "Prototype Development",
-          description: "Build and test prototypes to validate concepts and gather user feedback."
+          title: "Pilot Testing",
+          description: "Test solutions in real-world conditions."
         },
         {
-          title: "Integration & Deployment",
-          description: "Seamlessly integrate new technologies with existing systems and deploy solutions."
+          title: "Training",
+          description: "Build local capacity to use and maintain technologies."
         },
         {
-          title: "Training & Support",
-          description: "Provide comprehensive training and ongoing support to ensure successful adoption."
+          title: "Scale Up",
+          description: "Expand successful implementations."
         }
       ]
     },
-    approach:
-      "We bridge the gap between technological innovation and practical implementation. Our team of experts works to identify, develop, and scale technologies that address critical challenges in sustainable development. We prioritize solutions that are accessible, scalable, and have measurable impact.",
-    impact:
-      "Our technology initiatives have facilitated the deployment of innovative solutions in over 30 countries, improving access to essential services for millions. We've supported 100+ startups and helped implement digital transformation in numerous organizations, leading to increased efficiency and expanded reach.",
+    approach: "We combine cutting-edge technology with deep sector expertise to create practical, scalable solutions that address real-world challenges in agriculture and beyond.",
+    impact: "Our technology initiatives have transformed traditional practices, improving efficiency, productivity, and sustainability across multiple sectors.",
     stats: [
-      { value: "30+", label: "Countries Reached" },
-      { value: "100+", label: "Startups Supported" },
-      { value: "5M+", label: "People Impacted" },
+      { value: "500+", label: "Tech Solutions Deployed" },
+      { value: "75%", label: "Efficiency Gains" },
+      { value: "50K+", label: "Users Trained" },
     ],
   },
   {
-    title: "Knowledge, Research & Capacity Building",
-    slug: "knowledge-research-and-capacity-building",
-    description:
-      "Empowering individuals and organizations through education, research, and skill development.",
-    image: "/assets/Windmills.jpg",
-    heroImage: "/assets/Windmills.jpg",
+    title: "Training, Research and Capacity Building",
+    slug: "training-research-capacity-building",
+    description: "We believe growth begins with knowledge. Our work is rooted in research, training, and knowledge-sharing that equips people and organizations to thrive.",
+    image: "/assets/Training.jpg",
+    heroImage: "/assets/Training.jpg",
     introduction: {
-      title: "Knowledge, Research & Capacity Building",
-      content:
-        "Empowering individuals and organizations through education, research, and skill development.",
+      title: "Training, Research and Capacity Building",
+      content: "We believe growth begins with knowledge. Our work is rooted in research, training, and knowledge-sharing that equips people and organizations to thrive.",
     },
     keyAreas: {
-      title: "Key Focus Areas",
+      title: "Focus Areas",
       points: [
         {
-          title: "Professional training programs",
-          description: "Providing training and development opportunities to professionals in the field of sustainable development.",
+          title: "Professional Development",
+          description: "Enhancing skills and knowledge for sustainable development professionals.",
         },
         {
-          title: "Research and development",
-          description: "Conducting research and development to advance the field of sustainable development.",
+          title: "Applied Research",
+          description: "Conducting research that informs policy and practice.",
         },
         {
-          title: "Knowledge sharing platforms",
-          description: "Creating and managing platforms for sharing knowledge and best practices in sustainable development.",
-        },
-        {
-          title: "Institutional capacity building",
-          description: "Strengthening the capacity of institutions to support sustainable development.",
+          title: "Knowledge Exchange",
+          description: "Creating platforms for sharing best practices and innovations.",
         },
       ],
     },
-    subthemes: [],
+    subthemes: [
+      {
+        id: "community-development",
+        title: "Community-Centered Development",
+        description: "Ensuring local farmers, producers, and SMEs remain at the heart of projects.",
+        image: "/assets/Community.jpg",
+        keyPoints: [
+          "Participatory approaches",
+          "Local capacity building",
+          "Stakeholder engagement",
+          "Sustainable livelihoods"
+        ],
+        details: "Impact-driven consulting that grows people as much as it grows profits."
+      }
+    ],
     keyFocusAreas: [
-      "Professional training programs",
-      "Research and development",
-      "Knowledge sharing platforms",
-      "Institutional capacity building",
+      "Capacity development",
+      "Applied research",
+      "Knowledge management",
+      "Community empowerment"
     ],
     process: {
-      title: "Capacity Building Framework",
+      title: "Capacity Building Approach",
       steps: [
         {
-          title: "Needs Analysis",
-          description: "Conduct thorough assessments to identify knowledge gaps and capacity building needs."
+          title: "Needs Assessment",
+          description: "Identify knowledge and skill gaps."
         },
         {
-          title: "Curriculum Development",
-          description: "Design comprehensive training programs and learning materials tailored to specific audiences."
+          title: "Program Design",
+          description: "Develop targeted training and research programs."
         },
         {
-          title: "Training Delivery",
-          description: "Implement interactive and participatory training sessions with expert facilitators."
+          title: "Implementation",
+          description: "Deliver high-quality training and conduct research."
         },
         {
-          title: "Mentorship & Coaching",
-          description: "Provide ongoing support through mentorship programs and one-on-one coaching sessions."
+          title: "Mentorship",
+          description: "Provide ongoing support and guidance."
         },
         {
-          title: "Monitoring & Evaluation",
-          description: "Continuously assess the effectiveness of training programs and make necessary adjustments."
+          title: "Evaluation",
+          description: "Measure impact and refine approaches."
         }
       ]
     },
-    approach:
-      "We believe in the power of knowledge to drive sustainable change. Our comprehensive capacity building programs combine academic rigor with practical application, equipping individuals and organizations with the skills and knowledge needed to address complex challenges. We focus on creating sustainable learning ecosystems that continue to deliver value long after our direct involvement ends.",
-    impact:
-      "To date, we've trained over 10,000 professionals, published 50+ research papers, and established 15 knowledge hubs across different regions. Our alumni network spans across 40 countries, creating a global community of change-makers committed to sustainable development.",
+    approach: "Our capacity building initiatives combine academic rigor with practical application, ensuring that knowledge translates into real-world impact. We focus on creating sustainable learning ecosystems that continue to deliver value over time.",
+    impact: "Our training and research programs have built the capacity of thousands of professionals and organizations, leading to improved practices and better development outcomes.",
     stats: [
-      { value: "10K+", label: "Professionals Trained" },
-      { value: "50+", label: "Research Papers" },
-      { value: "15", label: "Knowledge Hubs" },
+      { value: "10K+", label: "Trained Professionals" },
+      { value: "100+", label: "Research Studies" },
+      { value: "95%", label: "Satisfaction Rate" },
     ],
   },
   {
-    title: "Partnerships and Market Access",
-    slug: "partnerships-and-market-access",
-    description:
-      "Creating connections that drive sustainable growth and opportunity.",
-    image: "/assets/Solar.jpg",
-    heroImage: "/assets/Solar.jpg",
+    title: "Partnerships & Market Access",
+    slug: "partnerships-market-access",
+    description: "Bridging the gap between farmers, markets, and investors to create sustainable value chains.",
+    image: "/assets/Partnerships.jpg",
+    heroImage: "/assets/Partnerships.jpg",
     introduction: {
-      title: "Partnerships and Market Access",
-      content:
-        "Creating connections that drive sustainable growth and opportunity.",
+      title: "Partnerships & Market Access",
+      content: "Creating connections that drive sustainable growth and opportunity by linking smallholders with large markets, strengthening supply chains, and influencing policy.",
     },
     keyAreas: {
-      title: "Key Focus Areas",
+      title: "Focus Areas",
       points: [
         {
-          title: "Strategic alliances",
-          description: "Building and managing strategic alliances with partners in the public, private, and non-profit sectors.",
+          title: "Market Linkages",
+          description: "Connecting producers with domestic and international markets.",
         },
         {
-          title: "Market development",
-          description: "Developing and implementing strategies to create and expand markets for sustainable products and services.",
+          title: "Value Chain Development",
+          description: "Strengthening agricultural value chains for better market access.",
         },
         {
-          title: "Investment facilitation",
-          description: "Facilitating investment in sustainable businesses and projects.",
-        },
-        {
-          title: "Cross-sector collaboration",
-          description: "Promoting collaboration across sectors to address complex challenges in sustainable development.",
+          title: "Investment Facilitation",
+          description: "Attracting investment into sustainable agriculture and rural development.",
         },
       ],
     },
-    subthemes: [],
+    subthemes: [
+      {
+        id: "market-linkages",
+        title: "Market Access & Value Chains",
+        description: "Linking smallholders with large markets, supply chain strengthening, and policy influence.",
+        image: "/assets/Market.jpg",
+        keyPoints: [
+          "Market analysis and intelligence",
+          "Value chain development",
+          "Trade facilitation",
+          "Policy advocacy"
+        ],
+        details: "Bridging the gap between farmers, markets, and investors.",
+        stats: [
+          { value: "$50M+", label: "Trade Facilitated" },
+          { value: "5K+", label: "Farmers Connected" }
+        ]
+      }
+    ],
     keyFocusAreas: [
-      "Strategic alliances",
-      "Market development",
-      "Investment facilitation",
-      "Cross-sector collaboration",
+      "Market access",
+      "Value chain development",
+      "Trade facilitation",
+      "Investment attraction"
     ],
     process: {
-      title: "Partnership Development Cycle",
+      title: "Partnership Development",
       steps: [
         {
-          title: "Stakeholder Mapping",
-          description: "Identify and analyze potential partners based on shared goals and complementary strengths."
+          title: "Market Analysis",
+          description: "Identify market opportunities and constraints."
         },
         {
-          title: "Partnership Design",
-          description: "Define clear objectives, roles, and governance structures for the partnership."
+          title: "Stakeholder Engagement",
+          description: "Build relationships with key market actors."
         },
         {
-          title: "Agreement & Commitment",
-          description: "Formalize partnerships through clear agreements that outline expectations and commitments."
+          title: "Partnership Formation",
+          description: "Develop strategic alliances and partnerships."
         },
         {
-          title: "Joint Implementation",
-          description: "Collaboratively execute partnership activities with regular coordination and communication."
+          title: "Capacity Building",
+          description: "Strengthen market actors' capabilities."
         },
         {
-          title: "Impact Assessment & Evolution",
-          description: "Evaluate partnership outcomes and adapt strategies for continuous improvement and growth."
+          title: "Market Linkages",
+          description: "Facilitate connections between producers and markets."
         }
       ]
     },
-    approach:
-      "We believe that complex challenges require collaborative solutions. Our partnership model brings together diverse stakeholders including governments, private sector, NGOs, and local communities to create sustainable market systems. We focus on building bridges that connect resources with needs, creating value for all parties involved.",
-    impact:
-      "Our partnership initiatives have facilitated over $50M in investments, created 5,000+ jobs, and supported 200+ small and medium enterprises. We've established market linkages that have improved livelihoods for thousands of smallholder farmers and artisans while promoting sustainable business practices.",
+    approach: "We take a market-systems approach to development, working with a wide range of stakeholders to create inclusive and sustainable market systems that benefit all participants, especially smallholder farmers and rural communities.",
+    impact: "Our market access initiatives have connected thousands of smallholder farmers to profitable markets, increased incomes, and created sustainable market systems that continue to function and grow.",
     stats: [
-      { value: "$50M+", label: "Investments Facilitated" },
-      { value: "5K+", label: "Jobs Created" },
-      { value: "200+", label: "SMEs Supported" },
+      { value: "$100M+", label: "Market Value Created" },
+      { value: "50+", label: "Value Chains Strengthened" },
+      { value: "200%", label: "Farmer Incomes Increased" },
     ],
   },
 ];
