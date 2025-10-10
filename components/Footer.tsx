@@ -2,11 +2,11 @@ import { Instagram, Linkedin, Mail, Phone, Twitter } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-gray-200 py-8">
+    <footer className="bg-primary text-gray-200 py-4">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center space-y-6">
              {/* Copyright */}
-             <div className="text-sm text-center">
+             <div className="text-sm text-center mt-4">
             &copy; {new Date().getFullYear()} FiveWell Africa. All rights reserved.
           </div>
           {/* Social Icons */}
@@ -20,6 +20,7 @@ const Footer = () => {
             >
               <Facebook className="w-6 h-6" />
             </a> */}
+            <p>Contact Us</p>
             <a 
               href="https://www.instagram.com/fivewell.africa?igsh=MWRqdnc2YW8ycW03eQ==" 
               target="_blank" 

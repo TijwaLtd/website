@@ -37,7 +37,7 @@ export default function ProcessSection({ process }: ProcessSectionProps) {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 space-y-6">
           {process.steps.map((step, index) => (
             <motion.div
               key={index}
@@ -54,9 +54,9 @@ export default function ProcessSection({ process }: ProcessSectionProps) {
                     {index + 1}
                   </div>
                   <div className="relative z-10">
-                    <div className="text-2xl font-bold text-white mb-2">
+                    {/* <div className="text-2xl font-bold text-white mb-2">
                       {`Step ${index + 1}`}
-                    </div>
+                    </div> */}
                     <h3 className="text-xl font-semibold text-white">
                       {step.title}
                     </h3>
@@ -64,11 +64,11 @@ export default function ProcessSection({ process }: ProcessSectionProps) {
                 </div>
 
                 {/* Step Number Indicator */}
-                <div className="flex justify-center items-center h-48 bg-gray-50">
+                {/* <div className="flex justify-center items-center h-48 bg-gray-50">
                   <div className="text-8xl font-bold text-gray-200">
                     {index + 1}
                   </div>
-                </div>
+                </div> */}
 
                 {/* Content */}
                 <div className="p-6 flex-1 flex flex-col">

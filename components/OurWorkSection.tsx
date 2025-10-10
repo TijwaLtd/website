@@ -60,7 +60,7 @@ export default function OurWorkSection() {
               >
                 <div className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-start`}>
                   {/* Number with circular border */}
-                  <div className={`relative flex-shrink-0 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center ${isEven ? 'md:mr-6' : 'md:ml-0'}`}>
+                  <div className={`relative mt-12 flex-shrink-0 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center ${isEven ? 'md:mr-6' : 'md:ml-0'}`}>
                     <div className={`absolute inset-0 rounded-full border-4 ${colors[index % colors.length]} opacity-20`}></div>
                     <span className={`text-3xl md:text-4xl font-bold ${textColors[index % textColors.length]}`}>
                       {String(index + 1).padStart(2, '0')}
@@ -68,8 +68,8 @@ export default function OurWorkSection() {
                   </div>
                   
                   {/* Content */}
-                  <div className={`flex-1 min-w-0 -mt-1 ${isEven ? 'md:pr-8' : 'md:pl-8'}`}>
-                    <Link href={`/themes/${theme.slug}`} className="group">
+                  <div className={`flex-1 min-w-0 -mt-1 ${isEven ? 'md:pr-8' : 'md:pl-8'} mt-12`}>
+                    <Link href={`/themes/`} className="group">
                       <h3 className={`text-2xl md:text-3xl font-bold ${textColors[index % textColors.length]} mb-3 group-hover:underline`}>
                         {theme.title}
                       </h3>
@@ -78,7 +78,7 @@ export default function OurWorkSection() {
                       {theme.description}
                     </p>
                     <Link 
-                      href={`/themes/${theme.slug}`}
+                      href={`/themes`}
                       className={`inline-flex items-center px-5 py-2 border-2 ${borderColors[index % borderColors.length]} rounded-full text-sm md:text-base font-medium ${textColors[index % textColors.length]} hover:bg-opacity-10 transition-all duration-200`}
                     >
                       Learn more

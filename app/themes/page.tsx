@@ -1,8 +1,9 @@
 "use client";
 
+import ProcessSection from "@/components/ProcessSection";
+import WhatWeDoSection from "@/components/WhatWeDoSection";
 import { themes } from "@/data/themes";
 import { motion } from "framer-motion";
-import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -39,7 +40,7 @@ export default function ThemesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 pt-24">
+    <div className="min-h-screen bg-white dark:bg-gray-900 pt-20">
       {/* Hero Section */}
       <section className="relative py-20 md:py-28 text-white overflow-hidden">
         {/* Background Image with Overlay */}
@@ -77,7 +78,7 @@ export default function ThemesPage() {
       {/* Introduction Section */}
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -87,24 +88,13 @@ export default function ThemesPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
                 Driving Change Through Focused Initiatives
               </h2>
-              {/* <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                Our work is organized around strategic themes that address the
-                most pressing challenges and opportunities in our field. Each
-                theme represents a commitment to excellence and a pathway to
-                creating sustainable impact.
-              </p> */}
+            
               <p className="text-lg text-gray-600 mb-8">
                 Explore our themes to learn more about our approach, key focus
                 areas, and the difference we&apos;re making in communities
                 worldwide.
               </p>
-              {/* <Link
-                href="/about"
-                className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-full font-medium hover:bg-primary/80 transition-colors duration-200"
-              >
-                Learn about our approach
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link> */}
+            
             </motion.div>
             <motion.div
               className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden"
@@ -121,12 +111,13 @@ export default function ThemesPage() {
                 className="w-full h-full object-cover"
               />
             </motion.div>
-          </div>
+          </div> */}
+            <WhatWeDoSection />
         </div>
       </section>
 
       {/* Themes Grid Section */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-800">
+      <section className="py-4 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -139,130 +130,72 @@ export default function ThemesPage() {
               Explore Our Themes
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Each theme represents a pillar of our strategy for creating
               meaningful, sustainable change.
             </p>
           </motion.div>
 
           <div className="max-w-7xl mx-auto px-4">
-            {/* First Theme - Full Width */}
-            {themes.length > 0 && (
-              <motion.div
-                key={themes[0].slug}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="w-full mb-8"
-              >
-                <div className={`h-full flex flex-col lg:flex-row rounded-2xl overflow-hidden border ${themeColors[0].border} ${themeColors[0].bg} ${themeColors[0].hover} transition-all duration-300`}>
-                  {/* Image */}
-                  <div className="lg:w-1/2 h-80 lg:h-[32rem]">
-                    <div className="relative h-full w-full">
-                      <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent z-10"></div>
-                      <Image
-                        src={themes[0].image || "/placeholder-theme.jpg"}
-                        alt={themes[0].title}
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-105"
-                        priority
-                      />
-                      <div className="absolute bottom-4 left-4 z-20">
-                        <span className={`inline-flex items-center justify-center w-12 h-12 rounded-full ${themeColors[0].button} text-base font-bold mb-3`}>
-                          01
-                        </span>
-                        <h3 className="text-3xl font-bold text-white">
-                          <Link href={`/themes/${themes[0].slug}`} className="hover:underline">
-                            {themes[0].title}
-                          </Link>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Content */}
-                  <div className="lg:w-1/2 p-8 flex flex-col justify-center">
-                    <p className={`${themeColors[0].text} text-lg mb-8`}>
-                      {themes[0].description}
-                    </p>
-                    <div className="mt-6">
-                      <Link
-                        href={`/themes/${themes[0].slug}`}
-                        className={`inline-flex items-center px-6 py-3 rounded-full text-base font-medium ${themeColors[0].button} transition-all duration-200 hover:opacity-90`}
-                      >
-                        Explore theme
-                        <ChevronRight className="ml-2 h-5 w-5" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            )}
-
-            {/* Other Themes - Grid Layout */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-              {themes.slice(1).map((theme, index) => {
-                const color = themeColors[(index + 1) % themeColors.length];
-                
-                return (
-                  <motion.div
-                    key={theme.slug}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="w-full px-4 mb-8 group"
-                  >
-                    <div className={`h-full flex flex-col rounded-2xl overflow-hidden border ${color.border} ${color.bg} ${color.hover} transition-all duration-300`}>
-                      {/* Image with gradient overlay */}
-                      <div className="relative h-64 overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+            {/* All Themes - Full Width Layout */}
+            {themes.map((theme, index) => {
+              const color = themeColors[index % themeColors.length];
+              const isEven = index % 2 === 0;
+              
+              return (
+                <motion.div
+                  key={theme.slug}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="w-full mb-12"
+                >
+                  <div className={`h-full flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} rounded-2xl overflow-hidden border ${color.border} ${color.bg} ${color.hover} transition-all duration-300`}>
+                    {/* Image */}
+                    <div className="lg:w-1/2 h-80 lg:h-[32rem]">
+                      <div className="relative h-full w-full">
+                        <div className={`absolute inset-0 ${isEven ? 'bg-gradient-to-r' : 'bg-gradient-to-l'} from-black/60 to-transparent z-10`}></div>
                         <Image
                           src={theme.image || "/placeholder-theme.jpg"}
                           alt={theme.title}
                           fill
                           className="object-cover transition-transform duration-700 group-hover:scale-105"
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          priority={index === 0}
                         />
                         <div className="absolute bottom-4 left-4 z-20">
-                          <span className={`inline-flex items-center justify-center w-10 h-10 rounded-full ${color.button} text-sm font-bold mb-2`}>
-                            {index + 2}
+                          <span className={`inline-flex items-center justify-center w-12 h-12 rounded-full ${color.button} text-base font-bold mb-3`}>
+                            {String(index + 1).padStart(2, '0')}
                           </span>
-                          <h3 className="text-xl font-bold text-white">
-                            <Link href={`/themes/${theme.slug}`} className="hover:underline">
+                          <h3 className="text-3xl font-bold text-white">
+                            <Link href={``} className="hover:underline">
                               {theme.title}
                             </Link>
                           </h3>
                         </div>
                       </div>
-                      
-                      {/* Content */}
-                      <div className="p-6 flex-1 flex flex-col">
-                        <p className={`${color.text} text-sm mb-6 line-clamp-3`}>
-                          {theme.description}
-                        </p>
-                        
-                        <div className="mt-4">
-                          <Link
-                            href={`/themes/${theme.slug}`}
-                            className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium ${color.button} transition-all duration-200 hover:opacity-90`}
-                          >
-                            Learn more
-                            <ChevronRight className="ml-2 h-4 w-4" />
-                          </Link>
-                        </div>
-                      </div>
                     </div>
-                  </motion.div>
-                );
-              })}
-            </div>
+                    
+                    {/* Content */}
+                    <div className="lg:w-1/2 p-8 flex flex-col justify-center">
+                      <p className={`${color.text} text-lg mb-8`}>
+                        {theme.description}
+                      </p>
+                    
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
+      {themes[0]?.process && (
+        <section className=" bg-gray-50 dark:bg-gray-800">
+          <ProcessSection process={themes[0].process} />
+        </section>
+      )}
 
       {/* CTA Section */}
-      <section className="py-16 bg-blue-600 dark:bg-blue-800 text-white">
+      <section className="py-16 bg-primary dark:bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

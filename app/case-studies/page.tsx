@@ -55,9 +55,9 @@ const caseStudies = [
 
 export default function CaseStudiesPage() {
   return (
-    <div className="min-h-screen pt-24">
+    <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-green-600 to-blue-700 dark:from-green-700 dark:to-blue-800">
+      <section className="py-20 bg-gradient-to-br from-primary to-primary/90 dark:from-primary/90 dark:to-primary/80">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.h1

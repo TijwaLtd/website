@@ -36,7 +36,7 @@ const PartnerSection = () => {
   return (
     <section className="relative py-16 md:py-24 overflow-hidden">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 -z-10">
+      {/* <div className="absolute inset-0 -z-10">
         <Image
           src="/assets/Partnerships.jpg"
           alt="Partnerships background"
@@ -45,13 +45,13 @@ const PartnerSection = () => {
           quality={100}
           priority
         />
-        {/* <div className="absolute inset-0 bg-black/30 dark:bg-black/70 backdrop-blur-sm"></div> */}
-      </div>
+        <div className="absolute inset-0 bg-black/30 dark:bg-black/70 backdrop-blur-sm"></div>
+      </div> */}
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">Our Partners</h2>
-          <p className="mt-4 text-lg text-gray-100 max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold  drop-shadow-lg">Our Partners</h2>
+          <p className="mt-4 text-lg  max-w-3xl mx-auto">
             We are proud to collaborate with a diverse range of partners to achieve our mission.
           </p>
         </div>

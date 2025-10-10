@@ -51,7 +51,7 @@ export default function Navbar() {
       className="fixed top-0 w-full z-50 bg-primary text-white border-b border-primary/20"
     >
       <div className="px-4">
-        <div className="flex justify-between items-center h-24">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
@@ -83,7 +83,7 @@ export default function Navbar() {
                   >
                     {item.name}
                     {isActive && (
-                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-secondary"></span>
+                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#F5D7A2]"></span>
                     )}
                   </Link>
                 );
@@ -92,11 +92,11 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className="bg-[#F5D7A2] text-primary px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors duration-200 ml-6"
+              className="bg-[#F5D7A2] text-primary px-6 py-2 mt-2 text-center rounded-full text-sm font-medium hover:bg-gray-100 transition-colors duration-200 ml-6"
             >
               Contact Us
             </Link>
-            <div className="ml-6">
+            <div className="ml-6 mt-2">
               <ModeToggle /></div>
           </div>
 

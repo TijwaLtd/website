@@ -234,8 +234,8 @@ export const themes: Theme[] = [
     title: "Training, Research and Capacity Building",
     slug: "training-research-capacity-building",
     description: "We believe growth begins with knowledge. Our work is rooted in research, training, and knowledge-sharing that equips people and organizations to thrive.",
-    image: "/assets/Training.jpg",
-    heroImage: "/assets/Training.jpg",
+    image: "/assets/Windmills.jpg",
+    heroImage: "/assets/Windmills.jpg",
     introduction: {
       title: "Training, Research and Capacity Building",
       content: "We believe growth begins with knowledge. Our work is rooted in research, training, and knowledge-sharing that equips people and organizations to thrive.",
