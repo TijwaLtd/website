@@ -48,7 +48,7 @@ export default function ThemesPage() {
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: "url('/assets/Pollution.jpg')",
+              backgroundImage: "url('/assets/hero1.png')",
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat'
