@@ -88,7 +88,7 @@ export default function OurWorkSection() {
                   
                   {/* Image */}
                   <div className={`w-full md:w-[500px] h-[400px] rounded-2xl overflow-hidden flex-shrink-0 shadow-xl dark:shadow-gray-800/30 mt-6 md:mt-0 ${isEven ? 'md:ml-12' : 'md:mr-12'}`}>
-                    <Link href={`/themes/${theme.slug}`} className="block h-full">
+                    <Link href={`/themes/`} className="block h-full">
                       <Image
                         src={theme.image || "/placeholder.svg"}
                         alt={theme.title}

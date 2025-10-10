@@ -175,11 +175,31 @@ export default function ThemesPage() {
                     </div>
                     
                     {/* Content */}
-                    <div className="lg:w-1/2 p-8 flex flex-col justify-center">
-                      <p className={`${color.text} text-lg mb-8`}>
+                    <div className="lg:w-1/2 p-2 flex flex-col justify-center">
+                      <p className={`${color.text} text-lg mb-2`}>
                         {theme.description}
                       </p>
-                    
+                      
+                      {theme.subthemes && theme.subthemes.length > 0 && (
+                        <div className="mt-2 space-y-2">
+                          <h4 className="text-lg font-semibold mb-2">Focus Areas</h4>
+                          <ol className="space-y-2">
+                            {theme.subthemes.map((subtheme, idx) => (
+                              <li key={subtheme.id} className="flex">
+                                <span className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary font-medium mr-3 mt-0.5">
+                                  {idx + 1}
+                                </span>
+                                <div>
+                                  <h5 className="font-semibold text-gray-900 dark:text-white">{subtheme.title}</h5>
+                                  <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">
+                                    {subtheme.description}
+                                  </p>
+                                </div>
+                              </li>
+                            ))}
+                          </ol>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </motion.div>
