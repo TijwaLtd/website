@@ -50,7 +50,7 @@ export default function ContactForm() {
       <div className="lg:grid lg:grid-cols-2 lg:gap-8">
         {/* Contact Information */}
         <div className="mb-12 lg:mb-0">
-          <h2 className="text-3xl font-bold text-[#F5D7A2] dark:text-white mb-6 mt-9">Get in Touch</h2>
+          <h2 className="text-3xl font-bold text-[#F5D7A2] mb-6 mt-9">Get in Touch</h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
             Have questions about our services or want to discuss a potential project?
             Fill out the form or reach out to us directly.
@@ -81,7 +81,7 @@ export default function ContactForm() {
 
         {/* Contact Form */}
         <div className="bg-white dark:bg-gray-800 shadow-lg dark:shadow-gray-900/50 rounded-lg p-8">
-          <h2 className="text-2xl font-bold text-[#F5D7A2] dark:text-white mb-6">Send us a Message</h2>
+          <h2 className="text-2xl font-bold text-[#F5D7A2] mb-6">Send us a Message</h2>
 
           {submitStatus && (
             <div className={`mb-6 p-4 rounded-md ${submitStatus.success ? 'bg-green-50 dark:bg-green-900/30' : 'bg-red-50 dark:bg-red-900/30'

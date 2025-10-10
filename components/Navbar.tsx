@@ -40,7 +40,7 @@ export default function Navbar() {
     { name: "Themes", href: "/themes" },
     { name: "Projects", href: "/case-studies" },
     // { name: 'Media', href: '/media' },
-    { name: "Blog", href: "/blog" },
+    { name: "Media", href: "/blog" },
   ];
 
   return (
