@@ -40,9 +40,7 @@ export const teamMembers: TeamMember[] = [
     department: "operations",
     slug: "mercy-philips",
     social: {
-      twitter: "",
       linkedin: "",
-      email: "",
     },
   },
   {
@@ -55,9 +53,7 @@ export const teamMembers: TeamMember[] = [
     department: "technical",
     slug: "fredrick-kariuki",
     social: {
-      twitter: "https://x.com/?lang=en",
-      linkedin: "https://x.com/?lang=en",
-      email: "https://x.com/?lang=ens",
+      linkedin: "https://www.linkedin.com/in/fredrick-kariuki/",
     },
   },
   {
@@ -70,9 +66,7 @@ export const teamMembers: TeamMember[] = [
     department: "operations",
     slug: "charles-toywa",
     social: {
-      twitter: "",
       linkedin: "",
-      email: "",
     },
   },
   {
@@ -85,9 +79,7 @@ export const teamMembers: TeamMember[] = [
     department: "technical",
     slug: "dravin-victor-odhiambo",
     social: {
-      twitter: "",
       linkedin: "",
-      email: "",
     },
   },
 

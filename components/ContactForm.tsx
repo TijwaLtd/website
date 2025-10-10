@@ -50,7 +50,7 @@ export default function ContactForm() {
       <div className="lg:grid lg:grid-cols-2 lg:gap-8">
         {/* Contact Information */}
         <div className="mb-12 lg:mb-0">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Get in Touch</h2>
+          <h2 className="text-3xl font-bold text-[#F5D7A2] dark:text-white mb-6 mt-9">Get in Touch</h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
             Have questions about our services or want to discuss a potential project?
             Fill out the form or reach out to us directly.
@@ -58,9 +58,9 @@ export default function ContactForm() {
 
           <div className="space-y-6">
             <div className="flex items-start">
-              <div className="flex-shrink-0 h-6 w-6 text-blue-600">
+              <a href="mailto:info@fivewellafrica.com" className="flex-shrink-0 h-6 w-6 text-primary hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 transition-colors">
                 <Mail className="h-6 w-6" />
-              </div>
+              </a>
               <div className="ml-4">
                 <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100">Email us</h3>
                 <p className="text-gray-600 dark:text-gray-400">info@fivewellafrica.com</p>
@@ -68,9 +68,9 @@ export default function ContactForm() {
             </div>
 
             <div className="flex items-start">
-              <div className="flex-shrink-0 h-6 w-6 text-blue-600">
+              <a href="tel:+254741865915" className="flex-shrink-0 h-6 w-6 text-primary hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 transition-colors">
                 <Phone className="h-6 w-6" />
-              </div>
+              </a>
               <div className="ml-4">
                 <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100">Call us</h3>
                 <p className="text-gray-600 dark:text-gray-400">+254 741 865 915</p>
@@ -81,7 +81,7 @@ export default function ContactForm() {
 
         {/* Contact Form */}
         <div className="bg-white dark:bg-gray-800 shadow-lg dark:shadow-gray-900/50 rounded-lg p-8">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Send us a Message</h2>
+          <h2 className="text-2xl font-bold text-[#F5D7A2] dark:text-white mb-6">Send us a Message</h2>
 
           {submitStatus && (
             <div className={`mb-6 p-4 rounded-md ${submitStatus.success ? 'bg-green-50 dark:bg-green-900/30' : 'bg-red-50 dark:bg-red-900/30'
@@ -232,7 +232,7 @@ export default function ContactForm() {
               <motion.button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-black font-bold text-xl bg-[#F5D7A2] hover:bg-[#F5D7A2] dark:bg-[#F5D7A2] dark:hover:bg-[#F5D7A2] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >

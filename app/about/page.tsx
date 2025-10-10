@@ -1,6 +1,6 @@
 "use client";
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList } from "@/components/ui/tabs";
 import { teamMembers } from "@/data/team";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -33,7 +33,7 @@ const AboutPage = () => {
       {/* Our Story Section */}
       <section className="pb-16 bg-white dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 mt-16">
             <motion.h2
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -160,26 +160,26 @@ const AboutPage = () => {
       </section>
 
       {/* Tabs for Team Section */}
-      <section className="py-12 bg-gray-50 dark:bg-gray-800">
+      <section className="bg-gray-50 dark:bg-gray-800 mb-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <Tabs defaultValue="team" className="w-full">
-            <div className="flex justify-center mb-12">
+            <div className="flex justify-center">
               <TabsList>
-                <TabsTrigger value="team">Our Team</TabsTrigger>
+                {/* <TabsTrigger value="team">Meet the Team</TabsTrigger> */}
               </TabsList>
             </div>
 
-            <TabsContent value="team" className="mt-8">
+            <TabsContent value="team" >
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
-                  Meet Our Team
+                <h2 className="text-5xl font-bold text-center text-gray-900 dark:text-white mb-12">
+                  Meet the Team
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:justify-items-center">
                   {teamMembers.map((member, index) => (
                     <motion.div
                       key={member.name}
@@ -187,7 +187,7 @@ const AboutPage = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: 0.1 * index }}
                       viewport={{ once: true }}
-                      className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col h-full"
+                      className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col h-full mx-auto w-full max-w-sm"
                     >
                       <div className="h-64 relative bg-gray-200 dark:bg-gray-700">
                         <Image

@@ -27,7 +27,7 @@ const BlogPage = async () => {
   const blogPosts = await getBlogPosts();
 
   return (
-    <div className="min-h-screen pt-24">
+    <div className="min-h-screen pt-20">
       {/* Hero Section */}
       <div className="relative  py-20">
         <div className="absolute inset-0 overflow-hidden">
@@ -35,7 +35,7 @@ const BlogPage = async () => {
             src="/assets/Seedling.jpg"
             alt="Agricultural Insights Blog"
             fill
-            className="object-cover opacity-20"
+            className="object-cover "
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">

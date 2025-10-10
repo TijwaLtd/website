@@ -124,14 +124,11 @@ export default function ThemesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="mb-16 text-center"
+            className="mb-10 text-center"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl mt-6 md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Explore Our Themes
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              meaningful, sustainable change.
-            </p>
           </motion.div>
 
           <div className="max-w-7xl mx-auto px-4">
