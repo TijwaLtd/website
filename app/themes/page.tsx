@@ -131,7 +131,7 @@ export default function ThemesPage() {
             </h2>
           </motion.div>
 
-          <div className="max-w-7xl mx-auto px-4">
+          <div className="max-w-7xl mx-auto px-4 p-12">
             {/* All Themes - Full Width Layout */}
             {themes.map((theme, index) => {
               const color = themeColors[index % themeColors.length];
