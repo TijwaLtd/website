@@ -23,7 +23,7 @@ interface ProcessSectionProps {
 
 export default function ProcessSection({ process }: ProcessSectionProps) {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -32,7 +32,7 @@ export default function ProcessSection({ process }: ProcessSectionProps) {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
             {process.title}
           </h2>
         </motion.div>
@@ -47,7 +47,7 @@ export default function ProcessSection({ process }: ProcessSectionProps) {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full flex flex-col">
+              <div className="bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full flex flex-col">
                 {/* Step Header */}
                 <div className={`bg-gradient-to-r ${colors[index % colors.length]} p-6 relative`}>
                   <div className="text-6xl font-bold text-white/20 absolute top-2 right-4">
@@ -57,7 +57,7 @@ export default function ProcessSection({ process }: ProcessSectionProps) {
                     {/* <div className="text-2xl font-bold text-white mb-2">
                       {`Step ${index + 1}`}
                     </div> */}
-                    <h3 className="text-xl font-semibold text-white">
+                    <h3 className="text-xl font-semibold text-white dark:text-white/90">
                       {step.title}
                     </h3>
                   </div>
@@ -72,7 +72,7 @@ export default function ProcessSection({ process }: ProcessSectionProps) {
 
                 {/* Content */}
                 <div className="p-6 flex-1 flex flex-col">
-                  <p className="text-gray-600 leading-relaxed flex-1">
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed flex-1">
                     {step.description}
                   </p>
                 </div>
