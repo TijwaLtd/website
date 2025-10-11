@@ -184,14 +184,26 @@ export const themes: Theme[] = [
     ],
   },
   {
-    title: "Innovation and Technology",
-    slug: "innovation-and-technology",
-    description: "We believe innovation drives transformation. At Fivewell, we leverage technology, data, and artificial intelligence to design solutions that meet evolving development needs and accelerate progress toward sustainability. Our approach blends creativity with evidence-based insights, ensuring technology serves people - not the other way around. From digital agriculture to smart monitoring tools, we create systems that improve efficiency, accuracy, and adaptability, and help translate emerging technologies into inclusive, scalable development outcomes.",
+    title: "Knowledge, Research, and Capacity Building",
+    slug: "knowledge-research-and-capacity-building",
+    description: `Knowledge is the foundation of sustainable progress. We generate, translate, and share insights that
+empower individuals, organizations, and communities to make informed decisions and lead transformation
+from within.
+Through applied research, data systems, and tailored training programs, we strengthen capacities to address
+real-world challenges while fostering innovation and leadership. By connecting evidence to action, we
+ensure that learning continuously informs impact.`,
     image: "/assets/Innovation.jpg",
     heroImage: "/assets/Innovation.jpg",
     introduction: {
-      title: "Innovation and Technology",
-      content: "We bring fresh thinking and creative solutions to complex challenges. Whether it's in business, development, or community transformation, we don't recycle old ideas—we design new pathways that work.",
+      title: "Knowledge, Research, and Capacity Building",
+      content: `Knowledge is the foundation of sustainable progress. We generate, translate, and share insights that
+empower individuals, organizations, and communities to make informed decisions and lead transformation
+from within.
+
+
+Through applied research, data systems, and tailored training programs, we strengthen capacities to address
+real-world challenges while fostering innovation and leadership. By connecting evidence to action, we
+ensure that learning continuously informs impact.`,
     },
     keyAreas: {
       title: "Focus Areas",
@@ -212,71 +224,71 @@ export const themes: Theme[] = [
     },
     subthemes: [
       {
-        id: "digital-transformation",
-        title: "Digital Transformation",
-        description: "Applying data-driven tools and platforms to strengthen decision-making and service delivery.",
-        image: "/assets/Tech.jpg",
+        id: "applied-research",
+        title: "Applied Research and Data Analytics",
+        description: "Generating evidence to inform policy and program design.",
+        image: "/assets/Applied-Research.jpg",
         keyPoints: [
-          "Data analytics platforms",
-          "Cloud-based solutions",
-          "Digital service delivery",
-          "Decision support systems"
+          "Policy research",
+          "Impact evaluation",
+          "Data visualization",
+          "Trend analysis"
         ],
-        details: "Empowering organizations with digital tools for better outcomes.",
+        details: "Transforming data into actionable insights for better decision-making.",
         stats: [
-          { value: "70%", label: "Faster decisions" },
-          { value: "45%", label: "Cost reduction" }
+          { value: "100+", label: "Research Studies" },
+          { value: "85%", label: "Policy Impact" }
         ]
       },
       {
-        id: "ai-technologies",
-        title: "AI and Emerging Technologies",
-        description: "Harnessing artificial intelligence and automation to predict trends, enhance productivity, and manage risk.",
-        image: "/assets/AI.jpg",
+        id: "capacity-strengthening",
+        title: "Capacity Strengthening",
+        description: "Building human and institutional capabilities for sustainable development.",
+        image: "/assets/Capacity-Building.jpg",
         keyPoints: [
-          "Predictive analytics",
-          "Machine learning models",
-          "Automated monitoring",
-          "Risk assessment tools"
+          "Training programs",
+          "Mentorship initiatives",
+          "Institutional development",
+          "Leadership training"
         ],
-        details: "Transforming data into actionable intelligence.",
+        details: "Empowering individuals and organizations to drive meaningful change.",
         stats: [
-          { value: "3x", label: "Productivity gain" },
-          { value: "85%", label: "Accuracy rate" }
+          { value: "5,000+", label: "Trained Professionals" },
+          { value: "95%", label: "Satisfaction Rate" }
         ]
       },
       {
-        id: "innovation-ecosystems",
-        title: "Innovation Ecosystems",
-        description: "Supporting startups, innovators, and research institutions to build technology pipelines that solve real-world problems.",
-        image: "/assets/Innovation.jpg",
+        id: "knowledge-management",
+        title: "Knowledge Management",
+        description: "Curating and disseminating insights that drive innovation and collaboration.",
+        image: "/assets/Knowledge-Management.jpg",
         keyPoints: [
-          "Startup incubation",
-          "Research partnerships",
-          "Technology transfer",
-          "Innovation hubs"
+          "Knowledge repositories",
+          "Best practice sharing",
+          "Documentation",
+          "Learning systems"
         ],
-        details: "Fostering collaboration for breakthrough solutions.",
+        details: "Ensuring knowledge is accessible and actionable for all stakeholders.",
         stats: [
-          { value: "50+", label: "Startups supported" },
-          { value: "30+", label: "Research partners" }
+          { value: "1,000+", label: "Resources Shared" },
+          { value: "10K+", label: "Users Reached" }
         ]
       },
       {
-        id: "sustainable-tech",
-        title: "Sustainable Technology Adoption",
-        description: "Ensuring that innovation is inclusive, ethical, and aligned with environmental and social priorities.",
-        image: "/assets/Sustainability.jpg",
+        id: "learning-platforms",
+        title: "Learning and Exchange Platforms",
+        description: "Creating spaces for cross-sector learning, dialogue, and shared growth.",
+        image: "/assets/Learning-Platforms.jpg",
         keyPoints: [
-          "Green technology",
-          "Inclusive design",
-          "Ethical AI frameworks",
-          "Circular economy solutions"
+          "Peer learning networks",
+          "Community of practice",
+          "Webinars & workshops",
+          "Knowledge exchanges"
         ],
-        details: "Innovation that works for people and the planet.",
+        details: "Fostering collaboration and continuous learning across sectors.",
         stats: [
-          { value: "90%", label: "Reduced waste" },
-          { value: "100%", label: "Ethical compliance" }
+          { value: "200+", label: "Events Hosted" },
+          { value: "50+", label: "Countries Engaged" }
         ]
       }
     ],
@@ -320,14 +332,31 @@ export const themes: Theme[] = [
     ],
   },
   {
-    title: "Training, Research and Capacity Building",
-    slug: "training-research-capacity-building",
-    description: "We believe growth begins with knowledge. Our work is rooted in research, training, and knowledge-sharing that equips people and organizations to thrive.",
+    title: "Innovation & Technology",
+    slug: "innovation-technology",
+    description: `We believe innovation drives transformation. At Fivewell, we leverage technology, data, and artificial
+intelligence to design solutions that meet evolving development needs and accelerate progress toward
+sustainability. Our approach blends creativity with evidence-based insights, ensuring technology serves
+people- not the other way around.
+
+From digital agriculture to smart monitoring tools, we create systems that improve efficiency, accuracy, and
+adaptability, and help translate emerging technologies into inclusive, scalable development outcomes.
+
+`,
     image: "/assets/Windmills.jpg",
     heroImage: "/assets/Windmills.jpg",
     introduction: {
-      title: "Training, Research and Capacity Building",
-      content: "We believe growth begins with knowledge. Our work is rooted in research, training, and knowledge-sharing that equips people and organizations to thrive.",
+      title: "Innovation & Technology",
+      content: `We believe innovation drives transformation. At Fivewell, we leverage technology, data, and artificial
+intelligence to design solutions that meet evolving development needs and accelerate progress toward
+sustainability. Our approach blends creativity with evidence-based insights, ensuring technology serves
+people- not the other way around.
+
+
+From digital agriculture to smart monitoring tools, we create systems that improve efficiency, accuracy, and
+adaptability, and help translate emerging technologies into inclusive, scalable development outcomes.
+
+`,
     },
     keyAreas: {
       title: "Focus Areas",
@@ -348,17 +377,72 @@ export const themes: Theme[] = [
     },
     subthemes: [
       {
-        id: "community-development",
-        title: "Community-Centered Development",
-        description: "Ensuring local farmers, producers, and SMEs remain at the heart of projects.",
-        image: "/assets/Community.jpg",
+        id: "digital-transformation",
+        title: "Digital Transformation",
+        description: "Applying data-driven tools and platforms to strengthen decision-making and service delivery.",
+        image: "/assets/Digital-Transformation.jpg",
         keyPoints: [
-          "Participatory approaches",
-          "Local capacity building",
-          "Stakeholder engagement",
-          "Sustainable livelihoods"
+          "Data analytics platforms",
+          "Cloud-based solutions",
+          "Digital service delivery",
+          "Decision support systems"
         ],
-        details: "Impact-driven consulting that grows people as much as it grows profits."
+        details: "Empowering organizations with digital tools for better outcomes.",
+        stats: [
+          { value: "70%", label: "Faster decisions" },
+          { value: "45%", label: "Cost reduction" }
+        ]
+      },
+      {
+        id: "ai-technologies",
+        title: "AI and Emerging Technologies",
+        description: "Harnessing artificial intelligence and automation to predict trends, enhance productivity, and manage risk.",
+        image: "/assets/AI-Technologies.jpg",
+        keyPoints: [
+          "Predictive analytics",
+          "Machine learning models",
+          "Automated monitoring",
+          "Risk assessment tools"
+        ],
+        details: "Transforming data into actionable intelligence.",
+        stats: [
+          { value: "3x", label: "Productivity gain" },
+          { value: "85%", label: "Accuracy rate" }
+        ]
+      },
+      {
+        id: "innovation-ecosystems",
+        title: "Innovation Ecosystems",
+        description: "Supporting startups, innovators, and research institutions to build technology pipelines that solve real-world problems.",
+        image: "/assets/Innovation-Ecosystems.jpg",
+        keyPoints: [
+          "Startup incubation",
+          "Research partnerships",
+          "Technology transfer",
+          "Innovation hubs"
+        ],
+        details: "Fostering collaboration for breakthrough solutions.",
+        stats: [
+          { value: "50+", label: "Startups supported" },
+          { value: "30+", label: "Research partners" }
+        ]
+      },
+      {
+        id: "sustainable-tech",
+        title: "Sustainable Technology Adoption",
+        description: "Ensuring that innovation is inclusive, ethical, and aligned with environmental and social priorities.",
+        image: "/assets/Sustainable-Tech.jpg",
+        keyPoints: [
+          "Green technology",
+          "Inclusive design",
+          "Ethical AI frameworks",
+          "Circular economy solutions"
+        ],
+        details: "Innovation that works for people and the planet.",
+        stats: [
+          { value: "90%", label: "Reduced waste" },
+          { value: "100%", label: "Ethical compliance" }
+        ]
       }
     ],
     keyFocusAreas: [
@@ -401,13 +485,15 @@ export const themes: Theme[] = [
     ],
   },
   {
-    title: "Partnerships & Market Access",
-    slug: "partnerships-market-access",
-    description: "Bridging the gap between farmers, markets, and investors to create sustainable value chains.",
+    title: "Partnerships",
+    slug: "partnerships",
+    description: `We work with institutions, NGOs, changemakers, governments, and private sector partners to co-create solutions that align with shared values and measurable impact goals. Our partnerships strengthen systems, amplify reach, and accelerate sustainable development across Africa.
+
+We take a facilitative approach—bridging actors, building trust, and coordinating strategies that translate ideas into tangible outcomes. Each partnership reflects our belief that long-term progress depends on collective effort and shared accountability.`,
     image: "/assets/Partnerships.jpg",
     heroImage: "/assets/Partnerships.jpg",
     introduction: {
-      title: "Partnerships & Market Access",
+      title: "Partnerships",
       content: "Creating connections that drive sustainable growth and opportunity by linking smallholders with large markets, strengthening supply chains, and influencing policy.",
     },
     keyAreas: {
@@ -429,20 +515,212 @@ export const themes: Theme[] = [
     },
     subthemes: [
       {
-        id: "market-linkages",
-        title: "Market Access & Value Chains",
-        description: "Linking smallholders with large markets, supply chain strengthening, and policy influence.",
-        image: "/assets/Market.jpg",
+        id: "institutional-partnerships",
+        title: "Institutional Partnerships",
+        description: "Supporting organizations to design, implement, and scale their impact-driven projects.",
+        image: "/assets/Institutional-Partnerships.jpg",
         keyPoints: [
-          "Market analysis and intelligence",
-          "Value chain development",
-          "Trade facilitation",
-          "Policy advocacy"
+          "Program design and implementation",
+          "Capacity building",
+          "Scale and replication",
+          "Knowledge sharing"
         ],
-        details: "Bridging the gap between farmers, markets, and investors.",
+        details: "Collaborating with organizations to amplify impact through strategic partnerships.",
         stats: [
-          { value: "$50M+", label: "Trade Facilitated" },
-          { value: "5K+", label: "Farmers Connected" }
+          { value: "50+", label: "Partners Engaged" },
+          { value: "100+", label: "Projects Supported" }
+        ]
+      },
+      {
+        id: "regional-collaboration",
+        title: "Regional and Cross-Sector Collaboration",
+        description: "Connecting global and local stakeholders to foster innovation and alignment.",
+        image: "/assets/Regional-Collaboration.jpg",
+        keyPoints: [
+          "Stakeholder engagement",
+          "Innovation facilitation",
+          "Cross-sector alignment",
+          "Knowledge exchange"
+        ],
+        details: "Bridging gaps between different sectors and regions for greater impact.",
+        stats: [
+          { value: "20+", label: "Countries Reached" },
+          { value: "10+", label: "Sectors Engaged" }
+        ]
+      },
+      {
+        id: "impact-measurement",
+        title: "Impact Alignment and Measurement",
+        description: "Developing frameworks that track progress and demonstrate shared value.",
+        image: "/assets/Impact-Measurement.jpg",
+        keyPoints: [
+          "M&E framework development",
+          "Impact assessment",
+          "Data-driven insights",
+          "Reporting and accountability"
+        ],
+        details: "Ensuring measurable and meaningful outcomes for all stakeholders.",
+        stats: [
+          { value: "95%", label: "Project Success Rate" },
+          { value: "1M+", label: "Lives Impacted" }
+        ]
+      },
+      {
+        id: "community-collaboration",
+        title: "Community-Led Collaboration",
+        description: "Engaging local actors and networks to ensure interventions are inclusive and sustainable.",
+        image: "/assets/Community-Collaboration.jpg",
+        keyPoints: [
+          "Community engagement",
+          "Local capacity building",
+          "Participatory approaches",
+          "Sustainable solutions"
+        ],
+        details: "Empowering communities to drive their own development journey.",
+        stats: [
+          { value: "500+", label: "Communities Served" },
+          { value: "10K+", label: "Local Leaders Trained" }
+        ]
+      }
+    ],
+    keyFocusAreas: [
+      "Market access",
+      "Value chain development",
+      "Trade facilitation",
+      "Investment attraction"
+    ],
+    process: {
+      title: "Partnership Development",
+      steps: [
+        {
+          title: "Market Analysis",
+          description: "Identify market opportunities and constraints."
+        },
+        {
+          title: "Stakeholder Engagement",
+          description: "Build relationships with key market actors."
+        },
+        {
+          title: "Partnership Formation",
+          description: "Develop strategic alliances and partnerships."
+        },
+        {
+          title: "Capacity Building",
+          description: "Strengthen market actors' capabilities."
+        },
+        {
+          title: "Market Linkages",
+          description: "Facilitate connections between producers and markets."
+        }
+      ]
+    },
+    approach: "We take a market-systems approach to development, working with a wide range of stakeholders to create inclusive and sustainable market systems that benefit all participants, especially smallholder farmers and rural communities.",
+    impact: "Our market access initiatives have connected thousands of smallholder farmers to profitable markets, increased incomes, and created sustainable market systems that continue to function and grow.",
+    stats: [
+      { value: "$100M+", label: "Market Value Created" },
+      { value: "50+", label: "Value Chains Strengthened" },
+      { value: "200%", label: "Farmer Incomes Increased" },
+    ],
+  },
+  {
+    title: "Market Access",
+    slug: "market-access",
+    description: `We work to open Africa to new and fairer markets by improving access, quality, and competitiveness across
+value chains. Our approach focuses on strengthening production systems, enhancing trade readiness, and
+aligning policies that enable African enterprises to thrive globally.
+
+By connecting local producers to regional and international opportunities, we help unlock growth while
+ensuring that market expansion translates into improved livelihoods and sustainable business ecosystems`,
+    image: "/assets/Market.jpg",
+    heroImage: "/assets/Market.jpg",
+    introduction: {
+      title: "Market Access",
+      content: "We work to open Africa to new and fairer markets by improving access, quality, and competitiveness across value chains. Our approach focuses on strengthening production systems, enhancing trade readiness, and aligning policies that enable African enterprises to thrive globally.",
+    },
+    keyAreas: {
+      title: "Focus Areas",
+      points: [
+        {
+          title: "Market Linkages",
+          description: "Connecting producers with domestic and international markets.",
+        },
+        {
+          title: "Value Chain Development",
+          description: "Strengthening agricultural value chains for better market access.",
+        },
+        {
+          title: "Investment Facilitation",
+          description: "Attracting investment into sustainable agriculture and rural development.",
+        },
+      ],
+    },
+    subthemes: [
+      {
+        id: "trade-facilitation",
+        title: "Trade Facilitation and Policy Advocacy",
+        description: "Promoting enabling policies and frameworks for equitable market participation.",
+        image: "/assets/Trade-Facilitation.jpg",
+        keyPoints: [
+          "Policy analysis and reform",
+          "Trade agreement support",
+          "Regulatory alignment",
+          "Stakeholder engagement"
+        ],
+        details: "Creating an enabling environment for fair and sustainable trade across Africa.",
+        stats: [
+          { value: "30+", label: "Policy Reforms Supported" },
+          { value: "20+", label: "Markets Opened" }
+        ]
+      },
+      {
+        id: "quality-standards",
+        title: "Quality Standards and Certification",
+        description: "Improving competitiveness through adherence to international standards.",
+        image: "/assets/Quality-Standards.jpg",
+        keyPoints: [
+          "Certification support",
+          "Quality management systems",
+          "Compliance training",
+          "Market requirements"
+        ],
+        details: "Helping African producers meet and exceed international quality benchmarks.",
+        stats: [
+          { value: "500+", label: "Certifications Obtained" },
+          { value: "95%", label: "Compliance Rate" }
+        ]
+      },
+      {
+        id: "value-chain",
+        title: "Value Chain Strengthening",
+        description: "Linking producers, processors, and buyers for greater efficiency and transparency.",
+        image: "/assets/Value-Chain.jpg",
+        keyPoints: [
+          "Value chain analysis",
+          "Market system development",
+          "Business linkages",
+          "Technology integration"
+        ],
+        details: "Building resilient and efficient agricultural value chains across Africa.",
+        stats: [
+          { value: "100+", label: "Value Chains Supported" },
+          { value: "40%", label: "Efficiency Gain" }
+        ]
+      },
+      {
+        id: "export-readiness",
+        title: "Export Readiness and Market Linkages",
+        description: "Supporting African enterprises to access and sustain new market opportunities.",
+        image: "/assets/Export-Readiness.jpg",
+        keyPoints: [
+          "Market intelligence",
+          "Export training",
+          "Buyer-seller meetings",
+          "Market entry support"
+        ],
+        details: "Empowering African businesses to compete and succeed in global markets.",
+        stats: [
+          { value: "1,000+", label: "Businesses Supported" },
+          { value: "$50M+", label: "Export Value Generated" }
         ]
       }
     ],

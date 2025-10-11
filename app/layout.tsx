@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import "./globals.css";
+import { CookieConsent } from "@/components/CookieConsent";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fivewellafrica.com"),
@@ -79,7 +80,9 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
       
-        <GoogleAnalytics gaId="G-XXXXXXXXXX" />  </ThemeProvider>
+        <GoogleAnalytics gaId="G-XXXXXXXXXX" />
+        <CookieConsent />
+        </ThemeProvider>
       </body>
     
     </html>
