@@ -36,7 +36,7 @@ export function CookieConsent() {
       <div className="max-w-4xl mx-auto">
         <h3 className="text-lg font-semibold mb-2">Cookies Consent Preferences</h3>
         <p className="text-sm text-gray-700">
-          We use cookies to help you navigate efficiently and perform certain functions. The cookies that are categorized as "Necessary" are stored on your browser as they are essential for enabling the basic functionalities of the site. We also use third-party cookies that help us analyze and understand how you use this website. These cookies will be stored in your browser only with your consent.
+          We use cookies to help you navigate efficiently and perform certain functions. The cookies that are categorized as &quot;Necessary&quot; are stored on your browser as they are essential for enabling the basic functionalities of the site. We also use third-party cookies that help us analyze and understand how you use this website. These cookies will be stored in your browser only with your consent.
         </p>
         <div className="mt-4">
           <Button 
