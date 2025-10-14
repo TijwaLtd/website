@@ -27,7 +27,7 @@ const BlogPage = async () => {
   const blogPosts = await getBlogPosts();
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-18">
       {/* Hero Section */}
       <div className="relative  py-20">
         <div className="absolute inset-0 overflow-hidden">

@@ -24,7 +24,7 @@ const Footer = () => {
             >
               <Facebook className="w-6 h-6" />
             </a> */}
-            <p>Contact Us</p>
+            <p>Connect with us :</p>
             <a
               href="https://www.instagram.com/fivewell.africa?igsh=MWRqdnc2YW8ycW03eQ=="
               target="_blank"

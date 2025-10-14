@@ -34,7 +34,7 @@ const item = {
 
 const PartnerSection = () => {
   return (
-    <section className="relative py-16 md:py-24 overflow-hidden">
+    <section className="relative pb-6  overflow-hidden">
       {/* Background Image with Overlay */}
       {/* <div className="absolute inset-0 -z-10">
         <Image
@@ -49,7 +49,7 @@ const PartnerSection = () => {
       </div> */}
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="text-4xl md:text-5xl font-bold  drop-shadow-lg">Our Partners</h2>
           <p className="mt-4 text-lg  max-w-3xl mx-auto">
             We are proud to collaborate with a diverse range of partners to achieve our mission.

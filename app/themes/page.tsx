@@ -40,7 +40,7 @@ export default function ThemesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 pt-20">
+    <div className="min-h-screen bg-white dark:bg-gray-900 pt-18">
       {/* Hero Section */}
       <section className="relative py-20 md:py-28 text-white overflow-hidden">
         {/* Background Image with Overlay */}
@@ -76,7 +76,7 @@ export default function ThemesPage() {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-16 bg-white dark:bg-gray-900">
+      <section className="bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -117,7 +117,7 @@ export default function ThemesPage() {
       </section>
 
       {/* Themes Grid Section */}
-      <section className="py-4 bg-gray-50 dark:bg-gray-800">
+      <section className="">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -126,12 +126,12 @@ export default function ThemesPage() {
             viewport={{ once: true }}
             className="mb-10 text-center"
           >
-            <h2 className="text-3xl mt-6 md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl mt-6 md:text-4xl font-bold text-gray-900 dark:text-white">
               Explore Our Themes
             </h2>
           </motion.div>
 
-          <div className="max-w-7xl mx-auto px-4 p-12">
+          <div className="max-w-7xl mx-auto px-4">
             {/* All Themes - Full Width Layout */}
             {themes.map((theme, index) => {
               const color = themeColors[index % themeColors.length];
@@ -206,7 +206,7 @@ export default function ThemesPage() {
         </div>
       </section>
       {themes[0]?.process && (
-        <section className=" bg-gray-50 dark:bg-gray-800">
+        <section>
           <ProcessSection process={themes[0].process} />
         </section>
       )}
@@ -229,7 +229,7 @@ export default function ThemesPage() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 bg-white dark:bg-gray-100 text-primary rounded-full font-medium hover:bg-blue-50 dark:hover:bg-gray-200 transition-colors duration-200"
+                className="inline-flex bg-[#F5D7A2] items-center justify-center px-6 py-3 text-primary rounded-full font-medium hover:bg-blue-50 dark:hover:bg-gray-200 transition-colors duration-200"
               >
                 Book a Call
               </Link>

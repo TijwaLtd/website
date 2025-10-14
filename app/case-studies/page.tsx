@@ -55,7 +55,7 @@ const caseStudies = [
 
 export default function CaseStudiesPage() {
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-18">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-primary to-primary/90 dark:from-primary/90 dark:to-primary/80">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,7 +83,7 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Case Studies Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+      <section className="py-10 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-20">
             {caseStudies.map((study, index) => (

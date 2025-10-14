@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 export default function OurWorkSection() {
   return (
-    <section className="py-20 bg-white dark:bg-gray-900">
+    <section className="pt-10 pb-12 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -60,7 +60,7 @@ export default function OurWorkSection() {
               >
                 <div className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-start`}>
                   {/* Number with circular border */}
-                  <div className={`relative mt-12 flex-shrink-0 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center ${isEven ? 'md:mr-6' : 'md:ml-0'}`}>
+                  <div className={`relative mt-8 flex-shrink-0 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center ${isEven ? 'md:mr-6' : 'md:ml-0'}`}>
                     <div className={`absolute inset-0 rounded-full border-4 ${colors[index % colors.length]} opacity-20`}></div>
                     <span className={`text-3xl md:text-4xl font-bold ${textColors[index % textColors.length]}`}>
                       {String(index + 1).padStart(2, '0')}

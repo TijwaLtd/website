@@ -31,14 +31,14 @@ const AboutPage = () => {
       </section>
 
       {/* Our Story Section */}
-      <section className="pb-16 bg-white dark:bg-gray-900">
+      <section className="pb-8 bg-white dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 mt-16">
+          <div className="text-center mb-12 mt-12">
             <motion.h2
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4"
+              className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2"
             >
               Our Story
             </motion.h2>
@@ -160,7 +160,7 @@ const AboutPage = () => {
       </section>
 
       {/* Tabs for Team Section */}
-      <section className="bg-gray-50 dark:bg-gray-800 mb-12">
+      <section className="bg-gray-50 dark:bg-gray-800">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <Tabs defaultValue="team" className="w-full">
             <div className="flex justify-center">

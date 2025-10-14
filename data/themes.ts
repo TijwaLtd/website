@@ -172,7 +172,11 @@ export const themes: Theme[] = [
         {
           title: "Monitoring",
           description: "Continuously evaluate impact and make necessary adjustments."
-        }
+        },
+        {
+          title: "Handing Over",
+          description: "Project deliverables transferred to client for final ownership"
+        },
       ]
     },
     approach: "We combine traditional knowledge with innovative approaches to create sustainable and adaptive development pathways that work in the real world.",
@@ -485,144 +489,6 @@ adaptability, and help translate emerging technologies into inclusive, scalable 
     ],
   },
   {
-    title: "Partnerships",
-    slug: "partnerships",
-    description: `We work with institutions, NGOs, changemakers, governments, and private sector partners to co-create solutions that align with shared values and measurable impact goals. Our partnerships strengthen systems, amplify reach, and accelerate sustainable development across Africa.
-
-We take a facilitative approach—bridging actors, building trust, and coordinating strategies that translate ideas into tangible outcomes. Each partnership reflects our belief that long-term progress depends on collective effort and shared accountability.`,
-    image: "/assets/Partnerships.jpg",
-    heroImage: "/assets/Partnerships.jpg",
-    introduction: {
-      title: "Partnerships",
-      content: "Creating connections that drive sustainable growth and opportunity by linking smallholders with large markets, strengthening supply chains, and influencing policy.",
-    },
-    keyAreas: {
-      title: "Focus Areas",
-      points: [
-        {
-          title: "Market Linkages",
-          description: "Connecting producers with domestic and international markets.",
-        },
-        {
-          title: "Value Chain Development",
-          description: "Strengthening agricultural value chains for better market access.",
-        },
-        {
-          title: "Investment Facilitation",
-          description: "Attracting investment into sustainable agriculture and rural development.",
-        },
-      ],
-    },
-    subthemes: [
-      {
-        id: "institutional-partnerships",
-        title: "Institutional Partnerships",
-        description: "Supporting organizations to design, implement, and scale their impact-driven projects.",
-        image: "/assets/Institutional-Partnerships.jpg",
-        keyPoints: [
-          "Program design and implementation",
-          "Capacity building",
-          "Scale and replication",
-          "Knowledge sharing"
-        ],
-        details: "Collaborating with organizations to amplify impact through strategic partnerships.",
-        stats: [
-          { value: "50+", label: "Partners Engaged" },
-          { value: "100+", label: "Projects Supported" }
-        ]
-      },
-      {
-        id: "regional-collaboration",
-        title: "Regional and Cross-Sector Collaboration",
-        description: "Connecting global and local stakeholders to foster innovation and alignment.",
-        image: "/assets/Regional-Collaboration.jpg",
-        keyPoints: [
-          "Stakeholder engagement",
-          "Innovation facilitation",
-          "Cross-sector alignment",
-          "Knowledge exchange"
-        ],
-        details: "Bridging gaps between different sectors and regions for greater impact.",
-        stats: [
-          { value: "20+", label: "Countries Reached" },
-          { value: "10+", label: "Sectors Engaged" }
-        ]
-      },
-      {
-        id: "impact-measurement",
-        title: "Impact Alignment and Measurement",
-        description: "Developing frameworks that track progress and demonstrate shared value.",
-        image: "/assets/Impact-Measurement.jpg",
-        keyPoints: [
-          "M&E framework development",
-          "Impact assessment",
-          "Data-driven insights",
-          "Reporting and accountability"
-        ],
-        details: "Ensuring measurable and meaningful outcomes for all stakeholders.",
-        stats: [
-          { value: "95%", label: "Project Success Rate" },
-          { value: "1M+", label: "Lives Impacted" }
-        ]
-      },
-      {
-        id: "community-collaboration",
-        title: "Community-Led Collaboration",
-        description: "Engaging local actors and networks to ensure interventions are inclusive and sustainable.",
-        image: "/assets/Community-Collaboration.jpg",
-        keyPoints: [
-          "Community engagement",
-          "Local capacity building",
-          "Participatory approaches",
-          "Sustainable solutions"
-        ],
-        details: "Empowering communities to drive their own development journey.",
-        stats: [
-          { value: "500+", label: "Communities Served" },
-          { value: "10K+", label: "Local Leaders Trained" }
-        ]
-      }
-    ],
-    keyFocusAreas: [
-      "Market access",
-      "Value chain development",
-      "Trade facilitation",
-      "Investment attraction"
-    ],
-    process: {
-      title: "Partnership Development",
-      steps: [
-        {
-          title: "Market Analysis",
-          description: "Identify market opportunities and constraints."
-        },
-        {
-          title: "Stakeholder Engagement",
-          description: "Build relationships with key market actors."
-        },
-        {
-          title: "Partnership Formation",
-          description: "Develop strategic alliances and partnerships."
-        },
-        {
-          title: "Capacity Building",
-          description: "Strengthen market actors' capabilities."
-        },
-        {
-          title: "Market Linkages",
-          description: "Facilitate connections between producers and markets."
-        }
-      ]
-    },
-    approach: "We take a market-systems approach to development, working with a wide range of stakeholders to create inclusive and sustainable market systems that benefit all participants, especially smallholder farmers and rural communities.",
-    impact: "Our market access initiatives have connected thousands of smallholder farmers to profitable markets, increased incomes, and created sustainable market systems that continue to function and grow.",
-    stats: [
-      { value: "$100M+", label: "Market Value Created" },
-      { value: "50+", label: "Value Chains Strengthened" },
-      { value: "200%", label: "Farmer Incomes Increased" },
-    ],
-  },
-  {
     title: "Market Access",
     slug: "market-access",
     description: `We work to open Africa to new and fairer markets by improving access, quality, and competitiveness across
@@ -721,6 +587,144 @@ ensuring that market expansion translates into improved livelihoods and sustaina
         stats: [
           { value: "1,000+", label: "Businesses Supported" },
           { value: "$50M+", label: "Export Value Generated" }
+        ]
+      }
+    ],
+    keyFocusAreas: [
+      "Market access",
+      "Value chain development",
+      "Trade facilitation",
+      "Investment attraction"
+    ],
+    process: {
+      title: "Partnership Development",
+      steps: [
+        {
+          title: "Market Analysis",
+          description: "Identify market opportunities and constraints."
+        },
+        {
+          title: "Stakeholder Engagement",
+          description: "Build relationships with key market actors."
+        },
+        {
+          title: "Partnership Formation",
+          description: "Develop strategic alliances and partnerships."
+        },
+        {
+          title: "Capacity Building",
+          description: "Strengthen market actors' capabilities."
+        },
+        {
+          title: "Market Linkages",
+          description: "Facilitate connections between producers and markets."
+        }
+      ]
+    },
+    approach: "We take a market-systems approach to development, working with a wide range of stakeholders to create inclusive and sustainable market systems that benefit all participants, especially smallholder farmers and rural communities.",
+    impact: "Our market access initiatives have connected thousands of smallholder farmers to profitable markets, increased incomes, and created sustainable market systems that continue to function and grow.",
+    stats: [
+      { value: "$100M+", label: "Market Value Created" },
+      { value: "50+", label: "Value Chains Strengthened" },
+      { value: "200%", label: "Farmer Incomes Increased" },
+    ],
+  },
+   {
+    title: "Partnerships",
+    slug: "partnerships",
+    description: `We work with institutions, NGOs, changemakers, governments, and private sector partners to co-create solutions that align with shared values and measurable impact goals. Our partnerships strengthen systems, amplify reach, and accelerate sustainable development across Africa.
+
+We take a facilitative approach—bridging actors, building trust, and coordinating strategies that translate ideas into tangible outcomes. Each partnership reflects our belief that long-term progress depends on collective effort and shared accountability.`,
+    image: "/assets/Partnerships.jpg",
+    heroImage: "/assets/Partnerships.jpg",
+    introduction: {
+      title: "Partnerships",
+      content: "Creating connections that drive sustainable growth and opportunity by linking smallholders with large markets, strengthening supply chains, and influencing policy.",
+    },
+    keyAreas: {
+      title: "Focus Areas",
+      points: [
+        {
+          title: "Market Linkages",
+          description: "Connecting producers with domestic and international markets.",
+        },
+        {
+          title: "Value Chain Development",
+          description: "Strengthening agricultural value chains for better market access.",
+        },
+        {
+          title: "Investment Facilitation",
+          description: "Attracting investment into sustainable agriculture and rural development.",
+        },
+      ],
+    },
+    subthemes: [
+      {
+        id: "institutional-partnerships",
+        title: "Institutional Partnerships",
+        description: "Supporting organizations to design, implement, and scale their impact-driven projects.",
+        image: "/assets/Institutional-Partnerships.jpg",
+        keyPoints: [
+          "Program design and implementation",
+          "Capacity building",
+          "Scale and replication",
+          "Knowledge sharing"
+        ],
+        details: "Collaborating with organizations to amplify impact through strategic partnerships.",
+        stats: [
+          { value: "50+", label: "Partners Engaged" },
+          { value: "100+", label: "Projects Supported" }
+        ]
+      },
+      {
+        id: "regional-collaboration",
+        title: "Regional and Cross-Sector Collaboration",
+        description: "Connecting global and local stakeholders to foster innovation and alignment.",
+        image: "/assets/Regional-Collaboration.jpg",
+        keyPoints: [
+          "Stakeholder engagement",
+          "Innovation facilitation",
+          "Cross-sector alignment",
+          "Knowledge exchange"
+        ],
+        details: "Bridging gaps between different sectors and regions for greater impact.",
+        stats: [
+          { value: "20+", label: "Countries Reached" },
+          { value: "10+", label: "Sectors Engaged" }
+        ]
+      },
+      {
+        id: "impact-measurement",
+        title: "Impact Alignment and Measurement",
+        description: "Developing frameworks that track progress and demonstrate shared value.",
+        image: "/assets/Impact-Measurement.jpg",
+        keyPoints: [
+          "M&E framework development",
+          "Impact assessment",
+          "Data-driven insights",
+          "Reporting and accountability"
+        ],
+        details: "Ensuring measurable and meaningful outcomes for all stakeholders.",
+        stats: [
+          { value: "95%", label: "Project Success Rate" },
+          { value: "1M+", label: "Lives Impacted" }
+        ]
+      },
+      {
+        id: "community-collaboration",
+        title: "Community-Led Collaboration",
+        description: "Engaging local actors and networks to ensure interventions are inclusive and sustainable.",
+        image: "/assets/Community-Collaboration.jpg",
+        keyPoints: [
+          "Community engagement",
+          "Local capacity building",
+          "Participatory approaches",
+          "Sustainable solutions"
+        ],
+        details: "Empowering communities to drive their own development journey.",
+        stats: [
+          { value: "500+", label: "Communities Served" },
+          { value: "10K+", label: "Local Leaders Trained" }
         ]
       }
     ],

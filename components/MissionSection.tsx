@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function MissionSection() {
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section className="py-12 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

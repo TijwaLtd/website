@@ -18,7 +18,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) =
 
 const WhatWeDoSection = () => {
   return (
-    <section className="py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <section className="py-12  transition-colors duration-300">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">What We Do</h2>
         <p className="text-lg text-gray-700 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
