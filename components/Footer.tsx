@@ -1,13 +1,17 @@
 import { Instagram, Linkedin, Mail, Phone, Twitter } from 'lucide-react';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
     <footer className="bg-primary text-gray-200 py-4">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center space-y-6">
-             {/* Copyright */}
-             <div className="text-sm text-center mt-4">
-            &copy; {new Date().getFullYear()} FiveWell Africa. All rights reserved.
+          {/* Copyright */}
+          <div className="text-sm text-center mt-4">
+            &copy; {new Date().getFullYear()} FiveWell Africa. All rights reserved. |{' '}
+            <Link href="/privacy-policy" className="hover:underline">
+              Privacy Policy
+            </Link>
           </div>
           {/* Social Icons */}
           <div className="flex space-x-6">
@@ -21,27 +25,27 @@ const Footer = () => {
               <Facebook className="w-6 h-6" />
             </a> */}
             <p>Contact Us</p>
-            <a 
-              href="https://www.instagram.com/fivewell.africa?igsh=MWRqdnc2YW8ycW03eQ==" 
-              target="_blank" 
+            <a
+              href="https://www.instagram.com/fivewell.africa?igsh=MWRqdnc2YW8ycW03eQ=="
+              target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-white transition-colors"
               aria-label="Instagram"
             >
               <Instagram className="w-6 h-6" />
             </a>
-            <a 
-              href="https://x.com/FivewellAfrica" 
-              target="_blank" 
+            <a
+              href="https://x.com/FivewellAfrica"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-white transition-colors"
               aria-label="Twitter"
             >
               <Twitter className="w-6 h-6" />
             </a>
-            <a 
-              href="https://www.linkedin.com/company/fivewell-africa/" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/company/fivewell-africa/"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-white transition-colors"
               aria-label="LinkedIn"
@@ -57,23 +61,23 @@ const Footer = () => {
             >
               <Youtube className="w-6 h-6" />
             </a> */}
-            <a 
-              href="mailto:info@fivewellafrica.com" 
+            <a
+              href="mailto:info@fivewellafrica.com"
               className="text-gray-300 hover:text-white transition-colors"
               aria-label="Email us"
             >
               <Mail className="w-6 h-6" />
             </a>
-            <a 
-              href="tel:+254741865915" 
+            <a
+              href="tel:+254741865915"
               className="text-gray-300 hover:text-white transition-colors"
               aria-label="Call us"
             >
               <Phone className="w-6 h-6" />
             </a>
           </div>
-          
-      
+
+
         </div>
       </div>
     </footer>

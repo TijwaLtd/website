@@ -179,42 +179,44 @@ const AboutPage = () => {
                 <h2 className="text-5xl font-bold text-center text-gray-900 dark:text-white mb-12">
                   Meet the Team
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:justify-items-center">
-                  {teamMembers.map((member, index) => (
-                    <motion.div
-                      key={member.name}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: 0.1 * index }}
-                      viewport={{ once: true }}
-                      className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col h-full mx-auto w-full max-w-sm"
-                    >
-                      <div className="h-64 relative bg-gray-200 dark:bg-gray-700">
-                        <Image
-                          src={member.image}
-                          alt={member.name}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                      <div className="p-6 flex-grow flex flex-col">
-                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                          {member.name}
-                        </h3>
-                        <p className="text-primary font-medium mb-2">
-                          {member.role}
-                        </p>
-                        {/* <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">{member.bio}</p> */}
-                        <Link 
-                          href={`/team/${member.slug}`}
-                          className="mt-auto inline-block px-4 py-2 text-sm font-medium text-white text-center bg-primary rounded-md hover:bg-primary/90 transition-colors"
+                <div className="w-full">
+                  <div className="flex flex-wrap justify-center gap-8">
+                    {teamMembers
+                      .filter(member => member.id !== 'empty-1')
+                      .map((member, index) => (
+                        <motion.div
+                          key={member.id}
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.5, delay: 0.1 * index }}
+                          viewport={{ once: true }}
+                          className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col h-full w-full sm:w-[calc(33.333%-1.5rem)] max-w-sm"
                         >
-                          View Profile
-                        </Link>
-                      </div>
-                    </motion.div>
-                  ))}
+                          <div className="h-64 relative bg-gray-200 dark:bg-gray-700">
+                            <Image
+                              src={member.image}
+                              alt={member.name}
+                              fill
+                              className="object-cover"
+                            />
+                          </div>
+                          <div className="p-6 flex-grow flex flex-col">
+                            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                              {member.name}
+                            </h3>
+                            <p className="text-primary font-medium mb-2">{member.role}</p>
+                            <Link
+                              href={`/team/${member.slug}`}
+                              className="mt-auto inline-block px-4 py-2 text-sm font-medium text-white text-center bg-primary rounded-md hover:bg-primary/90 transition-colors"
+                            >
+                              View Profile
+                            </Link>
+                          </div>
+                        </motion.div>
+                      ))}
+                  </div>
                 </div>
+
               </motion.div>
             </TabsContent>
           </Tabs>
