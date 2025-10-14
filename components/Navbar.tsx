@@ -92,11 +92,11 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className="bg-[#F5D7A2] text-primary px-6 py-2 mt-2 text-center rounded-full text-sm font-medium hover:bg-gray-100 transition-colors duration-200 ml-6"
+              className="bg-[#F5D7A2] text-primary px-6 py-2.5 text-center rounded-full text-sm font-medium hover:bg-gray-100 transition-colors duration-200 ml-6 flex items-center justify-center h-10"
             >
               Contact Us
             </Link>
-            <div className="ml-6 mt-2">
+            <div className="ml-6">
               <ModeToggle /></div>
           </div>
 
