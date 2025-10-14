@@ -79,7 +79,7 @@ export async function POST(request: Request) {
 
     // Send email to user
     await transporter.sendMail({
-      from: `"FiveWell Africa" <${process.env.EMAIL_USER}>`,
+      from: `"FiveWell Africa" <${process.env.CPANEL_EMAIL || 'noreply@fivewellafrica.org'}>`,
       to: data.email,
       subject: 'Thank You for Your Interest in Partnering with FiveWell Africa',
       html: createUserEmailTemplate(data),
@@ -87,7 +87,7 @@ export async function POST(request: Request) {
 
     // Send notification to admin
     await transporter.sendMail({
-      from: `"FiveWell Africa Partnership Form" <${process.env.EMAIL_USER}>`,
+      from: `"FiveWell Africa Partnership Form" <${process.env.CPANEL_EMAIL || 'noreply@fivewellafrica.org'}>`,
       to: process.env.ADMIN_EMAIL || 'info@fivewellafrica.org',
       subject: `New Partnership Request from ${data.organization}`,
       html: createAdminEmailTemplate(data),

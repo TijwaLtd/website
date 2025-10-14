@@ -83,9 +83,12 @@ export default function BecomePartnerForm() {
               type="text"
               id="name"
               {...register('name', { required: 'Name is required' })}
-              className={`block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
-                errors.name ? 'border-red-300 dark:border-red-500' : ''
-              }`}
+            className={`w-full px-4 py-2 rounded-xl border transition-all duration-200
+    bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
+    placeholder-gray-400 dark:placeholder-gray-500
+    focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500
+    shadow-sm hover:shadow-md
+    ${errors.name ? 'border-red-400 focus:ring-red-500 focus:border-red-500' : 'border-gray-300 dark:border-gray-600'}`}
             />
             {errors.name && (
               <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.name.message}</p>
@@ -108,9 +111,12 @@ export default function BecomePartnerForm() {
                   message: 'Invalid email address',
                 },
               })}
-              className={`block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
-                errors.email ? 'border-red-300 dark:border-red-500' : ''
-              }`}
+              className={`w-full px-4 py-2 rounded-xl border transition-all duration-200
+    bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
+    placeholder-gray-400 dark:placeholder-gray-500
+    focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500
+    shadow-sm hover:shadow-md
+    ${errors.email ? 'border-red-400 focus:ring-red-500 focus:border-red-500' : 'border-gray-300 dark:border-gray-600'}`}
             />
             {errors.email && (
               <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.email.message}</p>
@@ -127,9 +133,12 @@ export default function BecomePartnerForm() {
               type="text"
               id="organization"
               {...register('organization', { required: 'Organization is required' })}
-              className={`block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
-                errors.organization ? 'border-red-300 dark:border-red-500' : ''
-              }`}
+              className={`w-full px-4 py-2 rounded-xl border transition-all duration-200
+    bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
+    placeholder-gray-400 dark:placeholder-gray-500
+    focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500
+    shadow-sm hover:shadow-md
+    ${errors.organization ? 'border-red-400 focus:ring-red-500 focus:border-red-500' : 'border-gray-300 dark:border-gray-600'}`}
             />
             {errors.organization && (
               <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.organization.message}</p>
@@ -146,7 +155,7 @@ export default function BecomePartnerForm() {
               id="message"
               rows={4}
               {...register('message', { required: 'Please tell us how we can collaborate' })}
-              className={`block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white ${
+              className={`block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white p-4 ${
                 errors.message ? 'border-red-300 dark:border-red-500' : ''
               }`}
               defaultValue={''}

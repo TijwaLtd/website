@@ -44,4 +44,6 @@ next-env.d.ts
 
 GEMINI.md
 DS_Store
+scripts/test-email.ts
+
 

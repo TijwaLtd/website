@@ -3,11 +3,11 @@ import nodemailer from 'nodemailer';
 
 // Configure Nodemailer with cPanel SMTP settings
 const transporter = nodemailer.createTransport({
-  host: process.env.CPANEL_SMTP_HOST || 'mail.fivewellafrica.org', // Your cPanel mail server
+  host: process.env.CPANEL_SMTP_HOST || 'mail.fivewellafrica.com', // Your cPanel mail server
   port: parseInt(process.env.CPANEL_SMTP_PORT || '465'), // 465 for SSL, 587 for TLS
   secure: true, // true for 465, false for other ports
   auth: {
-    user: process.env.CPANEL_EMAIL || 'noreply@fivewellafrica.org',
+    user: process.env.CPANEL_EMAIL || 'admin@fivewellafrica.com',
     pass: process.env.CPANEL_EMAIL_PASSWORD,
   },
   tls: {
@@ -41,7 +41,7 @@ const createUserEmailTemplate = (data: ContactFormData) => `
       <p><strong>Subject:</strong> ${data.subject}</p>
       ${data.organization ? `<p><strong>Organization:</strong> ${data.organization}</p>` : ''}
       
-      <p>If you have any further questions, feel free to reply to this email or contact us at info@fivewellafrica.org.</p>
+      <p>If you have any further questions, feel free to reply to this email or contact us at info@fivewellafrica.com.</p>
       
       <p>Best regards,<br>The FiveWell Africa Team</p>
     </div>
@@ -83,7 +83,7 @@ export async function POST(request: Request) {
 
     // Send email to user
     await transporter.sendMail({
-      from: `"FiveWell Africa" <${process.env.EMAIL_USER}>`,
+      from: `"FiveWell Africa" <${process.env.CPANEL_EMAIL || 'admin@fivewellafrica.com'}>`,
       to: data.email,
       subject: 'Thank You for Contacting FiveWell Africa',
       html: createUserEmailTemplate(data),
@@ -91,8 +91,8 @@ export async function POST(request: Request) {
 
     // Send notification to admin
     await transporter.sendMail({
-      from: `"FiveWell Africa Contact Form" <${process.env.EMAIL_USER}>`,
-      to: process.env.ADMIN_EMAIL || 'info@fivewellafrica.org',
+      from: `"FiveWell Africa Contact Form" <${process.env.CPANEL_EMAIL || 'admin@fivewellafrica.com'}>`,
+      to: process.env.ADMIN_EMAIL || 'info@fivewellafrica.com',
       subject: `New Contact Form Submission: ${data.subject}`,
       html: createAdminEmailTemplate(data),
     });

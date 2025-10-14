@@ -26,7 +26,7 @@ async function testEmail() {
   // Send mail with defined transport object
   const info = await transporter.sendMail({
     from: `"Test Sender" <${process.env.CPANEL_EMAIL}>`,
-    to: process.env.ADMIN_EMAIL, // Send to admin email from .env
+    to: 'achiandoomollo64@gmail.com', // Send to specified email
     subject: 'SMTP Test Email',
     text: 'This is a test email to verify SMTP configuration',
     html: '<b>This is a test email to verify SMTP configuration</b>',
