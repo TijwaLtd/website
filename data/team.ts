@@ -31,7 +31,7 @@ export const teamMembers: TeamMember[] = [
   {
     id: "mercy-philips",
     name: "Mercy Philips",
-    role: "Communications & PR",
+    role: "Communications Director",
     bio: "A storyteller and sustainable development practitioner, crafting stories that connect people and inspire change.",
     detailedBio: "Mercy describes herself as a storyteller, farmer's ally, and sustainable development practitioner. Growing up in a farming community nurtured her early passion in agriculture and informed her decision to study Agribusiness Economics at JKUAT, followed by advanced training in Israel. Her career has since spanned collaborations with leading initiatives such as the Kenya Climate-Smart Agriculture Project, the World Bank, and the Ban Ki-moon Center for Global Citizens, where her community project, Evergreen Garden, was recognized as one of Africa's best practices in sustainable farming.\n\nBeyond her professional work, Mercy is a lover of art and literature, often sharing reflections on her long-running blog. She also enjoys the discipline and creativity of baking, which she views as another form of storytelling and experimentation.\n\nShe brings this blend of field experience, creativity and communication expertise to her role at FiveWell, where she shapes the organization's PR, storytelling, and digital presence to connect people, amplify impact, and inspire change.",
     image: "/assets/MercyPhilips.jpeg",
@@ -80,7 +80,7 @@ export const teamMembers: TeamMember[] = [
   {
     id: "dravin",
     name: "Dravin Victor",
-    role: "Social Media & Design",
+      role: "Communications & PR",
     bio: "Expert in climate-smart agriculture, desert technologies, and community resilience with international experience in sustainable development.",
     detailedBio: "Dravin is an environmental and agricultural sustainability specialist with expertise in climate-smart agriculture, desert technologies, and community resilience. He holds a BSc in Environmental Science, a Postgraduate Diploma in Agricultural Studies (Israel), and a Master's in Sustainable Communities from Ben-Gurion University.\n\nHis career has combined policy, research, and field practice across organizations such as the International Organization for Migration (IOM–UN), the Agriculture and Food Authority, the Ministry of Housing and Public Service in Kenya, and the Kisumu Water and Sanitation Company. Internationally, he has worked with Nura Global Lab (Pears Program) in Tel Aviv and My Desert Produce – Hamidbar Sheli Ltd. in Israel.\n\nThis range of experience positions him at the intersection of global innovation and local implementation, particularly in tackling issues of food security, water management, and sustainable livelihoods.\n\nDravin's personal interests are closely aligned with his professional path. In his free time, he remains deeply engaged in environmental conservation, research, and community work.",
     image: "/assets/DravinVictor.jpg",
