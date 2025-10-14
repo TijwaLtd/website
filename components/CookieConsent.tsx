@@ -16,8 +16,8 @@ export function CookieConsent() {
       onDecline={() => {
         console.log('Cookies declined');
       }}
-      buttonClasses="bg-blue-500 text-primary-foreground hover:bg-blue-600 h-10 px-4 py-2 rounded-full text-sm font-medium transition-colors"
-      declineButtonClasses="ml-2 bg-yellow-500 text-secondary-foreground hover:bg-yellow-600 h-10 px-4 py-2 rounded-full text-sm font-medium transition-colors"
+      buttonClasses="bg-[#273345] text-white hover:bg-[#1a2533] h-10 px-4 py-2 rounded-full text-sm font-medium transition-colors"
+      declineButtonClasses="ml-2 bg-[#F5D7A2] text-[#273345] hover:bg-[#e8c98f] h-10 px-4 py-2 rounded-full text-sm font-medium transition-colors"
       style={{
         background: '#ffffff',
         color: '#1f2937',
@@ -26,13 +26,12 @@ export function CookieConsent() {
         display: 'flex',
         flexDirection: 'column',
         gap: '1rem',
-        maxWidth: '50%',
-        margin: '0 auto',
         borderRadius: '0.5rem',
         position: 'fixed',
-        left: '50%',
-        transform: 'translateX(-50%)',
+        left: '1rem',
         bottom: '1rem',
+        width: '90%',
+        maxWidth: '400px',
       }}
       contentStyle={{
         flex: '1 0 0',
