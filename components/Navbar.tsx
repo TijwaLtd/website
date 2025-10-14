@@ -51,7 +51,7 @@ export default function Navbar() {
       className="fixed top-0 w-full z-50 bg-primary text-white border-b border-primary/20"
     >
       <div className="px-4">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-18">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">

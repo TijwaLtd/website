@@ -11,40 +11,6 @@ import MediaGrid, {
 const MediaContnent = () => {
   const mediaItems: MediaGridItem[] = [
     {
-      id: "1",
-      title:
-        "White Paper: The Future of Sustainable Coffee Production in East Africa",
-      type: "publication",
-      thumbnail:
-        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=450&fit=crop",
-      date: "2024-09-15",
-      url: "#",
-      category: "White Paper",
-      source: "FiveWell Africa Research",
-    },
-    {
-      id: "2",
-      title: "Dr. Amara Okafor's Keynote at the African Agri-Investment Indaba",
-      type: "video",
-      thumbnail:
-        "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=800&h=450&fit=crop",
-      date: "2024-08-22",
-      url: "#",
-      category: "Keynote",
-      source: "Agri-Investment Indaba",
-    },
-    {
-      id: "3",
-      title: "FiveWell Africa Featured in Business Daily on Agritech Adoption",
-      type: "article",
-      thumbnail:
-        "https://images.unsplash.com/photo-1581092921461-39b2f2c6a964?w=800&h=450&fit=crop",
-      date: "2024-07-10",
-      url: "#",
-      category: "In The News",
-      source: "Business Daily",
-    },
-    {
       id: "4",
       title: "Publication: A Framework for De-Risking Smallholder Farmer Loans",
       type: "publication",
@@ -77,12 +43,46 @@ const MediaContnent = () => {
       category: "Article",
       source: "Logistics Monthly",
     },
+    // {
+    //   id: "1",
+    //   title:
+    //     "White Paper: The Future of Sustainable Coffee Production in East Africa",
+    //   type: "publication",
+    //   thumbnail:
+    //     "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=450&fit=crop",
+    //   date: "2024-09-15",
+    //   url: "#",
+    //   category: "White Paper",
+    //   source: "FiveWell Africa Research",
+    // },
+    // {
+    //   id: "2",
+    //   title: "Dr. Amara Okafor's Keynote at the African Agri-Investment Indaba",
+    //   type: "video",
+    //   thumbnail:
+    //     "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=800&h=450&fit=crop",
+    //   date: "2024-08-22",
+    //   url: "#",
+    //   category: "Keynote",
+    //   source: "Agri-Investment Indaba",
+    // },
+    // {
+    //   id: "3",
+    //   title: "FiveWell Africa Featured in Business Daily on Agritech Adoption",
+    //   type: "article",
+    //   thumbnail:
+    //     "https://images.unsplash.com/photo-1581092921461-39b2f2c6a964?w=800&h=450&fit=crop",
+    //   date: "2024-07-10",
+    //   url: "#",
+    //   category: "In The News",
+    //   source: "Business Daily",
+    // },
   ];
 
   // Grid rendering with animations is handled in the client component `MediaGrid`.
 
   return (
-    <div className="min-h-screen pt-24">
+    <div>
       {/* Hero Section */}
       {/* <div className="relative bg-green-700 py-20">
         <div className="absolute inset-0 overflow-hidden">
@@ -104,7 +104,7 @@ const MediaContnent = () => {
       </div> */}
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 mt-6">
         {/* Media Grid */}
         <MediaGrid mediaItems={mediaItems as MediaGridItem[]} />
       </div>
