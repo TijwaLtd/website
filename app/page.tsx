@@ -1,9 +1,8 @@
-import type { Metadata } from "next";
+import BecomePartner from "@/components/BecomePartner";
 import HeroSection from "@/components/HeroSection";
 import MissionSection from "@/components/MissionSection";
 import OurWorkSection from "@/components/OurWorkSection";
-import PartnerSection from "@/components/Partners";
-import BecomePartner from "@/components/BecomePartner";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Agriculture Consulting for Africa | FiveWell Africa",
@@ -43,7 +42,7 @@ export default function Home() {
       <OurWorkSection />
 
       {/* <AnnualReportSection /> */}
-      <PartnerSection />
+      {/* <PartnerSection /> */}
       <BecomePartner />
       {/* <CTASection /> */}
     </>

@@ -23,8 +23,7 @@ const AboutPage = () => {
               About FiveWell Africa
             </h1>
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-              FiveWell Africa stands as the convergence of five journeys, five
-              pillars of expertise, and one well of solutions.
+              Fivewell Africa is a purpose-driven organization dedicated to advancing sustainable and inclusive development across the continent. We partner with communities, institutions, and changemakers to design solutions that strengthen systems, unlock opportunities, and deliver measurable impact.
             </p>
           </motion.div>
         </div>
@@ -204,10 +203,10 @@ const AboutPage = () => {
                             <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                               {member.name}
                             </h3>
-                            <p className="text-primary font-medium mb-2">{member.role}</p>
+                            <p className="text-white font-medium mb-2">{member.role}</p>
                             <Link
                               href={`/team/${member.slug}`}
-                              className="mt-auto inline-block px-4 py-2 text-sm font-medium text-white text-center bg-primary rounded-md hover:bg-primary/90 transition-colors"
+                              className="mt-auto inline-block px-4 py-2 text-sm font-medium text-primary text-center bg-[#F5D7A2] dark:bg-[#F5D7A2] rounded-full hover:bg-[#F5D7A2]/90 transition-colors"
                             >
                               View Profile
                             </Link>

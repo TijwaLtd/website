@@ -21,7 +21,7 @@ export default function OurWorkSection() {
             Our Guiding Themes
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Our projects fall under four themes that capture the breadth of our expertise and vision. Each theme reflects the areas where we drive impact and partner with communities, businesses, and institutions.
+            Our pathways for shaping sustainable and inclusive development across Africa.
           </p>
         </motion.div>
 
@@ -29,24 +29,24 @@ export default function OurWorkSection() {
           {themes.map((theme, index) => {
             const isEven = index % 2 === 0;
             const colors = [
-              'border-primary',
-              'border-primary/70',
-              'border-primary/70',
-              'border-primary/70',
-              'border-primary/70',
-              'border-primary/70'
+              'border-[#F5D7A2]',
+              'border-[#F5D7A2]/70',
+              'border-[#F5D7A2]/70',
+              'border-[#F5D7A2]/70',
+              'border-[#F5D7A2]/70',
+              'border-[#F5D7A2]/70'
             ];
             const textColors = [
-              'text-primary',
-              'text-primary/80',
-              'text-primary/80',
-              'text-primary/80'
+              'text-[#F5D7A2]',
+              'text-[#F5D7A2]/80',
+              'text-[#F5D7A2]/80',
+              'text-[#F5D7A2]/80'
             ];
             const borderColors = [
-              'border-primary hover:border-primary',
-              'border-primary/20 hover:border-primary/20',
-              'border-primary/20 hover:border-primary/20',
-              'border-primary/20 hover:border-primary/20'
+              'border-[#F5D7A2] hover:border-[#F5D7A2]',
+              'border-[#F5D7A2]/20 hover:border-[#F5D7A2]/20',
+              'border-[#F5D7A2]/20 hover:border-[#F5D7A2]/20',
+              'border-[#F5D7A2]/20 hover:border-[#F5D7A2]/20'
             ];
             
             return (
@@ -79,9 +79,9 @@ export default function OurWorkSection() {
                     </p>
                     <Link 
                       href={`/themes`}
-                      className={`inline-flex items-center px-5 py-2 border-2 ${borderColors[index % borderColors.length]} rounded-full text-sm md:text-base font-medium ${textColors[index % textColors.length]} hover:bg-opacity-10 transition-all duration-200`}
+                      className={`inline-flex  items-center px-5 py-2 border-2 ${borderColors[index % borderColors.length]} rounded-full text-sm md:text-base font-medium ${textColors[index % textColors.length]} hover:bg-opacity-10 transition-all duration-200`}
                     >
-                      Learn more
+                      {theme.ctaLink}
                       <ArrowRight className="ml-2" size={16} />
                     </Link>
                   </div>

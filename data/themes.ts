@@ -15,8 +15,12 @@ export interface Theme {
   title: string;
   slug: string;
   description: string;
+  tagline: string;
   image: string;
   heroImage?: string;
+  ctaLink?: string;
+  seoKeywords: string[];
+  metaDescription: string;
   introduction: {
     title: string;
     content: string;
@@ -48,19 +52,41 @@ export interface Theme {
     description: string;
     link: string;
   }[];
+  pillars?: {
+    title: string;
+    description: string;
+  }[];
 }
 
 export const themes: Theme[] = [
   {
     title: "Building Sustainable and Adaptive Pathways for Development",
     slug: "building-sustainable-and-adaptive-pathways",
-    description: "This theme anchors our work around the Sustainable Development Goals (SDGs), guiding projects that deliver measurable social, economic, and environmental impact. We support communities, institutions, and enterprises to build systems that are inclusive, resilient, and responsive to change.",
+    tagline: "Building resilience across people, systems, and environments.",
+    description: "We support initiatives that advance the Sustainable Development Goals. Our work integrates innovation, policy, and collaboration to design adaptive solutions that respond to Africa's evolving realities.",
+    seoKeywords: ["climate resilience", "adaptive agriculture", "smallholder adaptation", "water-smart farming", "sustainable development", "adaptive systems", "SDGs in Africa"],
+    metaDescription: "Advance Africa's sustainable development with Fivewell Africa. Building resilient communities, ecosystems, and economies through adaptive solutions.",
     image: "/assets/WindMills.jpg",
     heroImage: "/assets/WindMills.jpg",
+    ctaLink: "Explore Sustainable Pathways →",
     introduction: {
-      title: "Building Sustainable and Adaptive Pathways for Development",
-      content: "In a world of constant change, we help our partners pivot, adjust, and remain resilient while navigating shifting markets, policies, or social challenges.",
+      title: "Sustainable & Adaptive Pathways for Development",
+      content: "This theme is designed to deliver measurable impact across multiple Sustainable Development Goals (SDGs). Through this theme, the organization advances models that regenerate natural ecosystems, empower communities to lead their own development, and build economic systems that can withstand environmental and market shocks. It seeks to create a balance between people, planet, and prosperity by promoting practices that sustain life, nurture equity, and foster long-term transformation.",
     },
+    pillars: [
+      {
+        title: "Climate-Resilient and Regenerative Systems",
+        description: "Projects championing sustainable land and resource management approaches that rebuild ecosystems, restore biodiversity, and strengthen resilience to climate change."
+      },
+      {
+        title: "Sustainable Economies",
+        description: "Projects supporting locally driven, circular, and climate-aligned economic systems that ensure prosperity without compromising environmental integrity."
+      },
+      {
+        title: "Social and Institutional Resilience",
+        description: "Projects fostering inclusive systems that prioritize human development, equity, and local governance in responding to global challenges."
+      }
+    ],
     keyAreas: {
       title: "Key Focus Areas",
       points: [
@@ -179,7 +205,7 @@ export const themes: Theme[] = [
         },
       ]
     },
-    approach: "We combine traditional knowledge with innovative approaches to create sustainable and adaptive development pathways that work in the real world.",
+    approach: "Our sustainability work is organized around three interconnected pillars that collectively advance all 17 SDGs, ensuring impact that is both broad in scope and deep in transformation.",
     impact: "Our sustainable pathways have helped communities and businesses adapt to change while reducing environmental impact and improving livelihoods.",
     stats: [
       { value: "100+", label: "Communities Impacted" },
@@ -190,39 +216,35 @@ export const themes: Theme[] = [
   {
     title: "Knowledge, Research, and Capacity Building",
     slug: "knowledge-research-and-capacity-building",
-    description: `Knowledge is the foundation of sustainable progress. We generate, translate, and share insights that
-empower individuals, organizations, and communities to make informed decisions and lead transformation
-from within.
-Through applied research, data systems, and tailored training programs, we strengthen capacities to address
-real-world challenges while fostering innovation and leadership. By connecting evidence to action, we
-ensure that learning continuously informs impact.`,
+    tagline: "Expanding knowledge that drives progress.",
+    description: "We generate evidence, build skills, and share knowledge that transforms ideas into action. Through applied research, capacity-building programs, and collaborative learning, we equip organizations, communities, and leaders with the tools to create measurable impact.",
+    seoKeywords: ["farmer training", "capacity building", "participatory learning", "research and development Africa", "capacity building", "evidence-based action", "knowledge partnerships"],
+    metaDescription: "Transform ideas into action with Fivewell Africa. Evidence-based research, training, and knowledge sharing for inclusive and informed development",
     image: "/assets/Innovation.jpg",
     heroImage: "/assets/Innovation.jpg",
+    ctaLink: "Learn How We Build Knowledge →",
     introduction: {
       title: "Knowledge, Research, and Capacity Building",
-      content: `Knowledge is the foundation of sustainable progress. We generate, translate, and share insights that
-empower individuals, organizations, and communities to make informed decisions and lead transformation
-from within.
-
-
-Through applied research, data systems, and tailored training programs, we strengthen capacities to address
-real-world challenges while fostering innovation and leadership. By connecting evidence to action, we
-ensure that learning continuously informs impact.`,
+      content: "We believe knowledge is the foundation of progress. Through research and learning, we turn insights into action bridging data, experience, and innovation to solve real-world challenges. Our work strengthens institutions and communities by building skills, sharing evidence, and nurturing ideas that shape better futures and that make development more informed, inclusive, and sustainable.",
     },
     keyAreas: {
       title: "Focus Areas",
       points: [
         {
-          title: "Digital Agriculture",
-          description: "Leveraging technology to enhance agricultural productivity and sustainability.",
+          title: "Applied Research and Learning",
+          description: "Conducting studies that inform decisions and guide practical action.",
         },
         {
-          title: "Precision Farming",
-          description: "Using data and technology to optimize farming practices and resource use.",
+          title: "Training and Capacity Strengthening",
+          description: "Building the skills and confidence of organizations and communities to lead their own growth.",
         },
         {
-          title: "Financial Technology",
-          description: "Developing innovative financing models to support agricultural innovation.",
+          title: "Knowledge Sharing and Publications",
+          description: "Producing insights, stories, and resources that amplify learning and spark innovation.",
+        },
+        {
+          title: "Innovation and Thought Leadership",
+          description: "Exploring emerging ideas that inspire new ways of achieving sustainable development.",
         },
       ],
     },
@@ -297,10 +319,10 @@ ensure that learning continuously informs impact.`,
       }
     ],
     keyFocusAreas: [
-      "Digital transformation",
-      "Precision agriculture",
-      "Financial innovation",
-      "Sustainable tech solutions"
+      "Applied Research and Learning",
+      "Training and Capacity Strengthening",
+      "Knowledge Sharing and Publications",
+      "Innovation and Thought Leadership"
     ],
     process: {
       title: "Technology Implementation",
@@ -338,44 +360,35 @@ ensure that learning continuously informs impact.`,
   {
     title: "Innovation & Technology",
     slug: "innovation-technology",
-    description: `We believe innovation drives transformation. At Fivewell, we leverage technology, data, and artificial
-intelligence to design solutions that meet evolving development needs and accelerate progress toward
-sustainability. Our approach blends creativity with evidence-based insights, ensuring technology serves
-people- not the other way around.
-
-From digital agriculture to smart monitoring tools, we create systems that improve efficiency, accuracy, and
-adaptability, and help translate emerging technologies into inclusive, scalable development outcomes.
-
-`,
+    tagline: "Technology for inclusive transformation.",
+    description: "We pilot and scale human-centered innovative tools and digital solutions that address real development challenges; improving efficiency, transparency, and access. Our focus is on technologies that simplify systems and enable equitable growth across sectors.",
+    seoKeywords: ["innovation in Africa", "digital transformation", "inclusive technology", "sustainable innovation"],
+    metaDescription: "Harness technology to solve Africa's development challenges. Fivewell Africa drives digital innovation, AI, and tools for inclusive transformation.",
     image: "/assets/Windmills.jpg",
     heroImage: "/assets/Windmills.jpg",
+    ctaLink: "Discover Our Innovation Approach →",
     introduction: {
       title: "Innovation & Technology",
-      content: `We believe innovation drives transformation. At Fivewell, we leverage technology, data, and artificial
-intelligence to design solutions that meet evolving development needs and accelerate progress toward
-sustainability. Our approach blends creativity with evidence-based insights, ensuring technology serves
-people- not the other way around.
-
-
-From digital agriculture to smart monitoring tools, we create systems that improve efficiency, accuracy, and
-adaptability, and help translate emerging technologies into inclusive, scalable development outcomes.
-
-`,
+      content: "We believe that new ideas and technology can help solve Africa's most pressing challenges including system inefficiencies. Using tools like data, digital platforms, and artificial intelligence, we make development work smarter, faster, and more effective. But technology is never the goal in itself; it's a way to improve lives, strengthen communities, and create lasting solutions. We also support innovators, startups, and institutions to test and scale their ideas so they can reach more people and make real impact. Our focus is on ensuring that innovation remains ethical, inclusive, and practical.",
     },
     keyAreas: {
       title: "Focus Areas",
       points: [
         {
-          title: "Professional Development",
-          description: "Enhancing skills and knowledge for sustainable development professionals.",
+          title: "Digital Transformation",
+          description: "Applying data-driven tools and platforms to strengthen decision-making, service delivery, and impact tracking.",
         },
         {
-          title: "Applied Research",
-          description: "Conducting research that informs policy and practice.",
+          title: "AI and Emerging Technologies",
+          description: "Harnessing artificial intelligence and automation to anticipate trends, enhance productivity, and manage risks.",
         },
         {
-          title: "Knowledge Exchange",
-          description: "Creating platforms for sharing best practices and innovations.",
+          title: "Innovation Ecosystems",
+          description: "Supporting startups, innovators, and research institutions to co-create technology pipelines that address real-world challenges.",
+        },
+        {
+          title: "Sustainable Technology Adoption",
+          description: "Promoting inclusive, ethical, and environmentally aligned use of technology to ensure long-term benefits for all.",
         },
       ],
     },
@@ -450,10 +463,10 @@ adaptability, and help translate emerging technologies into inclusive, scalable 
       }
     ],
     keyFocusAreas: [
-      "Capacity development",
-      "Applied research",
-      "Knowledge management",
-      "Community empowerment"
+      "Digital Transformation",
+      "AI and Emerging Technologies",
+      "Innovation Ecosystems",
+      "Sustainable Technology Adoption"
     ],
     process: {
       title: "Capacity Building Approach",
@@ -489,34 +502,37 @@ adaptability, and help translate emerging technologies into inclusive, scalable 
     ],
   },
   {
-    title: "Market Access",
+    title: "Market Access & Regional Integration",
     slug: "market-access",
-    description: `We work to open Africa to new and fairer markets by improving access, quality, and competitiveness across
-value chains. Our approach focuses on strengthening production systems, enhancing trade readiness, and
-aligning policies that enable African enterprises to thrive globally.
-
-By connecting local producers to regional and international opportunities, we help unlock growth while
-ensuring that market expansion translates into improved livelihoods and sustainable business ecosystems`,
+    tagline: "Unlocking Africa's potential through open markets.",
+    description: "We work to strengthen intra-African and global trade linkages by supporting quality systems, market standards, and enabling policies. Our goal is to make African enterprises more competitive, visible, and connected across borders.",
+    seoKeywords: ["market access Africa", "AfCFTA", "trade policy", "value chain integration", "export readiness"],
+    metaDescription: "Unlock Africa's potential with Fivewell Africa. We connect producers, enterprises, and innovators to regional and global markets for equitable growth.",
     image: "/assets/Market.jpg",
     heroImage: "/assets/Market.jpg",
+    ctaLink: " Learn About Our Market Work →",
     introduction: {
-      title: "Market Access",
-      content: "We work to open Africa to new and fairer markets by improving access, quality, and competitiveness across value chains. Our approach focuses on strengthening production systems, enhancing trade readiness, and aligning policies that enable African enterprises to thrive globally.",
+      title: "Market Access & Regional Integration",
+      content: "Expanding markets is central to unlocking Africa's full potential. Under this theme, we connect producers, innovators, and institutions to markets across Africa and beyond, enabling growth that is fair, equitable, and sustainable. Our work focuses on identifying barriers that limit access, strengthening value chains, and fostering regional integration so that African enterprises can thrive in global markets. We increase producer earnings by reducing intermediaries, improving quality, and creating new regional and digital trade channels. By bridging policy, innovation, and opportunity, we help build a continent that trades more with itself, and with the world on fair and forward-looking terms.",
     },
     keyAreas: {
       title: "Focus Areas",
       points: [
         {
-          title: "Market Linkages",
-          description: "Connecting producers with domestic and international markets.",
+          title: "Trade Facilitation & Regional Integration",
+          description: "Strengthening intra-African and global trade linkages by promoting fair policies, cross-border collaboration, and regional value chains.",
         },
         {
-          title: "Value Chain Development",
-          description: "Strengthening agricultural value chains for better market access.",
+          title: "Quality Standards & Market Readiness",
+          description: "Supporting enterprises to meet international standards through certification, compliance, and capacity development.",
         },
         {
-          title: "Investment Facilitation",
-          description: "Attracting investment into sustainable agriculture and rural development.",
+          title: "Inclusive Value Chains",
+          description: "Empowering small and medium enterprises, cooperatives, and community-based organizations to participate meaningfully in local and international markets.",
+        },
+        {
+          title: "Innovation & Digital Access",
+          description: "Leveraging technology to improve market connectivity, enhance transparency, and support data-driven decision-making across value chains.",
         },
       ],
     },
@@ -591,10 +607,10 @@ ensuring that market expansion translates into improved livelihoods and sustaina
       }
     ],
     keyFocusAreas: [
-      "Market access",
-      "Value chain development",
-      "Trade facilitation",
-      "Investment attraction"
+      "Trade Facilitation & Regional Integration",
+      "Quality Standards & Market Readiness",
+      "Inclusive Value Chains",
+      "Innovation & Digital Access"
     ],
     process: {
       title: "Partnership Development",
@@ -629,32 +645,50 @@ ensuring that market expansion translates into improved livelihoods and sustaina
       { value: "200%", label: "Farmer Incomes Increased" },
     ],
   },
-   {
-    title: "Partnerships",
+  {
+    title: "Partnerships & Systems Change",
     slug: "partnerships",
-    description: `We work with institutions, NGOs, changemakers, governments, and private sector partners to co-create solutions that align with shared values and measurable impact goals. Our partnerships strengthen systems, amplify reach, and accelerate sustainable development across Africa.
-
-We take a facilitative approach—bridging actors, building trust, and coordinating strategies that translate ideas into tangible outcomes. Each partnership reflects our belief that long-term progress depends on collective effort and shared accountability.`,
+    tagline: "Collaborative action that scale change.",
+    description: "We partner with changemakers, governments, and organizations to design and deliver impactful programs. From policy design to implementation support, we build partnerships that strengthen institutions and drive transformative change at scale.",
+    seoKeywords: ["systems change", "partnerships for impact", "institutional collaboration", "public-private partnerships"],
+    metaDescription: "Fivewell Africa collaborates with governments, institutions, and changemakers to drive impactful programs and scale sustainable solutions across Africa.",
     image: "/assets/Partnerships.jpg",
     heroImage: "/assets/Partnerships.jpg",
+    ctaLink:"Partner With Us →",
     introduction: {
-      title: "Partnerships",
-      content: "Creating connections that drive sustainable growth and opportunity by linking smallholders with large markets, strengthening supply chains, and influencing policy.",
+      title: "Partnerships & Systems Change",
+      content: "We collaborate closely with organizations, changemakers, governments, and private sector partners to drive meaningful development across Africa. Our partnerships are built on trust, shared values, and a common goal to create solutions that make a real difference in people's lives. By connecting ideas, resources, and people, we help turn plans into action and strengthen the systems that sustain progress. We also act as an implementing partner for governments and organizations that need reliable project delivery on the ground. Our team manages programs from planning to execution bridging ideas with action and ensuring every effort creates visible, lasting impact.",
     },
     keyAreas: {
       title: "Focus Areas",
       points: [
         {
-          title: "Market Linkages",
-          description: "Connecting producers with domestic and international markets.",
+          title: "Advocacy and Policy Partnerships",
+          description: "Engaging with civil society and government agencies to strengthen policy frameworks and amplify citizen voices.",
         },
         {
-          title: "Value Chain Development",
-          description: "Strengthening agricultural value chains for better market access.",
+          title: "Capacity-Building Partnerships",
+          description: "Supporting local institutions and communities with training, mentorship, and systems that enhance long-term resilience.",
         },
         {
-          title: "Investment Facilitation",
-          description: "Attracting investment into sustainable agriculture and rural development.",
+          title: "Impact Investment Partnerships",
+          description: "Working with investors who prioritize both financial returns and measurable social or environmental outcomes.",
+        },
+        {
+          title: "Institutional Partnerships",
+          description: "Working with organizations to design and grow projects that create impact.",
+        },
+        {
+          title: "Regional and Cross-Sector Collaboration",
+          description: "Bringing together local and global partners to share ideas and drive innovation.",
+        },
+        {
+          title: "Impact Alignment and Measurement",
+          description: "Helping partners track their progress and show how their work creates value.",
+        },
+        {
+          title: "Community-Led Collaboration",
+          description: "Engaging communities directly to make sure every effort is inclusive and sustainable.",
         },
       ],
     },
@@ -729,10 +763,13 @@ We take a facilitative approach—bridging actors, building trust, and coordinat
       }
     ],
     keyFocusAreas: [
-      "Market access",
-      "Value chain development",
-      "Trade facilitation",
-      "Investment attraction"
+      "Advocacy and Policy Partnerships",
+      "Capacity-Building Partnerships",
+      "Impact Investment Partnerships",
+      "Institutional Partnerships",
+      "Regional and Cross-Sector Collaboration",
+      "Impact Alignment and Measurement",
+      "Community-Led Collaboration"
     ],
     process: {
       title: "Partnership Development",

@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 
 const heroSlides = [
   {
-    image: '/assets/Sustainability.jpg',
+    image: '/assets/Sprinklers.jpg',
     title: 'Sustainable Solutions for a Sustainable Future',
     subtitle: 'Driving transformation in Africa and beyond through innovative and sustainable solutions.',
     cta: 'Discover Our Mission'
@@ -18,13 +18,13 @@ const heroSlides = [
     cta: 'Discover Our Mission'
   },
   {
-    image: '/assets/Solar.jpg',
+    image: '/assets/Pollution.jpg',
     title: 'Sustainable Solutions for a Sustainable Future',
     subtitle: 'Driving transformation in Africa and beyond through innovative and sustainable solutions.',
     cta: 'Explore Tech'
   },
   {
-    image: '/assets/Meditteranean.jpg',
+    image: '/assets/Solar.jpg',
     title: 'Sustainable Solutions for a Sustainable Future',
     subtitle: 'Driving transformation in Africa and beyond through innovative and sustainable solutions.',
     cta: 'See Our Research'

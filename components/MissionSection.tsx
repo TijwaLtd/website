@@ -38,7 +38,7 @@ export default function MissionSection() {
             >
               <h3 className="text-3xl font-semibold text-primary dark:text-primary-foreground mb-4">Our Vision</h3>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                Our vision is to drive transformation in Africa and beyond through innovative and sustainable solutions.
+               Our vision is to drive transformation that impacts lives in Africa and beyond through innovative and sustainable solutions.
               </p>
             </motion.div>
           </div>
