@@ -60,14 +60,14 @@ export interface Theme {
 
 export const themes: Theme[] = [
   {
-    title: "Building Sustainable and Adaptive Pathways for Development",
+    title: "Sustainable & Adaptive Pathways for Development",
     slug: "building-sustainable-and-adaptive-pathways",
     tagline: "Building resilience across people, systems, and environments.",
-    description: "We support initiatives that advance the Sustainable Development Goals. Our work integrates innovation, policy, and collaboration to design adaptive solutions that respond to Africa's evolving realities.",
+    description: "This theme is designed to deliver measurable impact across multiple Sustainable Development Goals (SDGs). Through this theme, the organization advances models that regenerate natural ecosystems, empower communities to lead their own development, and build economic systems that can withstand environmental and market shocks. It seeks to create a balance between people, planet, and prosperity by promoting practices that sustain life, nurture equity, and foster long-term transformation.Our sustainability work is organized around three interconnected pillars that collectively advance all 17 SDGs, ensuring impact that is both broad in scope and deep in transformation.",
     seoKeywords: ["climate resilience", "adaptive agriculture", "smallholder adaptation", "water-smart farming", "sustainable development", "adaptive systems", "SDGs in Africa"],
     metaDescription: "Advance Africa's sustainable development with Fivewell Africa. Building resilient communities, ecosystems, and economies through adaptive solutions.",
-    image: "/assets/WindMills.jpg",
-    heroImage: "/assets/WindMills.jpg",
+    image: "/assets/NorthEasternWomen.jpg",
+    heroImage: "/assets/NorthEasternWomen.jpg",
     ctaLink: "Explore Sustainable Pathways →",
     introduction: {
       title: "Sustainable & Adaptive Pathways for Development",
@@ -91,16 +91,16 @@ export const themes: Theme[] = [
       title: "Key Focus Areas",
       points: [
         {
-          title: "Climate-resilient development",
-          description: "Creating strategies that help communities and businesses adapt to changing environmental conditions.",
+          title: "Climate-Resilient and Regenerative Systems",
+          description: "Projects championing sustainable land and resource management approaches that rebuild ecosystems, restore biodiversity, and strengthen resilience to climate change.",
         },
         {
-          title: "Sustainable resource management",
-          description: "Implementing practices that ensure long-term availability of natural resources.",
+          title: "Sustainable Economies",
+          description: "Projects supporting locally driven, circular, and climate-aligned economic systems that ensure prosperity without compromising environmental integrity.",
         },
         {
-          title: "Policy and market adaptation",
-          description: "Helping organizations navigate and adapt to changing policies and market conditions.",
+          title: "Social and Institutional Resilience",
+          description: "Projects fostering inclusive systems that prioritize human development, equity, and local governance in responding to global challenges.",
         },
       ],
     },
@@ -220,8 +220,8 @@ export const themes: Theme[] = [
     description: "We generate evidence, build skills, and share knowledge that transforms ideas into action. Through applied research, capacity-building programs, and collaborative learning, we equip organizations, communities, and leaders with the tools to create measurable impact.",
     seoKeywords: ["farmer training", "capacity building", "participatory learning", "research and development Africa", "capacity building", "evidence-based action", "knowledge partnerships"],
     metaDescription: "Transform ideas into action with Fivewell Africa. Evidence-based research, training, and knowledge sharing for inclusive and informed development",
-    image: "/assets/Innovation.jpg",
-    heroImage: "/assets/Innovation.jpg",
+    image: "/assets/StickyNotes.jpg",
+    heroImage: "/assets/StickyNotes.jpg",
     ctaLink: "Learn How We Build Knowledge →",
     introduction: {
       title: "Knowledge, Research, and Capacity Building",
@@ -364,8 +364,8 @@ export const themes: Theme[] = [
     description: "We pilot and scale human-centered innovative tools and digital solutions that address real development challenges; improving efficiency, transparency, and access. Our focus is on technologies that simplify systems and enable equitable growth across sectors.",
     seoKeywords: ["innovation in Africa", "digital transformation", "inclusive technology", "sustainable innovation"],
     metaDescription: "Harness technology to solve Africa's development challenges. Fivewell Africa drives digital innovation, AI, and tools for inclusive transformation.",
-    image: "/assets/Windmills.jpg",
-    heroImage: "/assets/Windmills.jpg",
+    image: "/assets/Innovation.jpg",
+    heroImage: "/assets/Innovation.jpg",
     ctaLink: "Discover Our Innovation Approach →",
     introduction: {
       title: "Innovation & Technology",
@@ -508,8 +508,8 @@ export const themes: Theme[] = [
     description: "We work to strengthen intra-African and global trade linkages by supporting quality systems, market standards, and enabling policies. Our goal is to make African enterprises more competitive, visible, and connected across borders.",
     seoKeywords: ["market access Africa", "AfCFTA", "trade policy", "value chain integration", "export readiness"],
     metaDescription: "Unlock Africa's potential with Fivewell Africa. We connect producers, enterprises, and innovators to regional and global markets for equitable growth.",
-    image: "/assets/Market.jpg",
-    heroImage: "/assets/Market.jpg",
+    image: "/assets/Maersk.jpg",
+    heroImage: "/assets/Maersk.jpg",
     ctaLink: " Learn About Our Market Work →",
     introduction: {
       title: "Market Access & Regional Integration",

@@ -2,11 +2,11 @@
 import { motion } from "framer-motion";
 
 const colors = [
-  "from-green-500 to-green-600",
-  "from-blue-500 to-blue-600",
-  "from-purple-500 to-purple-600",
-  "from-amber-500 to-amber-600",
-  "from-rose-500 to-rose-600"
+  "from-[#F5D7A2] to-[#F5D7A2]",
+  "from-[#F5D7A2] to-[#F5D7A2]",
+  "from-[#F5D7A2] to-[#F5D7A2]",
+  "from-[#F5D7A2] to-[#F5D7A2]",
+  "from-[#F5D7A2] to-[#F5D7A2]"
 ];
 
 interface ProcessStep {

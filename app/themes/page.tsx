@@ -9,6 +9,7 @@ import Link from "next/link";
 
 export default function ThemesPage() {
   const themeColors = [
+    // Building Sustainable and Adaptive Pathways for Development
     {
       bg: 'bg-blue-50 dark:bg-blue-900/30',
       border: 'border-blue-200 dark:border-blue-800',
@@ -16,6 +17,7 @@ export default function ThemesPage() {
       hover: 'hover:bg-blue-100 dark:hover:bg-blue-900/50',
       button: 'bg-blue-100 dark:bg-blue-800/50 text-blue-700 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-700/70'
     },
+    // Knowledge, Research, and Capacity Building
     {
       bg: 'bg-green-50 dark:bg-green-900/30',
       border: 'border-green-200 dark:border-green-800',
@@ -23,6 +25,15 @@ export default function ThemesPage() {
       hover: 'hover:bg-green-100 dark:hover:bg-green-900/50',
       button: 'bg-green-100 dark:bg-green-800/50 text-green-700 dark:text-green-200 hover:bg-green-200 dark:hover:bg-green-700/70'
     },
+    // Innovation & Technology
+    {
+      bg: 'bg-purple-50 dark:bg-purple-900/30',
+      border: 'border-purple-200 dark:border-purple-800',
+      text: 'text-purple-700 dark:text-purple-300',
+      hover: 'hover:bg-purple-100 dark:hover:bg-purple-900/50',
+      button: 'bg-purple-100 dark:bg-purple-800/50 text-purple-700 dark:text-purple-200 hover:bg-purple-200 dark:hover:bg-purple-700/70'
+    },
+    // Market Access & Regional Integration
     {
       bg: 'bg-amber-50 dark:bg-amber-900/30',
       border: 'border-amber-200 dark:border-amber-800',
@@ -30,12 +41,13 @@ export default function ThemesPage() {
       hover: 'hover:bg-amber-100 dark:hover:bg-amber-900/50',
       button: 'bg-amber-100 dark:bg-amber-800/50 text-amber-700 dark:text-amber-200 hover:bg-amber-200 dark:hover:bg-amber-700/70'
     },
+    // Partnerships & Systems Change
     {
-      bg: 'bg-purple-50 dark:bg-purple-900/30',
-      border: 'border-purple-200 dark:border-purple-800',
-      text: 'text-purple-700 dark:text-purple-300',
-      hover: 'hover:bg-purple-100 dark:hover:bg-purple-900/50',
-      button: 'bg-purple-100 dark:bg-purple-800/50 text-purple-700 dark:text-purple-200 hover:bg-purple-200 dark:hover:bg-purple-700/70'
+      bg: 'bg-teal-50 dark:bg-teal-900/30',
+      border: 'border-teal-200 dark:border-teal-800',
+      text: 'text-teal-700 dark:text-teal-300',
+      hover: 'hover:bg-teal-100 dark:hover:bg-teal-900/50',
+      button: 'bg-teal-100 dark:bg-teal-800/50 text-teal-700 dark:text-teal-200 hover:bg-teal-200 dark:hover:bg-teal-700/70'
     }
   ];
 

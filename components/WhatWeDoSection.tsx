@@ -1,20 +1,21 @@
 import React from 'react';
 
-interface FeatureCardProps {
-  icon: string; // Placeholder for icon component or path
-  title: string;
-  description: string;
-}
+// Commented out unused component to fix lint warning
+// interface FeatureCardProps {
+//   icon: string; // Placeholder for icon component or path
+//   title: string;
+//   description: string;
+// }
 
-const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) => {
-  return (
-    <div className="flex flex-col items-center text-center p-6 border rounded-lg shadow-sm bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 transition-colors duration-300">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{title}</h3>
-      <p className="text-gray-600 dark:text-gray-300">{description}</p>
-    </div>
-  );
-};
+// const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) => {
+//   return (
+//     <div className="flex flex-col items-center text-center p-6 border rounded-lg shadow-sm bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 transition-colors duration-300">
+//       <div className="text-4xl mb-4">{icon}</div>
+//       <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{title}</h3>
+//       <p className="text-gray-600 dark:text-gray-300">{description}</p>
+//     </div>
+//   );
+// };
 
 const WhatWeDoSection = () => {
   return (
@@ -24,8 +25,16 @@ const WhatWeDoSection = () => {
         <p className="text-lg text-gray-700 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
           We work to build resilient food systems through various initiatives.
         </p>
+        <div className="text-lg text-gray-700 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
+          Fivewell Africa&apos;s work is anchored in five interconnected themes that guide our approach to 
+          sustainable and inclusive development.
+          Each theme represents a core area of impact and 
+          collectively forms a holistic framework for transforming Africa&apos;s communities, ecosystems, 
+          and economies.
+          Explore each theme to see how we turn vision into action.
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <FeatureCard
             icon="💡"
             title="Partner with Entrepreneurs"
@@ -41,7 +50,7 @@ const WhatWeDoSection = () => {
             title="Design Food Systems"
             description="We design holistic and climate-sensitive food systems from production to distribution."
           />
-        </div>
+        </div> */}
       </div>
     </section>
   );

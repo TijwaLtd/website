@@ -41,11 +41,10 @@ const BlogPage = async () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white sm:text-5xl">
-              Blogs
+              Stay connected with Fivewell Africa&apos;s latest updates, stories, and
+              thought leadership.
             </h1>
-            <p className="mt-4 text-xl text-green-100 max-w-3xl mx-auto">
-              Exploring sustainable pathways, innovation, and partnerships that are shaping Africa&apos;s development landscape.
-            </p>
+           
           </div>
         </div>
       </div>

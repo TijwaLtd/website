@@ -1,10 +1,20 @@
+import { CookieConsent } from "@/components/CookieConsent";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
+import { Lato } from 'next/font/google';
 import "./globals.css";
-import { CookieConsent } from "@/components/CookieConsent";
+
+// Configure Lato font with all weights and styles
+const lato = Lato({
+  weight: ['100', '300', '400', '700', '900'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-lato',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fivewellafrica.com"),
@@ -64,7 +74,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={`${lato.variable} font-sans`}>
       <body>
         <script
           type="application/ld+json"
@@ -72,7 +82,7 @@ export default function RootLayout({
         />
         <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="dark"
             enableSystem
             disableTransitionOnChange
           >
