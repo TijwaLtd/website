@@ -5,12 +5,23 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import path from 'path';
+import { ReactNode } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 interface ArticleParams {
   params: {
     slug: string;
   };
+}
+
+interface MarkdownProps {
+    alt?: string;
+    src?: string;
+    children?: ReactNode;
+    href?: string;
+    inline?: boolean;
+    className?: string;
+    title?: string;
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
@@ -25,7 +36,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       title: data.title || 'Article',
       description: data.description || 'Read this article on FiveWell Africa',
     };
-  } catch (error) {
+  } catch {
     return {
       title: 'Article Not Found',
       description: 'The requested article could not be found.',
@@ -43,7 +54,7 @@ export default async function ArticlePage({ params }: ArticleParams) {
     
     // Custom components for ReactMarkdown
     const components = {
-      img: ({ node, ...props }: any) => {
+      img: ({ ...props }: MarkdownProps) => {
         const altText = props.alt || '';
         const [alt, caption] = altText.split('|').map((s: string) => s.trim());
         const isBase64 = props.src?.startsWith('data:image');
@@ -54,9 +65,11 @@ export default async function ArticlePage({ params }: ArticleParams) {
             <div className="relative rounded-lg overflow-hidden shadow-lg">
               {isBase64 ? (
                 // Handle base64 images
-                <img 
-                  src={props.src} 
+                <Image 
+                  src={props.src || ''}
                   alt={alt}
+                  width={500}
+                  height={500}
                   className="w-full h-auto max-h-[500px] object-contain mx-auto"
                   loading="lazy"
                 />
@@ -64,7 +77,7 @@ export default async function ArticlePage({ params }: ArticleParams) {
                 // Handle local images from public folder
                 <div className="relative w-full aspect-video">
                   <Image
-                    src={props.src}
+                    src={props.src || ''}
                     alt={alt}
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -73,9 +86,11 @@ export default async function ArticlePage({ params }: ArticleParams) {
                 </div>
               ) : (
                 // Handle external images
-                <img 
-                  src={props.src}
+                <Image 
+                  src={props.src || ''}
                   alt={alt}
+                  width={500}
+                  height={500}
                   className="w-full h-auto max-h-[500px] object-contain mx-auto"
                   loading="lazy"
                 />
@@ -94,7 +109,7 @@ export default async function ArticlePage({ params }: ArticleParams) {
           </figure>
         );
       },
-      a: ({ node, ...props }: any) => {
+      a: ({ ...props }: MarkdownProps) => {
         // Check if the link is external
         const isExternal = props.href?.startsWith('http');
         return (
@@ -106,10 +121,10 @@ export default async function ArticlePage({ params }: ArticleParams) {
           />
         );
       },
-      h2: ({ node, ...props }: any) => {
+      h2: ({ ...props }: MarkdownProps) => {
         // Create an ID for the heading for anchor links
         const id = props.children
-          .toString()
+          ?.toString()
           .toLowerCase()
           .replace(/[^\w\s]/g, '')
           .replace(/\s+/g, '-');
@@ -127,25 +142,24 @@ export default async function ArticlePage({ params }: ArticleParams) {
           </h2>
         );
       },
-      p: ({ node, ...props }: any) => (
+      p: ({ ...props }: MarkdownProps) => (
         <p className="my-6 text-gray-700 leading-relaxed text-base" {...props} />
       ),
-      ul: ({ node, ...props }: any) => (
+      ul: ({ ...props }: MarkdownProps) => (
         <ul className="list-disc pl-8 my-6 space-y-3" {...props} />
       ),
-      li: ({ node, ...props }: any) => (
+      li: ({ ...props }: MarkdownProps) => (
         <li className="text-gray-700 leading-relaxed" {...props}>
           <span className="relative -left-1">{props.children}</span>
         </li>
       ),
-      blockquote: ({ node, ...props }: any) => (
+      blockquote: ({ ...props }: MarkdownProps) => (
         <blockquote 
           className="border-l-4 border-green-500 bg-green-50 dark:bg-green-900/20 pl-6 pr-4 py-3 my-6 text-gray-700 dark:text-gray-300 not-italic rounded-r-lg"
           {...props} 
         />
       ),
-      code: ({ node, inline, className, children, ...props }: any) => {
-        const match = /language-(\w+)/.exec(className || '');
+      code: ({ inline, className, children, ...props }: MarkdownProps) => {
         return !inline ? (
           <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 my-6 overflow-x-auto">
             <code className={className} {...props}>
@@ -239,7 +253,7 @@ export default async function ArticlePage({ params }: ArticleParams) {
         </article>
       </div>
     );
-  } catch (error) {
+  } catch {
     notFound();
   }
 }
@@ -253,7 +267,7 @@ export async function generateStaticParams() {
     return files.map((filename) => ({
       slug: filename.replace(/\.md$/, ''),
     }));
-  } catch (error) {
+  } catch {
     return [];
   }
 }

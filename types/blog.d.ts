@@ -1,6 +1,4 @@
 declare module '*.md' {
-  import { ReactNode } from 'react';
-  
   interface FrontMatter {
     title: string;
     description: string;
@@ -8,7 +6,7 @@ declare module '*.md' {
     author?: string;
     image?: string;
     category?: string;
-    [key: string]: any;
+    [key: string]: string | number | boolean | undefined;
   }
   
   const content: {
