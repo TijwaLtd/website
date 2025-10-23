@@ -40,8 +40,18 @@ const MediaContnent = () => {
         "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=450&fit=crop",
       date: "2024-04-10",
       url: "#",
-      category: "Article",
+      category: "Articl",
       source: "Logistics Monthly",
+    },
+      {
+      id: '3',
+      title: 'Why Data Privacy Matters: Building Trust in Kenya\'s Digital Development',
+      type: 'article',
+      thumbnail: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop',
+      date: '2024-07-15',
+      url: '/media/why-data-privacy-matters',
+      category: 'Featured Article',
+      source: 'FiveWell Africa'
     },
     // {
     //   id: "1",

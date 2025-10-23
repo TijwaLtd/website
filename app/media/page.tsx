@@ -32,13 +32,13 @@ const MediaPage = () => {
     },
     {
       id: '3',
-      title: 'FiveWell Africa Featured in Business Daily on Agritech Adoption',
+      title: 'Why Data Privacy Matters: Building Trust in Kenya\'s Digital Development',
       type: 'article',
-      thumbnail: 'https://images.unsplash.com/photo-1581092921461-39b2f2c6a964?w=800&h=450&fit=crop',
-      date: '2024-07-10',
-      url: '#',
-      category: 'In The News',
-      source: 'Business Daily'
+      thumbnail: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop',
+      date: '2024-07-15',
+      url: '/media/why-data-privacy-matters',
+      category: 'Featured Article',
+      source: 'FiveWell Africa'
     },
     {
       id: '4',

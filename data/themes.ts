@@ -15,6 +15,7 @@ export interface Theme {
   title: string;
   slug: string;
   description: string;
+  theme_page_description: string;
   tagline: string;
   image: string;
   heroImage?: string;
@@ -63,11 +64,12 @@ export const themes: Theme[] = [
     title: "Sustainable & Adaptive Pathways for Development",
     slug: "building-sustainable-and-adaptive-pathways",
     tagline: "Building resilience across people, systems, and environments.",
-    description: "This theme is designed to deliver measurable impact across multiple Sustainable Development Goals (SDGs). Through this theme, the organization advances models that regenerate natural ecosystems, empower communities to lead their own development, and build economic systems that can withstand environmental and market shocks. It seeks to create a balance between people, planet, and prosperity by promoting practices that sustain life, nurture equity, and foster long-term transformation.Our sustainability work is organized around three interconnected pillars that collectively advance all 17 SDGs, ensuring impact that is both broad in scope and deep in transformation.",
+    description: "We support initiatives that advance the Sustainable Development Goals. Our work integrates innovation, policy, and collaboration to design adaptive solutions that respond to Africa’s evolving realities.",
     seoKeywords: ["climate resilience", "adaptive agriculture", "smallholder adaptation", "water-smart farming", "sustainable development", "adaptive systems", "SDGs in Africa"],
     metaDescription: "Advance Africa's sustainable development with Fivewell Africa. Building resilient communities, ecosystems, and economies through adaptive solutions.",
     image: "/assets/NorthEasternWomen.jpg",
     heroImage: "/assets/NorthEasternWomen.jpg",
+    theme_page_description: "This theme is designed to deliver measurable impact across multiple Sustainable Development Goals (SDGs). Through this theme, the organization advances models that regenerate natural ecosystems, empower communities to lead their own development, and build economic systems that can withstand environmental and market shocks. It seeks to create a balance between people, planet, and prosperity by promoting practices that sustain life, nurture equity, and foster long-term transformation. Our sustainability work is organized around three interconnected pillars that collectively advance all 17 SDGs, ensuring impact that is both broad in scope and deep in transformation.",
     ctaLink: "Explore Sustainable Pathways →",
     introduction: {
       title: "Sustainable & Adaptive Pathways for Development",
@@ -218,6 +220,7 @@ export const themes: Theme[] = [
     slug: "knowledge-research-and-capacity-building",
     tagline: "Expanding knowledge that drives progress.",
     description: "We generate evidence, build skills, and share knowledge that transforms ideas into action. Through applied research, capacity-building programs, and collaborative learning, we equip organizations, communities, and leaders with the tools to create measurable impact.",
+    theme_page_description:"We believe knowledge is the foundation of progress. Through research and learning, we turn insights into action bridging data, experience, and innovation to solve real-world challenges. Our work strengthens institutions and communities by building skills, sharing evidence, and nurturing ideas that shape better futures and that make development more informed, inclusive, and sustainable.",
     seoKeywords: ["farmer training", "capacity building", "participatory learning", "research and development Africa", "capacity building", "evidence-based action", "knowledge partnerships"],
     metaDescription: "Transform ideas into action with Fivewell Africa. Evidence-based research, training, and knowledge sharing for inclusive and informed development",
     image: "/assets/StickyNotes.jpg",
@@ -362,6 +365,7 @@ export const themes: Theme[] = [
     slug: "innovation-technology",
     tagline: "Technology for inclusive transformation.",
     description: "We pilot and scale human-centered innovative tools and digital solutions that address real development challenges; improving efficiency, transparency, and access. Our focus is on technologies that simplify systems and enable equitable growth across sectors.",
+    theme_page_description:"We believe that new ideas and technology can help solve Africa’s most pressing challenges including system inefficiencies. Using tools like data, digital platforms, and artificial intelligence, we make development work smarter, faster, and more effective. But technology is never the goal in itself; it’s a way to improve lives, strengthen communities, and create lasting solutions.We also support innovators, startups, and institutions to test and scale their ideas so they can reach more people and make real impact. Our focus is on ensuring that innovation remains ethical, inclusive, and practical. ",
     seoKeywords: ["innovation in Africa", "digital transformation", "inclusive technology", "sustainable innovation"],
     metaDescription: "Harness technology to solve Africa's development challenges. Fivewell Africa drives digital innovation, AI, and tools for inclusive transformation.",
     image: "/assets/Innovation.jpg",
@@ -509,6 +513,7 @@ export const themes: Theme[] = [
     seoKeywords: ["market access Africa", "AfCFTA", "trade policy", "value chain integration", "export readiness"],
     metaDescription: "Unlock Africa's potential with Fivewell Africa. We connect producers, enterprises, and innovators to regional and global markets for equitable growth.",
     image: "/assets/Maersk.jpg",
+    theme_page_description:"Expanding markets is central to unlocking Africa’s full potential. Under this theme, we connect producers, innovators, and institutions to markets across Africa and beyond, enabling growth that is fair, equitable, and sustainable. Our work focuses on identifying barriers that limit access, strengthening value chains, and fostering regional integration so that African enterprises can thrive in global markets.  We increase producer earnings by reducing intermediaries, improving quality, and creating new regional and digital trade channels. By bridging policy, innovation, and opportunity, we help build a continent that trades more with itself, and with the world on fair and forward-looking terms.",
     heroImage: "/assets/Maersk.jpg",
     ctaLink: " Learn About Our Market Work →",
     introduction: {
@@ -654,6 +659,7 @@ export const themes: Theme[] = [
     metaDescription: "Fivewell Africa collaborates with governments, institutions, and changemakers to drive impactful programs and scale sustainable solutions across Africa.",
     image: "/assets/Partnerships.jpg",
     heroImage: "/assets/Partnerships.jpg",
+    theme_page_description: "PartnershipsWe collaborate closely with organizations, changemakers, governments, and private sector partners to drive meaningful development across Africa. Our partnerships are built on trust, shared values, and a common goal to create solutions that make a real difference in people’s lives. By connecting ideas, resources, and people, we help turn plans into action and strengthen the systems that sustain progress. We also act as an implementing partner for governments and organizations that need reliable project delivery on the ground. Our team manages programs from planning to execution bridging ideas with action and ensuring every effort creates visible, lasting impact.",
     ctaLink:"Partner With Us →",
     introduction: {
       title: "Partnerships & Systems Change",
