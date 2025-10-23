@@ -183,3 +183,7 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.whitespace-pre-line {
+  white-space: pre-line;
+}

@@ -185,7 +185,7 @@ export default function ThemesPage() {
                     
                     {/* Content */}
                     <div className="lg:w-1/2 p-8 flex flex-col">
-                      <div className={`${color.text} text-lg`}>
+                      <div className={`${color.text} text-lg whitespace-pre-line`}>
                         {theme.theme_page_description}
                       </div>
                       
