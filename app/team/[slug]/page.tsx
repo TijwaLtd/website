@@ -2,7 +2,7 @@
 
 import { TeamMember, teamMembers } from '@/data/team';
 import { motion, Variants } from 'framer-motion';
-import { Award, Briefcase, Linkedin, Mail, Sparkles, Twitter, Users } from 'lucide-react';
+import { Briefcase, Linkedin, Mail, Sparkles, Twitter, Users } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -219,10 +219,7 @@ export default function TeamMemberPage({ params }: PageProps) {
                   variants={item}
                   className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-6 mb-8 border border-primary/20 hover:shadow-md transition-shadow"
                 >
-                  <div className="flex items-center gap-2 mb-4">
-                    <Award className="w-5 h-5 text-primary" />
-                    <h3 className="text-xl md:text-2xl font-bold text-gray-900">About Me</h3>
-                  </div>
+                 
                   <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
                     {member.detailedBio}
                   </p>

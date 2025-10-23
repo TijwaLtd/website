@@ -1,6 +1,5 @@
 import AnimatedHero from "@/components/AnimatedHero";
 import BecomePartnerForm from "@/components/BecomePartnerForm";
-import PartnerSection from "@/components/Partners";
 
 // Placeholder for an icon. In a real app, this would be an SVG or an icon component.
 const PlaceholderIcon = ({ className }: { className?: string }) => (
@@ -222,7 +221,7 @@ function BecomePartnerPage() {
           </div>
         </div>
       </section>
-      <PartnerSection />
+      {/* <PartnerSection /> */}
     </div>
   );
 }

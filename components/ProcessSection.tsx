@@ -32,7 +32,7 @@ export default function ProcessSection({ process }: ProcessSectionProps) {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[gray-900] dark:text-white">
             {process.title}
           </h2>
         </motion.div>
@@ -57,7 +57,7 @@ export default function ProcessSection({ process }: ProcessSectionProps) {
                     {/* <div className="text-2xl font-bold text-white mb-2">
                       {`Step ${index + 1}`}
                     </div> */}
-                    <h3 className="text-xl font-semibold text-white dark:text-white/90">
+                    <h3 className="text-xl font-semibold text-[#0D2543] dark:text-[#0D2543]">
                       {step.title}
                     </h3>
                   </div>

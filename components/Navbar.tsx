@@ -124,7 +124,7 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-gray-700 hover:text-green-600 text-base font-medium"
+                  className="block px-3 py-2 text-text-white hover:text-white text-base font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -132,7 +132,7 @@ export default function Navbar() {
               ))}
               <Link
                 href="/contact"
-                className="block w-full mt-4 bg-green-600 text-white px-6 py-2 rounded-full text-center text-sm font-medium hover:bg-green-700 transition-colors duration-200"
+                className="block w-full mt-4 bg-[#F3E6C2] text-black px-6 py-2 rounded-full text-center text-sm font-medium hover:bg-green-700 transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Get Started

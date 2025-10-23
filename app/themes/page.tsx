@@ -195,7 +195,7 @@ export default function ThemesPage() {
                           <ol className="space-y-2">
                             {theme.subthemes.map((subtheme, idx) => (
                               <li key={subtheme.id} className="flex">
-                                <span className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary font-medium mr-3 mt-0.5">
+                                <span className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-white font-medium mr-3 mt-0.5">
                                   {idx + 1}
                                 </span>
                                 <div>

@@ -30,7 +30,9 @@ const BlogPage = async () => {
     <div className="min-h-screen pt-18">
       {/* Hero Section */}
       <div className="relative  py-20">
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden"
+        suppressHydrationWarning
+        >
           <Image
             src="/assets/Seedling.jpg"
             alt="Agricultural Insights Blog"

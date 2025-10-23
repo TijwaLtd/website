@@ -16,7 +16,7 @@ export default function AnimatedHero() {
           priority
           quality={100}
         />
-        <div className="absolute inset-0 "></div>
+        <div className="absolute inset-0 opacity-50 bg-black "></div>
       </div>
       
       {/* Content */}
@@ -25,12 +25,12 @@ export default function AnimatedHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 drop-shadow-lg text-gray-800"
+          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 drop-shadow-lg text-white"
         >
           Partner With Us
         </motion.h1>
         <motion.p 
-          className="text-xl sm:text-2xl max-w-3xl mx-auto mb-8 text-gray-800"
+          className="text-xl sm:text-2xl max-w-3xl mx-auto mb-8 text-white"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
