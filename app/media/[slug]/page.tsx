@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import path from 'path';
 import { ReactNode } from 'react';
-import ReactMarkdown from 'react-markdown';
+import ReactMarkdown, { Components } from 'react-markdown';
 
 interface ArticleParams {
   params: {
@@ -14,15 +14,20 @@ interface ArticleParams {
   };
 }
 
-interface MarkdownProps {
-    alt?: string;
-    src?: string;
-    children?: ReactNode;
-    href?: string;
-    inline?: boolean;
-    className?: string;
-    title?: string;
-}
+// Type for the node in markdown components
+type MarkdownNode = {
+  children?: Array<{ tagName?: string; properties?: Record<string, unknown> }>;
+  properties?: Record<string, unknown>;
+  tagName?: string;
+};
+
+// Type for code component props
+type CodeProps = {
+  node?: unknown;
+  className?: string;
+  children?: ReactNode;
+  inline?: boolean;
+};
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const { slug } = params;
@@ -50,15 +55,25 @@ export default async function ArticlePage({ params }: ArticleParams) {
   
   try {
     const fileContents = fs.readFileSync(filePath, 'utf8');
-    const { data, content } = matter(fileContents);
+    const { data, content: rawContent } = matter(fileContents);
+    let content = rawContent.replace(/<data:image/g, 'data:image');
+    content = content.replace(/(base64,[\s\S]*?)>/g, '$1');
     
     // Custom components for ReactMarkdown
-    const components = {
-      img: ({ ...props }: MarkdownProps) => {
-        const altText = props.alt || '';
-        const [alt, caption] = altText.split('|').map((s: string) => s.trim());
-        const isBase64 = props.src?.startsWith('data:image');
-        const isLocal = props.src?.startsWith('/');
+    const components: Components = {
+      img: (props) => {
+        const { src, alt = '', title, width, height, className: _className, ...rest } = props;
+
+        if (!src) {
+          return null;
+        }
+        const [altTextOnly, caption] = alt.split('|').map((s: string) => s.trim());
+        const isBase64 = typeof src === 'string' && src.startsWith('data:image');
+        const isLocal = typeof src === 'string' && src.startsWith('/');
+        
+        // Convert width/height to numbers if they're strings
+        const imgWidth = width ? Number(width) : 500;
+        const imgHeight = height ? Number(height) : 500;
         
         return (
           <figure className="my-8 group relative">
@@ -66,38 +81,41 @@ export default async function ArticlePage({ params }: ArticleParams) {
               {isBase64 ? (
                 // Handle base64 images
                 <Image 
-                  src={props.src || ''}
-                  alt={alt}
-                  width={500}
-                  height={500}
+                  src={src as string}
+                  alt={altTextOnly}
+                  width={imgWidth}
+                  height={imgHeight}
                   className="w-full h-auto max-h-[500px] object-contain mx-auto"
                   loading="lazy"
+                  {...rest}
                 />
               ) : isLocal ? (
                 // Handle local images from public folder
                 <div className="relative w-full aspect-video">
-                  <Image
-                    src={props.src || ''}
-                    alt={alt}
+<Image
+                    src={src as string}
+                    alt={altTextOnly}
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    {...rest}
                   />
                 </div>
               ) : (
                 // Handle external images
                 <Image 
-                  src={props.src || ''}
-                  alt={alt}
-                  width={500}
-                  height={500}
+                  src={src as string}
+                  alt={altTextOnly}
+                  width={imgWidth}
+                  height={imgHeight}
                   className="w-full h-auto max-h-[500px] object-contain mx-auto"
                   loading="lazy"
+                  {...rest}
                 />
               )}
-              {props.title && (
+              {title && (
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {props.title}
+                  {title}
                 </div>
               )}
             </div>
@@ -109,7 +127,7 @@ export default async function ArticlePage({ params }: ArticleParams) {
           </figure>
         );
       },
-      a: ({ ...props }: MarkdownProps) => {
+      a: ({ ...props }) => {
         // Check if the link is external
         const isExternal = props.href?.startsWith('http');
         return (
@@ -121,7 +139,7 @@ export default async function ArticlePage({ params }: ArticleParams) {
           />
         );
       },
-      h2: ({ ...props }: MarkdownProps) => {
+      h2: ({ ...props }) => {
         // Create an ID for the heading for anchor links
         const id = props.children
           ?.toString()
@@ -142,24 +160,30 @@ export default async function ArticlePage({ params }: ArticleParams) {
           </h2>
         );
       },
-      p: ({ ...props }: MarkdownProps) => (
-        <p className="my-6 text-gray-700 leading-relaxed text-base" {...props} />
-      ),
-      ul: ({ ...props }: MarkdownProps) => (
+      p: ({ node, ...props }) => {
+        const hasImageChild = (node as MarkdownNode)?.children?.some(
+          child => child.tagName === 'img'
+        );
+        if (hasImageChild) {
+          return <>{props.children}</>;
+        }
+        return <p className="my-6 text-gray-700 leading-relaxed text-base" {...props} />;
+      },
+      ul: ({ ...props }) => (
         <ul className="list-disc pl-8 my-6 space-y-3" {...props} />
       ),
-      li: ({ ...props }: MarkdownProps) => (
+      li: ({ ...props }) => (
         <li className="text-gray-700 leading-relaxed" {...props}>
           <span className="relative -left-1">{props.children}</span>
         </li>
       ),
-      blockquote: ({ ...props }: MarkdownProps) => (
+      blockquote: ({ ...props }) => (
         <blockquote 
           className="border-l-4 border-green-500 bg-green-50 dark:bg-green-900/20 pl-6 pr-4 py-3 my-6 text-gray-700 dark:text-gray-300 not-italic rounded-r-lg"
           {...props} 
         />
       ),
-      code: ({ inline, className, children, ...props }: MarkdownProps) => {
+      code: ({ node: _node, className, children, inline, ...props }: CodeProps) => {
         return !inline ? (
           <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 my-6 overflow-x-auto">
             <code className={className} {...props}>

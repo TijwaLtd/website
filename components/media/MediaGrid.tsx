@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
 
 export type MediaItem = {
   id: string;
@@ -12,6 +12,9 @@ export type MediaItem = {
   date: string;
   url: string;
   category?: string;
+  tags?: string[];
+  seoTitle?: string;
+  seoDescription?: string;
   source: string;
 };
 

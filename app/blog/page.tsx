@@ -1,6 +1,5 @@
-import BlogPostList from "@/components/BlogPostList";
 import MediaContnent from "@/components/Media";
-import { getBlogPosts } from "@/lib/contentful";
+// import { getBlogPosts } from "@/lib/contentful";
 import type { Metadata } from "next";
 import Image from "next/image";
 
@@ -24,7 +23,7 @@ export const revalidate = 3600;
 // }
 
 const BlogPage = async () => {
-  const blogPosts = await getBlogPosts();
+  // Removed unused blogPosts since we're not using Contentful for now
 
   return (
     <div className="min-h-screen pt-18">
@@ -52,9 +51,9 @@ const BlogPage = async () => {
       </div>
       <MediaContnent />
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <BlogPostList posts={blogPosts} />
-      </div>
+      </div> */}
     </div>
   );
 };
