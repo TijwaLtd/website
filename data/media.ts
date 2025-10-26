@@ -1,5 +1,5 @@
   import {
-    type MediaItem as MediaGridItem,
+  type MediaItem as MediaGridItem,
 } from "@/components/media/MediaGrid";
 
   

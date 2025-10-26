@@ -24,7 +24,8 @@ const AboutPage = () => {
               About FiveWell Africa
             </h1>
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-              Fivewell Africa is a purpose-driven organization dedicated to advancing sustainable and inclusive development across the continent. We partner with communities, institutions, and changemakers to design solutions that strengthen systems, unlock opportunities, and deliver measurable impact.
+             Fivewell Africa is a purpose-driven consulting group and implementing partner dedicated to advancing sustainable and inclusive development across the continent.
+             We partner with communities, institutions, and changemakers to design and implement solutions that strengthen systems, unlock opportunities, and deliver measurable impact.
             </p>
           </motion.div>
         </div>
@@ -97,10 +98,9 @@ const AboutPage = () => {
                     Inspiration in Israel
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    In Israel, we worked alongside leading experts in the Arava
-                    Valley, witnessing firsthand how science, innovation, and
+                    Witnessing firsthand how innovation, efficient systems, and
                     determination could turn desert sands into fields that feed
-                    the world.
+                    the world, we worked alongside leading experts in the Arava Valley.
                   </p>
                 </div>
               </motion.div>
@@ -121,11 +121,9 @@ const AboutPage = () => {
                     The Birth of FiveWell
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Inspired by this possibility, we came together to bring that
-                    spirit of innovation back home. We believed that if the
-                    desert could bloom, then Africa&apos;s challenges too could
+                    We believed that if the desert could bloom, then Africa&apos;s challenges too could
                     be met with solutions rooted in knowledge, technology, and
-                    collaboration.
+                    collaboration. Then, we became Fivewell.
                   </p>
                 </div>
               </motion.div>
@@ -146,7 +144,7 @@ const AboutPage = () => {
                     Our Vision Today
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Today, FiveWell Africa stands as the convergence of five
+                    Today, FiveWellAfrica stands as the convergence of five
                     journeys, five pillars of expertise, and one well of
                     solutions. With over 25 years of cumulative experience, we
                     are committed to being a bridge between needs and solutions,

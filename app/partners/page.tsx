@@ -24,77 +24,93 @@ function BecomePartnerPage() {
   const benefits = [
     {
       icon: <PlaceholderIcon className="w-12 h-12 text-primary" />,
-      title: "Unlock Market Access",
+      title: "Expert Guidance",
       description:
-        "Gain entry into new local and regional markets with our extensive network and logistical support.",
+        "Leverage our team's deep expertise in sustainable models, project design and management, research, analysis, and emerging market trends to strengthen every stage of your initiative.",
     },
     {
       icon: <PlaceholderIcon className="w-12 h-12 text-primary" />,
-      title: "Expert Agribusiness Guidance",
+      title: "Achieve Measurable Excellence",
       description:
-        "Leverage our team's deep expertise in sustainable farming, supply chain management, and market trends.",
+        "Benefit from evidence-based design, participatory approaches, and results that clearly demonstrate your impact.",
     },
     {
       icon: <PlaceholderIcon className="w-12 h-12 text-primary" />,
-      title: "Access to Finance & Technology",
+      title: "Move Seamlessly",
       description:
-        "We help you connect with investors and adopt cutting-edge ag-tech to scale your operations efficiently.",
+        "Move seamlessly from ideas to impact with a team that helps you translate strategy into measurable action — from co-design to on-the-ground implementation.",
     },
     {
       icon: <PlaceholderIcon className="w-12 h-12 text-primary" />,
-      title: "Drive Sustainable Impact",
+      title: "Local Insight, Global Standards",
       description:
-        "Join a movement committed to building a resilient and profitable agricultural future for Africa.",
+        "Gain a partner who understands Africa's systems from the soil up, combining local insight with global standards to make your interventions relevant, inclusive, and lasting.",
     },
+    {
+      icon: <PlaceholderIcon className="w-12 h-12 text-primary" />,
+      title: "Partnership That Grows With You",
+      description:
+        "Gain more than a service provider; gain an ally who evolves with you as contexts shift and opportunities expand.",
+    }
   ];
 
   const partnerProfiles = [
     {
-      title: "Ambitious Agri-SMEs",
+      title: "Development Agencies & NGOs",
       description:
-        "Businesses looking to scale their production, improve quality, and reach new customers.",
+        "Seeking grounded implementation partners across Africa.",
     },
     {
-      title: "Farming Cooperatives",
+      title: "Government Institutions",
       description:
-        "Groups seeking to enhance collective bargaining power, streamline operations, and improve member livelihoods.",
+        "Aiming to develop and scale national or regional programs sustainably.",
     },
     {
-      title: "Technology Innovators",
+      title: "Research & Academic Institutions",
       description:
-        "Startups and companies with solutions that can transform the agricultural value chain.",
+        "Advancing applied learning, data, and innovation.",
     },
     {
-      title: "NGOs & Development Partners",
+      title: "Impact Investors & Foundations",
       description:
-        "Organizations aligned with our mission of sustainable development and food security in Africa.",
+        "Funding initiatives that combine measurable social and environmental outcomes.",
     },
+    {
+      title: "Private Sector Actors",
+      description:
+        "Integrating sustainability and shared value into their operations.",
+    },
+    {
+      title: "Community-Based Organizations",
+      description:
+        "Social innovators co-creating solutions with local ownership and global relevance.",
+    }
   ];
 
   const partnershipSteps = [
     {
       step: 1,
-      title: "Initial Inquiry",
+      title: "Conversation & Alignment",
       description:
-        "Fill out the form below to express your interest. Tell us about your organization and your goals.",
+        "We start by understanding your goals, challenges, and the impact you hope to achieve.",
     },
     {
       step: 2,
-      title: "Discovery Call",
+      title: "Co-Design & Planning",
       description:
-        "Our partnership team will schedule a call to understand your needs and see how we can align.",
+        "Together, we translate insights into a clear, actionable roadmap.",
     },
     {
       step: 3,
-      title: "Strategic Proposal",
+      title: "Implementation & Delivery",
       description:
-        "We'll develop a tailored partnership proposal outlining collaboration areas and mutual benefits.",
+        "Our team manages execution as agreed, ensuring efficiency, transparency, and measurable outcomes.",
     },
     {
       step: 4,
-      title: "Launch & Grow",
+      title: "Learning & Growth",
       description:
-        "Once we agree on the terms, we'll kick off the partnership and start working towards shared success.",
+        "We track impact, share lessons, and adapt to make every phase stronger than the last.",
     }
   ];
 
@@ -111,8 +127,8 @@ function BecomePartnerPage() {
               Why Partner With Us?
             </h2>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              We provide the resources, expertise, and network to help you
-              overcome challenges and seize opportunities.
+              We bring the strength of a multidisciplinary team with deep experience across Africa and beyond. 
+              — professionals who have worked with development agencies, governments, and innovators to turn strategies into measurable impact.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -212,8 +228,7 @@ function BecomePartnerPage() {
               Become a Partner
             </h2>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
-              Ready to take the next step? Fill out the form below and a member
-              of our team will be in touch shortly.
+             Ready to co-create sustainable change? Fill in the form below, and we will be in touch!
             </p>
           </div>
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-700">
