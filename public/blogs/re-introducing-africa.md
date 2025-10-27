@@ -24,7 +24,7 @@ And across rural areas, Indigenous knowledge about plants, trees, and soil conti
 
 ---
 
-![Image 2: (Credit Erik Hathaway)](/images/blog/Image2.jpg)
+![Image 2 | Photo: Erik Hathaway](/images/blog/Image2.jpg)
 
 
 ***Tracing the Currents of Development***
@@ -43,7 +43,7 @@ Across the continent, new models of development are emerging through partnership
 
 ---
 
-![Image 3: (Everyday Lagos, Nigeria) Phot Credit: Levithegrapher](/images/blog/Image3.jpg)
+![Everyday Lagos, Nigeria | Photo: Levithegrapher](/images/blog/Image3.jpg)
 
 Altogether, Africa holds a peculiar truth: that it is both old and young, it has great wealth, but also faces many needs. Even when tired, it continues to rise. Its strength has never rested in abundance alone, but in its ability to turn challenges into opportunities and to make the most of what it already has.
 

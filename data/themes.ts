@@ -109,8 +109,8 @@ export const themes: Theme[] = [
     subthemes: [
       {
         id: "climate-smart-agriculture",
-        title: "Climate Smart Agriculture",
-        description: "Focus on sustainable food systems, improving yield, and reducing post-harvest losses.",
+        title: "Climate-Resilient and Regenerative Systems",
+          description: "Projects championing sustainable land and resource management approaches that rebuild ecosystems, restore biodiversity, and strengthen resilience to climate change.",
         image: "/assets/Herbs Greenhouse 2.jpg",
         keyPoints: [
           "Sustainable farming practices",
@@ -122,8 +122,10 @@ export const themes: Theme[] = [
       },
       {
         id: "sustainable-resource-management",
-        title: "Sustainable Resource Management",
-        description: "Implementing practices that ensure long-term availability of natural resources.",
+        
+          title: "Social and Institutional Resilience",
+          description: "Projects fostering inclusive systems that prioritize human development, equity, and local governance in responding to global challenges.",
+        
         image: "/assets/placeholder-resource.jpg",
         keyPoints: [
           "Water conservation techniques",
@@ -365,7 +367,7 @@ export const themes: Theme[] = [
     slug: "innovation-technology",
     tagline: "Technology for inclusive transformation.",
     description: "We pilot and scale human-centered innovative tools and digital solutions that address real development challenges; improving efficiency, transparency, and access. Our focus is on technologies that simplify systems and enable equitable growth across sectors.",
-    theme_page_description:"We believe that new ideas and technology can help solve Africa’s most pressing challenges including system inefficiencies. Using tools like data, digital platforms, and artificial intelligence, we make development work smarter, faster, and more effective.\n\nBut technology is never the goal in itself; it’s a way to improve lives, strengthen communities, and create lasting solutions.We also support innovators, startups, and institutions to test and scale their ideas so they can reach more people and make real impact. Our focus is on ensuring that innovation remains ethical, inclusive, and practical. ",
+    theme_page_description:"We believe that new ideas and technology can help solve Africa’s most pressing challenges including system inefficiencies. Using tools like data, digital platforms, and artificial intelligence, we make development work smarter, faster, and more effective.\n\nBut technology is never the goal in itself; It is a way to improve lives, strengthen communities, and create lasting solutions.We support innovators, startups, and institutions to test and scale their ideas so they can reach more people and make real impact. Our focus is on ensuring that innovation remains ethical, inclusive, and practical. ",
     seoKeywords: ["innovation in Africa", "digital transformation", "inclusive technology", "sustainable innovation"],
     metaDescription: "Harness technology to solve Africa's development challenges. Fivewell Africa drives digital innovation, AI, and tools for inclusive transformation.",
     image: "/assets/Innovation.jpg",
@@ -701,8 +703,8 @@ export const themes: Theme[] = [
     subthemes: [
       {
         id: "institutional-partnerships",
-        title: "Institutional Partnerships",
-        description: "Supporting organizations to design, implement, and scale their impact-driven projects.",
+       title: "Advocacy and Policy Partnerships",
+          description: "Engaging with civil society and government agencies to strengthen policy frameworks and amplify citizen voices.",
         image: "/assets/Institutional-Partnerships.jpg",
         keyPoints: [
           "Program design and implementation",
@@ -718,8 +720,8 @@ export const themes: Theme[] = [
       },
       {
         id: "regional-collaboration",
-        title: "Regional and Cross-Sector Collaboration",
-        description: "Connecting global and local stakeholders to foster innovation and alignment.",
+        title: "Capacity-Building Partnerships",
+        description: "Supporting local institutions and communities with training, mentorship, and systems that enhance long-term resilience.",
         image: "/assets/Regional-Collaboration.jpg",
         keyPoints: [
           "Stakeholder engagement",
@@ -735,8 +737,8 @@ export const themes: Theme[] = [
       },
       {
         id: "impact-measurement",
-        title: "Impact Alignment and Measurement",
-        description: "Developing frameworks that track progress and demonstrate shared value.",
+        title: "Impact Investment Partnerships",
+        description: "Working with investors who prioritize both financial returns and measurable social or environmental outcomes.",
         image: "/assets/Impact-Measurement.jpg",
         keyPoints: [
           "M&E framework development",
@@ -752,8 +754,8 @@ export const themes: Theme[] = [
       },
       {
         id: "community-collaboration",
-        title: "Community-Led Collaboration",
-        description: "Engaging local actors and networks to ensure interventions are inclusive and sustainable.",
+        title: "Institutional Partnerships",
+        description: "Working with organizations to design and grow projects that create impact.",
         image: "/assets/Community-Collaboration.jpg",
         keyPoints: [
           "Community engagement",
@@ -766,7 +768,58 @@ export const themes: Theme[] = [
           { value: "500+", label: "Communities Served" },
           { value: "10K+", label: "Local Leaders Trained" }
         ]
-      }
+      },
+       {
+        id: "regional-collaboration_7",
+          title: "Regional and Cross-Sector Collaboration",
+          description: "Bringing together local and global partners to share ideas and drive innovation.",
+           image: "/assets/Institutional-Partnerships.jpg",
+        keyPoints: [
+          "Program design and implementation",
+          "Capacity building",
+          "Scale and replication",
+          "Knowledge sharing"
+        ],
+        details: "Collaborating with organizations to amplify impact through strategic partnerships.",
+        stats: [
+          { value: "50+", label: "Partners Engaged" },
+          { value: "100+", label: "Projects Supported" }
+        ]
+        },
+        {
+          id: "impact-measurement-b9",
+          title: "Impact Alignment and Measurement",
+          description: "Helping partners track their progress and show how their work creates value.",
+          image: "/assets/Impact-Measurement.jpg",
+        keyPoints: [
+          "M&E framework development",
+          "Impact assessment",
+          "Data-driven insights",
+          "Reporting and accountability"
+        ],
+        details: "Ensuring measurable and meaningful outcomes for all stakeholders.",
+        stats: [
+          { value: "95%", label: "Project Success Rate" },
+          { value: "1M+", label: "Lives Impacted" }
+        ]
+        },
+        {
+          id: "community-led-collaboration",
+          title: "Community-Led Collaboration",
+          description: "Engaging communities directly to make sure every effort is inclusive and sustainable.",
+          image: "/assets/Community-Collaboration.jpg",
+        keyPoints: [
+          "Community engagement",
+          "Local capacity building",
+          "Participatory approaches",
+          "Sustainable solutions"
+        ],
+        details: "Empowering communities to drive their own development journey.",
+        stats: [
+          { value: "500+", label: "Communities Served" },
+          { value: "10K+", label: "Local Leaders Trained" }
+        ]
+        },
     ],
     keyFocusAreas: [
       "Advocacy and Policy Partnerships",

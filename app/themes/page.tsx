@@ -11,11 +11,11 @@ export default function ThemesPage() {
   const themeColors = [
     // Building Sustainable and Adaptive Pathways for Development
     {
-      bg: 'bg-green-50 dark:bg-green-900/30',
-      border: 'border-green-200 dark:border-green-800',
-      text: 'text-green-700 dark:text-green-300',
-      hover: 'hover:bg-green-100 dark:hover:bg-green-900/50',
-      button: 'bg-green-100 dark:bg-green-800/50 text-green-700 dark:text-green-200 hover:bg-green-200 dark:hover:bg-green-700/70'
+      bg: 'bg-white dark:bg-white/10',
+      border: 'border-gray-200 dark:border-gray-700',
+      text: 'text-gray-800 dark:text-gray-200',
+      hover: 'hover:bg-gray-50 dark:hover:bg-white/20',
+      button: 'bg-white dark:bg-white/20 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-white/30'
     },
     // Knowledge, Research, and Capacity Building
     {

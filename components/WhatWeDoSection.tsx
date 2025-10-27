@@ -1,4 +1,3 @@
-import React from 'react';
 
 // Commented out unused component to fix lint warning
 // interface FeatureCardProps {
@@ -22,9 +21,9 @@ const WhatWeDoSection = () => {
     <section className="py-12  transition-colors duration-300">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">What We Do</h2>
-        <p className="text-lg text-gray-700 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
+        {/* <p className="text-lg text-gray-700 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
           We work to build resilient food systems through various initiatives.
-        </p>
+        </p> */}
         <div className="text-lg text-gray-700 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
           Fivewell Africa&apos;s work is anchored in five interconnected themes that guide our approach to 
           sustainable and inclusive development.

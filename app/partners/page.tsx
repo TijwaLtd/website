@@ -153,8 +153,7 @@ function BecomePartnerPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">Who We&apos;re Looking For</h2>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              We collaborate with a diverse range of organizations that share
-              our vision for a thriving African agricultural sector.
+             Together with like-minded partners, we pursue transformation that is ethical, inclusive, and sustainable.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

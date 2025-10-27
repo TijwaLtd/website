@@ -32,11 +32,11 @@ type CodeProps = {
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const { slug } = params;
   const filePath = path.join(process.cwd(), 'public/blogs', `${slug}.md`);
-  
+
   try {
     const fileContents = fs.readFileSync(filePath, 'utf8');
     const { data } = matter(fileContents);
-    
+
     return {
       title: data.title || 'Article',
       description: data.description || 'Read this article on FiveWell Africa',
@@ -52,13 +52,13 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 export default async function ArticlePage({ params }: ArticleParams) {
   const { slug } = params;
   const filePath = path.join(process.cwd(), 'public/blogs', `${slug}.md`);
-  
+
   try {
     const fileContents = fs.readFileSync(filePath, 'utf8');
     const { data, content: rawContent } = matter(fileContents);
     let content = rawContent.replace(/<data:image/g, 'data:image');
     content = content.replace(/(base64,[\s\S]*?)>/g, '$1');
-    
+
     // Custom components for ReactMarkdown
     const components: Components = {
       img: (props) => {
@@ -67,20 +67,22 @@ export default async function ArticlePage({ params }: ArticleParams) {
         if (!src) {
           return null;
         }
-        const [altTextOnly, caption] = alt.split('|').map((s: string) => s.trim());
+        
+        // Check if the alt text contains a credit in the format "description | credit"
+        const [altTextOnly, credit] = alt.split('|').map((s: string) => s.trim());
         const isBase64 = typeof src === 'string' && src.startsWith('data:image');
         const isLocal = typeof src === 'string' && src.startsWith('/');
-        
+
         // Convert width/height to numbers if they're strings
         const imgWidth = width ? Number(width) : 500;
         const imgHeight = height ? Number(height) : 500;
-        
+
         return (
-          <figure className="my-8 group relative">
+          <div className="my-8 group relative">
             <div className="relative rounded-lg overflow-hidden shadow-lg">
               {isBase64 ? (
                 // Handle base64 images
-                <Image 
+                <Image
                   src={src as string}
                   alt={altTextOnly}
                   width={imgWidth}
@@ -92,7 +94,7 @@ export default async function ArticlePage({ params }: ArticleParams) {
               ) : isLocal ? (
                 // Handle local images from public folder
                 <div className="relative w-full aspect-video">
-<Image
+                  <Image
                     src={src as string}
                     alt={altTextOnly}
                     fill
@@ -103,7 +105,7 @@ export default async function ArticlePage({ params }: ArticleParams) {
                 </div>
               ) : (
                 // Handle external images
-                <Image 
+                <Image
                   src={src as string}
                   alt={altTextOnly}
                   width={imgWidth}
@@ -119,20 +121,20 @@ export default async function ArticlePage({ params }: ArticleParams) {
                 </div>
               )}
             </div>
-            {caption && (
-              <figcaption className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
-                {caption}
-              </figcaption>
+            {credit && (
+              <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
+                {credit}
+              </p>
             )}
-          </figure>
+          </div>
         );
       },
       a: ({ ...props }) => {
         // Check if the link is external
         const isExternal = props.href?.startsWith('http');
         return (
-          <a 
-            {...props} 
+          <a
+            {...props}
             className="text-green-600 hover:text-green-700 hover:underline font-medium"
             target={isExternal ? "_blank" : "_self"}
             rel={isExternal ? "noopener noreferrer" : undefined}
@@ -146,11 +148,11 @@ export default async function ArticlePage({ params }: ArticleParams) {
           .toLowerCase()
           .replace(/[^\w\s]/g, '')
           .replace(/\s+/g, '-');
-          
+
         return (
           <h2 id={id} className="text-2xl font-bold mt-12 mb-6 text-gray-900 flex items-center group">
-            <a 
-              href={`#${id}`} 
+            <a
+              href={`#${id}`}
               className="invisible group-hover:visible text-green-500 mr-2 no-underline hover:opacity-75"
               aria-hidden="true"
             >
@@ -178,9 +180,9 @@ export default async function ArticlePage({ params }: ArticleParams) {
         </li>
       ),
       blockquote: ({ ...props }) => (
-        <blockquote 
+        <blockquote
           className="border-l-4 border-green-500 bg-green-50 dark:bg-green-900/20 pl-6 pr-4 py-3 my-6 text-gray-700 dark:text-gray-300 not-italic rounded-r-lg"
-          {...props} 
+          {...props}
         />
       ),
       code: ({ node: _node, className, children, inline, ...props }: CodeProps) => {
@@ -214,8 +216,8 @@ export default async function ArticlePage({ params }: ArticleParams) {
           </div>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div className="text-center">
-              <Link 
-                href="/media" 
+              <Link
+                href="/blog"
                 className="inline-flex items-center text-green-200 hover:text-white mb-4 transition-colors"
               >
                 <svg className="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -254,25 +256,6 @@ export default async function ArticlePage({ params }: ArticleParams) {
         <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="prose lg:prose-lg max-w-none">
             <ReactMarkdown components={components}>{content}</ReactMarkdown>
-            
-            <div className="mt-12 p-6 bg-green-50 rounded-lg border border-green-100">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Ready to learn more?</h3>
-              <p className="text-gray-700 mb-6">Contact us today to learn how we can help your organization.</p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 transition-colors"
-                >
-                  Get in Touch
-                </Link>
-                <Link
-                  href="/services"
-                  className="inline-flex items-center justify-center px-6 py-3 border border-green-300 text-base font-medium rounded-md text-green-700 bg-white hover:bg-green-50 transition-colors"
-                >
-                  Our Services
-                </Link>
-              </div>
-            </div>
           </div>
         </article>
       </div>
@@ -285,7 +268,7 @@ export default async function ArticlePage({ params }: ArticleParams) {
 // Generate static paths for all markdown files at build time
 export async function generateStaticParams() {
   const blogDir = path.join(process.cwd(), 'public/blogs');
-  
+
   try {
     const files = fs.readdirSync(blogDir);
     return files.map((filename) => ({
